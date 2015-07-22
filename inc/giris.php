@@ -1,0 +1,1 @@
+﻿Açılınca çıkacak 2 link sayfası
