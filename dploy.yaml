@@ -1,0 +1,10 @@
+live:
+  scheme: ftp
+  host: 188.132.221.216
+  port: 21
+  user: bayimnerede
+  pass: cpbayim2015*
+  check: true
+  path:
+    local: /
+    remote: public_html/yellow-bulls
