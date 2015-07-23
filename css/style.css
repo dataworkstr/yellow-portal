@@ -2,22 +2,110 @@
 
 body{
 background-color:#ddd;
+font-family: 'Open Sans', sans-serif;
+}
 
+.navbar-default {
+    background-color: #1d1d1d !important;
+    background-image: none;
+    color:#fded00;
+}
+.navbar-default .navbar-nav>li>a {
+    color:#fded00;
+}
+
+.header-logo {
+    margin-top: -32px;
 }
 
 .footer1{
-width:100%;
-height:200px;
-background-color:purple;
-margin-top:20px;
+    width:100%;
+    height:200px;
+    background-color:#1d1d1d;
+    margin-top:20px;
+    padding: 20px;
+}
+
+.footer-linkler {
+  float: left;
+}
+
+.footer-linkler ul li {
+  padding: 2px 0px;
+  line-height: 14px;
+}
+
+.footer-linkler h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px 0 0 0;
+}
+
+.footer-linkler a {
+  color: #454545;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.footer-linkler a:hover {
+  color: #999;
+  text-decoration: none;
+}
+
+.footer-linkler ul {
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+    margin-top: 10px;
+}
+
+
+.footer-sonuclar {
+  float: left;
+}
+
+.footer-sonuclar ul li {
+  padding: 2px 0px;
+  line-height: 14px;
+}
+
+.footer-sonuclar h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px 0 0 0;
+}
+
+.footer-sonuclar a {
+  color: #454545;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.footer-sonuclar a:hover {
+  color: #999;
+  text-decoration: none;
+}
+
+.footer-sonuclar ul {
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+    margin-top: 10px;
+}
+
+.footer-logo {
+    opacity: 0.2;
+    float:left;
+    margin-right: 20px;
 }
 
 .news-header {
 width:100%;
 padding:10px 20px;
-background-color:orangered;
+background-color:#ffed00;
 font-size:16px;
-
+color:#1d1d1b;
+font-weight: 600;
 }
 
 .row{
@@ -37,40 +125,166 @@ padding-right:20px;
 padding-right:0px;
 padding-left:0px;
 width:30%;
-height:100%;
+margin-bottom: -20px;
 }
 
 .maclar {
-height:400px;
-background-color:blue;
+height:231px;
+background-color:white;
+-webkit-border-top-left-radius: 10px;
+-webkit-border-top-right-radius: 10px;
+-moz-border-radius-topleft: 10px;
+-moz-border-radius-topright: 10px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+
+.takimlar {
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.mac-detayi {
+    width: 100%;
+    height: 169px;
+}
+
+.mac-devami-git {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 4px;
+  padding-top: 5px;
+  font-weight: 600;
+  height: 22px;
+}
+.mac-devami-git a {
+    color:#1d1d1b;
+    text-decoration: inherit;
+}
+.mac-devami-git:hover {
+    background-color: #ffed00;
+}
+
+
+.anasayfa-haber-baslik {
+    width: 100%;
+    padding: 10px;
+    font-weight: 400;
+}
+
+.skor {
+    float:left;
+    font-size: 39px;
+    font-weight: bold;
+    text-align: center;
+    width: 123px;
+    margin-top: 20px;
+}
+
+.mac-bilgi {
+    display: inline-table;
+    text-align: center;
+    width: 100%;
+    font-size:13px;
+    line-height: 18px;
+}
+
+.sol-logo{
+    float:left;
+    padding: 10px;
+}
+
+.sag-logo{
+    float:right;
+    padding: 10px;
 }
 
 .puantablosu{
-height:238px;
+height:160px;
 margin:20px 0px;
-background-color:green;
+background-color:white;
 }
+
+.anket{
+height:149px;
+margin:20px 0px;
+background-color:white;
+}
+
+.puantablosu table thead tr {
+    background-color: #fefbd8;
+    font-weight: 600;
+}
+
+.puantablosu2 table thead tr {
+    background-color: #fefbd8;
+    font-weight: 600;
+}
+
+.fa {
+    margin-right: 10px;
+}
+
+.menu-home-icon {
+  line-height: 20px;
+  font-size: 20px;
+}
+
+
+.puantablosu2{
+height:316px;
+margin:20px 0px;
+background-color:white;
+}
+
+.haber-text{
+   font-weight: 100;
+   padding: 0 10px;
+   font-size: 14px
+
+}
+
 
 .news-home-container {
 width:100%;
 height:496px;
 margin-top:20px;
-background-color:pink;
+background-color:white;
+-webkit-border-top-left-radius: 10px;
+-webkit-border-top-right-radius: 10px;
+-moz-border-radius-topleft: 10px;
+-moz-border-radius-topright: 10px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
 }
 .news-home-single {
-width:194px;
-height:200px;
-margin-top:20px;
-margin-left:20px;
-float:left;
-background-color:yellow;
+    width:194px;
+    height:200px;
+    margin-top:20px;
+    margin-left:20px;
+    float:left;
 }
 
-.reklam{
+.devami-butonu{
+    float: right;
+    padding: 4px;
+    font-size: 12px;
+}
+
+.advertise-top{
 	width:100%;
 	height:120px;
 	margin:20px 0px;
-	background-color:red;
+	background-image: url("http://www.sportsvideo.org/ibc2014/wp-content/themes/ibc2014/images/sports-tech-ibc-banner-2014.png");
+
+}
+
+.advertise-bottom{
+	width:100%;
+	height:120px;
+	margin:20px 0px;
+	background-image: url("http://www.learnarabic.com/assets/images/st-banner-learnarabic.png");
 	
 }
 
@@ -88,7 +302,34 @@ padding-left:0px;
 }
 
 .navbar-nav>li>a:hover {
-background-color:red !important;
-color:white !important;
+    background-color:#fded00 !important;
+    color:#1d1d1d !important;
+    font-size: 100%;
+}
+
+
+#footersocialBarWrapper ul {text-align: right;list-style:none;margin:0 auto;padding:0;}
+
+#footersocialBarWrapper ul li {float:left;font-size:22px;margin:0px;}
+
+#footersocialBarWrapper ul li a i {margin-right: 0px;}
+
+#footersocialBarWrapper ul li a {display:block;padding:5px;color:#fff;line-height: 33px;font-size:22px;width:33px;text-align:center;}
+
+#footersocialBarWrapper ul li a:hover {text-decoration: none;color:#fff;}
+
+#footersocialBarWrapper ul li a em {display:none;}
+
+.footer-sosyalmedya {
+    float:right;
+}
+
+.copyrightyazisi {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 56px;
+      margin-right: 47px;
+      color:#454545;
+}
 }
 
