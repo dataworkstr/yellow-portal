@@ -16,6 +16,7 @@ font-family: 'Open Sans', sans-serif;
     color:#fded00;
 }
 
+
 .anket-side {
     padding: 7px;
 }
@@ -233,6 +234,12 @@ border-top-right-radius: 10px;
 
 .puantablosu{
 height:160px;
+margin:20px 0px;
+background-color:white;
+}
+
+.anket{
+height:149px;
 margin:20px 0px;
 background-color:white;
 }

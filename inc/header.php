@@ -29,7 +29,9 @@
 </head>
 
 <div id="tum-site" class="row">
+
 <!-- <div class="advertise-top"> </div> -->
+
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -54,5 +56,6 @@
 </nav>
 
 <!-- <div class="advertise-bottom"></div> -->
+
 
 <body>
