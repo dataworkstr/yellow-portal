@@ -7,6 +7,9 @@
         <meta name="author" content="Murat Bayri"/>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
         <meta name="robots" content="ALL"/>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		
 		
 		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script> 
@@ -26,24 +29,18 @@
 </head>
 
 <div id="tum-site" class="row">
-<div class="reklam"> </div>
+<div class="reklam1"> </div>
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Yellow Bulls</a>
+      <a class="navbar-brand" href="#"><div class="header-logo"><img src="images/logo.png" width="92" height="86"/></div></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="index.php?page=home">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="index.php?page=home"><div class="menu-home-icon"><i class="fa fa-home"></i></div> <span class="sr-only">(current)</span></a></li>
         <li><a href="index.php?page=news">Haberler</a></li>
 		<li><a href="index.php?page=teams">Takımlar</a></li>
 		<li><a href="index.php?page=players">Oyuncular</a></li>
@@ -56,6 +53,6 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class="reklam"></div>
+<div class="reklam2"></div>
 
 <body>
