@@ -9,9 +9,40 @@ font-family: 'Open Sans', sans-serif;
     background-color: #1d1d1d !important;
     background-image: none;
     color:#fded00;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 .navbar-default .navbar-nav>li>a {
     color:#fded00;
+}
+
+.anket-side {
+    padding: 7px;
+}
+
+.anket-side form li {
+    list-style-type: none !important;
+    padding: 1px;
+    font-size:14px;
+    margin-left:40px;
+}
+
+.anket-title {
+    margin-left: 20px;
+}
+
+.anket-side form li input{
+    margin-right: 7px;
+}
+
+.anket-side form p {
+    text-align: center;
+}
+
+.anket-side form p input{
+    width: 80px;
+    background-color: #1d1d1d;
+    color: #fded00;
 }
 
 .header-logo {
@@ -251,19 +282,33 @@ width:100%;
 height:496px;
 margin-top:20px;
 background-color:white;
--webkit-border-top-left-radius: 10px;
--webkit-border-top-right-radius: 10px;
--moz-border-radius-topleft: 10px;
--moz-border-radius-topright: 10px;
-border-top-left-radius: 10px;
-border-top-right-radius: 10px;
 }
+
+.haberler-sayfasi {
+width:100%;
+height:916px;
+background-color:white;
+}
+
+.haber-sayfasi-tek-haber{
+  width: 100%;
+  height: 100px;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding-right: 40px;
+}
+
 .news-home-single {
     width:194px;
     height:200px;
     margin-top:20px;
     margin-left:20px;
     float:left;
+}
+
+.haberin-resmi {
+    float: left;
+    margin-right: 20px;
 }
 
 .devami-butonu{

@@ -30,6 +30,17 @@
 <div class="anket">
      <div class="news-header"><i class="fa fa-question"></i> Anket</div>
 
+    <div class="anket-side">
+       <div class="anket-title"> Haftanın oyuncusu kim ?<br/></div>
+            <form>
+                <li><input type="checkbox" name="Can Ağırkaya" value="can"/>Can Ağırkaya<br/></li>
+              <li> <input type="checkbox" name="Ozan Umut Şimşek" value="ozan"/>Ozan Umut Şimşek<br/></li>
+              <li> <input type="checkbox" name="Oytun Yüksel" value="oytun"/>Oytun Yüksel<br/></li>
+                <p><input type="submit" value="Oyla"/></p>
+            </form>
+    </div>
+
+
 </div>
 
 
