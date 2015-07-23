@@ -17,20 +17,7 @@
         <hr/>
      </div>
 
-     <div class="mac-detayi">
-        <div class="takimlar">
-            <span>Körükspor</span> - <span>AAÜ Ejderhaspor</span>
-       </div>
 
-        <div class="sol-logo"><img src="images/fenerlogo.png" width="60" height="60"/></div>
-        <div class="skor">12 - 10</div>
-        <div class="sag-logo"><img src="images/fenerlogo.png" width="60" height="60"/></div>
-        <div class="mac-bilgi">
-            <i class="fa fa-calendar-o"></i> <span>19 Temmuz 2015</span> - <span>19:07</span><br/>
-           <i class="fa fa-globe"></i> <span>Gültepe Arena</span>
-        </div>
-        <hr/>
-     </div>
 
     <div class="mac-devami-git"> <a href="#"><i class="fa fa-chevron-circle-right"></i> Tüm maçları görüntülemek için tıklayın..</a></div>
 
@@ -39,6 +26,12 @@
 
 
 </div>
+
+<div class="anket">
+     <div class="news-header"><i class="fa fa-question"></i> Anket</div>
+
+</div>
+
 
 <div class="puantablosu">
      <div class="news-header"><i class="fa fa-table"></i> Puan Tablosu</div>
