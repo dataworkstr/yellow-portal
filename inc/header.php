@@ -36,13 +36,13 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#"><div class="header-logo"><img src="images/logo.png" width="92" height="86"/></div></a>
+      <a class="navbar-brand" href="index.php"><div class="header-logo"><img src="images/logo.png" width="92" height="86"/></div></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="index.php?page=home"><div class="menu-home-icon"><i class="fa fa-home"></i></div> <span class="sr-only">(current)</span></a></li>
+        <li><a href="index.php"><div class="menu-home-icon"><i class="fa fa-home"></i></div> <span class="sr-only">(current)</span></a></li>
         <li><a href="index.php?page=news">Haberler</a></li>
 		<li><a href="index.php?page=teams">Takımlar</a></li>
 		<li><a href="index.php?page=players">Oyuncular</a></li>

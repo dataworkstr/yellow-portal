@@ -5,6 +5,10 @@
 		case "news" :
 		include "pages/news.php";
 		break;
+
+            case "haber-detay" :
+            include "pages/haber-detay.php";
+            break;
 		
 		case "teams" :
 		include "pages/teams.php";
