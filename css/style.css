@@ -30,6 +30,7 @@ font-family: 'Open Sans', sans-serif;
 
 .anket-title {
     margin-left: 20px;
+    margin-bottom: 5px;
 }
 
 .anket-side form li input{
@@ -42,6 +43,14 @@ font-family: 'Open Sans', sans-serif;
 
 .anket-side form p input{
     width: 80px;
+    background-color: #fded00;
+    color: #1d1d1d;
+    border: 0;
+    margin: 8px;
+    padding: 8px;
+}
+
+.anket-side form p input:hover{
     background-color: #1d1d1d;
     color: #fded00;
 }
@@ -245,7 +254,7 @@ background-color:white;
 }
 
 .anket{
-height:149px;
+height:175px;
 margin:20px 0px;
 background-color:white;
 }
@@ -272,7 +281,7 @@ background-color:white;
 
 
 .puantablosu2{
-    height:316px;
+    height:290px;
     margin:20px 0px;
     background-color:white;
 }
@@ -322,6 +331,14 @@ background-color:white;
     margin-top: 20px;
 }
 
+.oyuncu-liste2 {
+    float: left;
+    width: 110px;
+    height: 170px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
 .oyuncu-liste p {
     margin-top:20px;
 }
@@ -346,6 +363,22 @@ background-color:white;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
+
+.oyuncu-adi2 {
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.oyuncu-adi2 ul {
+    float:left;
+}
+.oyuncu-adi2 ul li {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
 
 .sakatlanmis-oyuncu {
     width: 35px;

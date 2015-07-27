@@ -9,10 +9,24 @@
 
 
 
+<div class="oyuncu-liste2">
+     <div class="oyuncuresim"><a href="#"><img src="images/oyuncu/ronaldinho.jpg" width="105" height="120"></a></div><br>
+        <div class="oyuncu-adi2"><a href="#">Ronaldinho</a></div>
+    </div>
 
-<div class="oyuncu-liste">
+    <div class="oyuncu-liste2">
         <div class="oyuncuresim"><a href="#"><img src="images/oyuncu/ronaldinho.jpg" width="105" height="120"></a></div><br>
-        <div class="oyuncu-adi"><a href="#">Ronaldinho</a></div>
+        <div class="oyuncu-adi2"><a href="#">Ronaldinho</a></div>
+    </div>
+
+    <div class="oyuncu-liste2">
+        <div class="oyuncuresim"><a href="#"><img src="images/oyuncu/ronaldinho.jpg" width="105" height="120"></a></div><br>
+        <div class="oyuncu-adi2"><a href="#">Ronaldinho</a></div>
+    </div>
+
+    <div class="oyuncu-liste2">
+        <div class="oyuncuresim"><a href="#"><img src="images/oyuncu/ronaldinho.jpg" width="105" height="120"></a></div><br>
+        <div class="oyuncu-adi2"><a href="#">Ronaldinho</a></div>
     </div>
 
 
@@ -20,7 +34,6 @@
 
 </div>
 
-<?php include "pages/yapim.php"; ?>
 
 </div>
 

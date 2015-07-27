@@ -111,11 +111,7 @@
           <td>9</td>
           <td>1.23</td>
         </tr>
-          <tr>
-          <td>Ozan Umut Şimşek</td>
-          <td>9</td>
-          <td>1.23</td>
-        </tr>
+
       </tbody>
     </table>
 
