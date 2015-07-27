@@ -316,11 +316,13 @@ background-color:white;
 }
 
 .oyuncu-liste {
-    float:left;
-    width: 110px;
-    height: 170px;
+    text-align: center;
     margin-left: 20px;
     margin-top: 20px;
+}
+
+.oyuncu-liste b {
+    margin-top:20px;
 }
 
 .oyuncuresim {
