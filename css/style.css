@@ -267,6 +267,7 @@ background-color:white;
 .menu-home-icon {
   line-height: 20px;
   font-size: 20px;
+  margin-right: -10px;
 }
 
 
@@ -321,7 +322,7 @@ background-color:white;
     margin-top: 20px;
 }
 
-.oyuncu-liste b {
+.oyuncu-liste p {
     margin-top:20px;
 }
 
@@ -335,6 +336,61 @@ background-color:white;
     width: 100%;
     font-size: 14px;
     font-weight: 500;
+    margin-top: 20px;
+}
+
+.oyuncu-adi ul {
+    float:left;
+}
+.oyuncu-adi ul li {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.sakatlanmis-oyuncu {
+    width: 35px;
+    font-weight: 700;
+    height: 20px;
+    font-size: 13px;
+    padding-top: 1px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: red;
+    color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.oyuncu-tablosu {
+
+}
+
+.yabanci-oyuncu {
+    width: 35px;
+    font-weight: 700;
+    height: 20px;
+    padding-top: 1px;
+    font-size: 13px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #3981C4;
+    color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.yerli-oyuncu {
+    width: 35px;
+    font-weight: 700;
+    height: 20px;
+    font-size: 13px;
+    padding-top: 1px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #1d1d1d;
+    color: #fded00;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
 }
 
 .statlar {

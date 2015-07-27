@@ -10,9 +10,36 @@
 
     <div class="oyuncu-liste">
        <img src="images/fenerlogo.png" width="100" height="100"/>  <br/>
-       <div id="adi">Körükspor</div>
-       <hr/>
-        <div class="oyuncu-adi">Ronaldinho</div>
+       <p>Körükspor</p>
+        <div class="oyuncu-adi">
+
+
+            <table class="table">
+
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td><div class="sakatlanmis-oyuncu">Skt</div></td>
+                          <td>OZAN</td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">2</th>
+                          <td><div class="yabanci-oyuncu">Ybn</div></td>
+                          <td>RONALDO</td>
+                        </tr>
+
+                           <tr>
+                          <th scope="row">2</th>
+                          <td><div class="yerli-oyuncu">Yrl</div></td>
+                          <td>RONALDO</td>
+                        </tr>
+
+                      </tbody>
+            </table>
+
+
+        </div>
     </div>
 
 
@@ -23,7 +50,7 @@
 
     <div class="oyuncu-liste">
          <img src="images/fenerlogo.png" width="100" height="100"/>  <br/>
-       <div id="adi">AAÜ Ejderhaspor</div>
+       <p>AAÜ Ejderhaspor</p>
        <hr/>
         <div class="oyuncu-adi">Ronaldinho</div>
     </div>
