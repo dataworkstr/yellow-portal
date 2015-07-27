@@ -8,11 +8,11 @@
 <ul>
 <li>
     <div class="haber-sayfasi-tek-haber">
-        <a href="#" class="haberin-resmi"><img src="images/default-haber.jpg" width="194" height="88"/></a>
+        <a href="index.php?page=haber-detay" class="haberin-resmi"><img src="images/default-haber.jpg" width="194" height="88"/></a>
         <div class="anasayfa-haber-baslik">
-            <a href="#">Haber Başlık 1</a><br/>
+            <a href="index.php?page=haber-detay">Haber Başlık 1</a><br/>
         </div>
-        <div class="haber-text">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem </div><div class="devami-butonu"><a href="#">Devamı..</a></div>
+        <div class="haber-text">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem </div><div class="devami-butonu"><a href="index.php?page=haber-detay">Devamı..</a></div>
 
     </div>
 
@@ -60,7 +60,7 @@
     <div class="haber-sayfasi-tek-haber">
         <a href="#" class="haberin-resmi"><img src="images/default-haber.jpg" width="194" height="88"/></a>
         <div class="anasayfa-haber-baslik">
-            <a href="#">Haber Başlık 1</a><br/>
+            <a href="index.php?page=haber-detay">Haber Başlık 1</a><br/>
         </div>
         <div class="haber-text">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem </div><div class="devami-butonu"><a href="#">Devamı..</a></div>
 
