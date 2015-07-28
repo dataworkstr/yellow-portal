@@ -377,6 +377,30 @@ background-color:white;
     margin-top: 20px;
 }
 
+.takim-detayi-sayfasi {
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.takim-detayi-sayfasi h1{
+    text-align: left;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.takim-detayi-sayfasi ul{
+    text-align: left;
+    line-height: 24px;
+}
+
+.takim-detayi-sayfasi ul li label{
+    font-weight: 600;
+    margin-right: 5px;
+}
+
 .oyuncu-adi ul {
     float:left;
 }
