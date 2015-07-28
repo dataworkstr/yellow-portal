@@ -13,6 +13,11 @@
 		case "teams" :
 		include "pages/teams.php";
 		break;
+
+            case "takim-detay" :
+            include "pages/takim-detay.php";
+            break;
+
 		
 		case "players" :
 		include "pages/players.php";

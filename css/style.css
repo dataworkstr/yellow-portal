@@ -498,6 +498,11 @@ background-color:white;
     margin-top: 20px;
 }
 
+.col-xs-12 {
+    text-align: center;
+    margin-top: 20px;
+}
+
 .haber-yazisi-anasayfadaki {
     position: absolute;
     font-size: 36px;
