@@ -412,6 +412,59 @@ background-color:white;
     -moz-border-radius: 5px;
 }
 
+.oyuncu-sol-resim {
+    margin:20px;
+    width: 38%;
+    float:left;
+    border: 3px solid #fded00;
+}
+
+#formadanumaram {
+    background-image: url("../images/formaresmi.png");
+    padding: 3px;
+    position: relative;
+}
+
+.oyuncu-detay-yazi {
+    float:left;
+    width: 52%;
+    margin-top: 20px;
+}
+
+.oyuncu-detay-yazi ul {
+    display: inline-block;
+}
+
+.oyuncu-detay-yazi h1{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.oyuncu-detay-yazi label{
+    float:left;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.oyuncu-detay-yazi ul li{
+    line-height: 24px;
+}
+
+
+
+.oyuncu-detay-yazi b{
+    font-size: 19px;
+}
+
+.oyuncu-detay-yazi hr{
+    margin-top: 1px;
+}
+
+.oyuncu-detay-yazi ıl{
+    font-size:14px;
+}
+
 .yerli-oyuncu {
     width: 35px;
     font-weight: 700;
