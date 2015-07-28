@@ -31,7 +31,7 @@
 
                            <tr>
                           <th scope="row">2</th>
-                          <td><div class="yerli-oyuncu">Yrl</div></td>
+                          <td><div class="yerli-oyuncu">Avp</div></td>
                           <td>RONALDO</td>
                         </tr>
 

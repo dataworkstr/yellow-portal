@@ -17,6 +17,10 @@
 		case "players" :
 		include "pages/players.php";
 		break;
+
+            case "oyuncu-detay" :
+            include "pages/oyuncu-detay.php";
+            break;
 		
 		case "stadium" :
 		include "pages/stadium.php";
