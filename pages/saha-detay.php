@@ -15,7 +15,7 @@
 <div class="saha-detaylari-alt">
 
    <div class="saha-detaylari-alt-yan1">
-       <h1>Saha Bilgileri</h1>
+       <h1><div class="baslik-yani-uzatici"></div>Saha Bilgileri</h1>
        <hr/>
 
        <ul>
@@ -31,7 +31,7 @@
    </div>
 
    <div class="saha-detaylari-alt-yan1">
-       <h1>Son Yapılan Maçlar</h1>
+       <h1><div class="baslik-yani-uzatici"></div>Son Yapılan Maçlar</h1>
        <hr/>
 
      <ol>

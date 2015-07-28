@@ -385,6 +385,10 @@ background-color:white;
     margin-top: 20px;
 }
 
+.takim-detayi-sayfasi hr{
+    margin-top: 6px;
+}
+
 .takim-detayi-sayfasi h1{
     text-align: left;
     font-weight: 700;
@@ -488,6 +492,10 @@ background-color:white;
     font-weight: 600;
 }
 
+.saha-detaylari-alt-yan1 hr{
+    margin-top: 7px;
+}
+
 .saha-detaylari-alt-yan1 ul{
     text-align: left;
     font-weight: normal;
@@ -533,9 +541,11 @@ background-color:white;
     font-weight: bold;
     color: white;
     bottom: 0;
+    background: rgba(253,237,0,0.6);
     padding: 14px;
     width: 100%;
     line-height: 41px;
+    text-shadow: 1px 1px 5px black;
 }
 
 #formadanumaram {
@@ -594,7 +604,7 @@ background-color:white;
 }
 
 .oyuncu-detay-yazi hr{
-    margin-top: 1px;
+    margin-top: 5px;
 }
 
 .oyuncu-detay-yazi ıl{

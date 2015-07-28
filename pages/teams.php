@@ -8,8 +8,8 @@
 
 <div class="col-xs-6">
 <div class="oyuncu-liste">
-       <img src="images/fenerlogo.png" width="100" height="100"/>  <br/>
-       <p>Körükspor</p>
+       <a href="index.php?page=takim-detay"><img src="images/fenerlogo.png" width="100" height="100"/></a>  <br/>
+       <p><a href="index.php?page=takim-detay">Körükspor</a></p>
 
         <div class="oyuncu-adi">
 
