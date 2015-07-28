@@ -6,14 +6,24 @@
 
 <div class="news-header"> <h3><i class="fa fa-th-list"></i> Statlar</h3></div>
 
+      <script type="text/javascript">
+            $(document).ready( function() {
+
+                $('.statlar').hover( function() {
+                    $(this).find('.statismi').slideToggle(300);
+                });
+
+            });
+     </script>
+
      <div class="statlar">
-         <div class="statresmi"><img src="images/stat/stat1.jpg" width="300" height="auto"/></div>
-         <div class="statismi"> Gültepe Arena </div>
+         <a href="index.php?page=saha-detay"><div class="statresmi" ><img src="images/stat/stat1.jpg" class="img-responsive"/></div></a>
+        <a href="index.php?page=saha-detay"> <div class="statismi" style="display:none;"> Gültepe Arena </div></a>
      </div>
 
       <div class="statlar">
-         <div class="statresmi"><img src="images/stat/stat1.jpg" width="300" height="auto"/></div>
-         <div class="statismi"> Gültepe Arena </div>
+         <div class="statresmi"><img src="images/stat/stat1.jpg" class="img-responsive"/></div>
+         <div class="statismi" style="display:none;"> Gültepe Arena </div>
      </div>
 
 

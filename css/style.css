@@ -331,12 +331,33 @@ background-color:white;
     margin-top: 20px;
 }
 
+.oyuncu-adi-container {
+    position: absolute;
+    bottom: 0;
+    width: 96%;
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    color: #1d1d1d;
+    background-color: #fded00;
+
+}
+
+.oyuncu-adi-container a{
+    color: #1d1d1d;
+    text-decoration: none;
+    font-weight: 500;
+
+}
+
+
 .oyuncu-liste2 {
     float: left;
     width: 110px;
-    height: 170px;
+    height: 120px;
     margin-left: 20px;
     margin-top: 20px;
+    position: relative;
 }
 
 .oyuncu-liste p {
@@ -419,10 +440,96 @@ background-color:white;
     border: 3px solid #fded00;
 }
 
+.detayli-oyuncu-bilgi-kismi-alt {
+    width: 94%;
+    float: left;
+    padding: 20px;
+}
+
+.saha-resim-ust {
+    width: 94%;
+    margin: 20px;
+}
+
+.saha-detaylari-alt {
+    width: 94%;
+    margin: 20px;
+}
+
+.saha-detaylari-alt-yan1{
+    width: 46%;
+    float:left;
+    margin-right: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.saha-detaylari-alt-yan1 ul{
+    text-align: left;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.saha-detaylari-alt-yan1 ol{
+    text-align: center;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 29px;
+}
+
+.saha-detaylari-alt-yan1 ul li label{
+    font-weight: 600;
+}
+
+.baslik-yani-uzatici {
+    width: 5px;
+    background-color: #fded00;
+    height: 25px;
+    float:left;
+    margin-right: 5px;
+}
+
+.saha-linki {
+    text-align: center;
+    font-size: 15px;
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+
+.haber-yazisi-anasayfadaki {
+    position: absolute;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    bottom: 0;
+    padding: 14px;
+    width: 100%;
+    line-height: 41px;
+}
+
 #formadanumaram {
     background-image: url("../images/formaresmi.png");
     padding: 3px;
     position: relative;
+    background-repeat: no-repeat;
+    font-size: 34px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    padding-left: 26px;
+    padding-bottom: 31px;
+    text-align: center;
+    width: 100px;
+    padding-top: 15px;
+    padding-right: 30px;
+    letter-spacing: -2px;
+    float: left;
+}
+
+.yanindaformaresmi {
+    float:left;
+    width: 240px;
 }
 
 .oyuncu-detay-yazi {
@@ -484,18 +591,28 @@ background-color:white;
     margin-right: 20px;
     margin-top: 20px;
     float:left;
-    width: 280px;
+    width: 43%;
+    position: relative;
 }
 
 .statresmi {
-    width: 280px;
+    width: 100%;
 }
 
 .statismi {
     text-align: center;
-    margin: 11px;
     font-size: 17px;
     font-weight: 700;
+    position: absolute;
+    bottom: 0;
+    background-color: #fded00;
+    width: 100%;
+    padding: 8px;
+    color:#1d1d1d;
+}
+
+.statismi a{
+    color:#1d1d1d;
 }
 
 .haberler-sayfasi ul hr {

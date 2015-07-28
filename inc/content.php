@@ -25,6 +25,10 @@
 		case "stadium" :
 		include "pages/stadium.php";
 		break;
+
+            case "saha-detay" :
+            include "pages/saha-detay.php";
+            break;
 		
 		default :
 		include "pages/home.php";
