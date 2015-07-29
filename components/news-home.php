@@ -3,11 +3,11 @@
     <div class="news-inner-container">
         <ul>
 
-         <?php
+           <?php
 
-         $habercekalti = mysql_query("select * from haberler order by id DESC limit 6");
+           $habercekalti = mysql_query("select * from haberler order by id DESC limit 6");
 
-         while($okualti = mysql_fetch_array($habercekalti)){
+           while($okualti = mysql_fetch_array($habercekalti)){
             ?>
 
             <li>

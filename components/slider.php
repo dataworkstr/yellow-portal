@@ -120,11 +120,11 @@
 <!-- Slides Container -->
 <div u="slides" lang="tr" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 663px; height: 300px; overflow: hidden;">
 
-   <?php
+ <?php
 
-   $habercek = mysql_query("select * from haberler order by id DESC limit 8");
+ $habercek = mysql_query("select * from haberler order by id DESC limit 8");
 
-   while($oku = mysql_fetch_array($habercek)){
+ while($oku = mysql_fetch_array($habercek)){
     ?>
     <div>
         <a href="index.php?page=haber-detay&haber=<?php echo $oku['haber_adiseo'] ?>"><img u="image" src="<?php echo $oku['haber_resim']; ?>" />

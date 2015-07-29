@@ -24,31 +24,30 @@
 
                 <div class="haber-detay-yazi">
 
-                 <strong><?php echo stripslashes($haberimioku['haber_adi']); ?></strong><br/>
-                 <?php echo stripslashes($haberimioku['haber_icerik']); ?>
+                    <strong><?php echo stripslashes($haberimioku['haber_adi']); ?></strong><br/>
+                    <?php echo stripslashes($haberimioku['haber_icerik']); ?>
+                </div>
 
-             </div>
+
+                <div class="haber-detay-footer">
+                    <div class="haber-detay-footer-etiketi"> <b class="etiket">Etiketler :</b> <?php echo $haberimioku['haber_etiket']; ?></div>
+                    <div class="paylasmaseyleri"><a href="#"><img src="images/facebook-share.png" width="150" height="36"/></a>  <a href="#"><img src="images/twitter-share.png" width="150" height="36"/></a></div>
+                </div>
 
 
-             <div class="haber-detay-footer">
-                <div class="haber-detay-footer-etiketi"> <b class="etiket">Etiketler :</b> <?php echo $haberimioku['haber_etiket']; ?></div>
-                <div class="paylasmaseyleri"><a href="#"><img src="images/facebook-share.png" width="150" height="36"/></a>  <a href="#"><img src="images/twitter-share.png" width="150" height="36"/></a></div>
             </div>
+
+
+
+
+
 
 
         </div>
 
 
-
-
-
-
-
     </div>
 
-
-</div>
-
-<?php include "components/side-panel.php";?>
+    <?php include "components/side-panel.php";?>
 
 </div>
