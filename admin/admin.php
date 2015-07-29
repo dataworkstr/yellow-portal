@@ -14,6 +14,7 @@ if($_SESSION['login'] != "true") die("permission denied");
 <link rel="stylesheet" href="css/bootstrap-fileupload.min.css" type="text/css" />
 <link rel="stylesheet" href="css/bootstrap-timepicker.min.css" type="text/css" />
 
+<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/responsive-tables.css">
