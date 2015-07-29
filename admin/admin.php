@@ -153,8 +153,6 @@ if($_SESSION['login'] != "true") die("permission denied");
                 </ul><!--headmenu-->
             </div>
         </div>
-<<<<<<< HEAD
-    </div>
 
     <div class="leftpanel">
 
@@ -197,21 +195,12 @@ if($_SESSION['login'] != "true") die("permission denied");
             </div>
         </div>
 
-            </div><!--span4-->
-        </div><!--row-fluid-->
 
-        <div class="footer">
-            <div class="footer-left">
-                <span>&copy; 2015. Yellow Bulls</span>
-            </div>
-        </div><!--footer-->
 
     </div><!--maincontentinner-->
-</div><!--maincontent-->
 
 </div><!--rightpanel-->
 
-</div><!--mainwrapper-->
 <script type="text/javascript">
     jQuery(document).ready(function() {
 
