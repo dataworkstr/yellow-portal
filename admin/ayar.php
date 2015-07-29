@@ -3,10 +3,15 @@
 session_start();
 ob_start();
 
-$dbhost		= "localhost:1454";
-$dbadi		= "yellowbulls";// veri tabanınızın adı
-$dbuser		= "root"; // veritabanı kullanıcı adı
-$dbpass		= "root";// veritabanı sifresi
+// $dbhost      = "localhost:1454";
+// $dbadi       = "yellowbulls";
+// $dbuser      = "root";
+// $dbpass      = "root";
+
+$dbhost      = "localhost";
+$dbadi       = "canagirk_yellowbulls";
+$dbuser      = "canagirk_yellowb";
+$dbpass      = "yellowbulls-db2015*";
 
 
 $baglanti = mysql_connect($dbhost,$dbuser,$dbpass);
