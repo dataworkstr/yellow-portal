@@ -3,10 +3,10 @@
 session_start();
 ob_start();
 
-  // $dbhost      = "localhost:1454";
-  // $dbadi       = "yellowbulls";
-  // $dbuser      = "root";
-  // $dbpass      = "root";
+   // $dbhost      = "localhost:1454";
+   // $dbadi       = "yellowbulls";
+   // $dbuser      = "root";
+   // $dbpass      = "root";
 
 $dbhost      = "localhost";
 $dbadi       = "canagirk_yellowbulls";
@@ -82,14 +82,14 @@ function rastgele_sifre($num) {
 }
 
 function kisalt($kelime, $str = 10)
-   {
-      if (strlen($kelime) > $str)
-      {
-         if (function_exists("mb_substr")) $kelime = mb_substr($kelime, 0, $str, "UTF-8").'..';
-         else $kelime = substr($kelime, 0, $str).'..';
-      }
-      return $kelime;
-   }
+{
+  if (strlen($kelime) > $str)
+  {
+   if (function_exists("mb_substr")) $kelime = mb_substr($kelime, 0, $str, "UTF-8").'..';
+   else $kelime = substr($kelime, 0, $str).'..';
+}
+return $kelime;
+}
 
 
 
