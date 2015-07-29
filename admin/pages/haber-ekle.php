@@ -28,7 +28,6 @@ if($kontrol)
    $haber_baslik2 = addslashes($_POST['baslik2']);
 
 
-
    $etiket = $_POST['tags'];
 
    $haber_baslikseo = cevir($haber_baslik);

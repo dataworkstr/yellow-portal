@@ -21,7 +21,7 @@ if($kontrol)
 
    $icerik = addslashes($_POST['icerik']);
 
-   $haber_baslik = addslashes($_POST['baslik']);
+   $haber_baslik =  addslashes($_POST['baslik']);
 
    $haber_baslik2 = addslashes($_POST['baslik2']);
 
@@ -87,17 +87,17 @@ $oku = mysql_fetch_array(mysql_query("select * from haberler where id='$kiminki'
         <form class="stdform stdform2" method="post" enctype="multipart/form-data">
             <p>
                 <label>Haber Üst Başlık</label>
-                <span class="field"><input type="text" name="baslik" id="firstname2" class="input-xxlarge" value="<?php echo $oku['haber_adi']; ?>"/></span>
+                <span class="field"><input type="text" name="baslik" id="firstname2" class="input-xxlarge" value="<?php echo stripslashes($oku['haber_adi']); ?>"/></span>
             </p>
 
             <p>
                 <label>Haber Alt Başlık</label>
-                <span class="field"><input type="text" name="baslik2" id="firstname2" class="input-xxlarge" value="<?php echo $oku['haber_adi2']; ?>"/></span>
+                <span class="field"><input type="text" name="baslik2" id="firstname2" class="input-xxlarge" value="<?php echo stripslashes($oku['haber_adi2']); ?>"/></span>
             </p>
 
             <p>
                 <label>Haber İçeriği</label>
-                <span class="field"><textarea type="text" name="icerik" id="lastname2" class="input-xxlarge" style="height: 300px;"><?php echo $oku['haber_icerik']; ?></textarea></span>
+                <span class="field"><textarea type="text" name="icerik" id="lastname2" class="input-xxlarge" style="height: 300px;"><?php echo stripslashes($oku['haber_icerik']); ?></textarea></span>
             </p>
 
             <p>

@@ -37,9 +37,9 @@
 
      <td><?php echo $oku['id']; ?></td>
 
-      <td><?php echo $oku['haber_adi']; ?></td>
+      <td><?php echo stripslashes($oku['haber_adi']); ?></td>
 
-      <td><?php echo $oku['haber_adi2']; ?></td>
+      <td><?php echo stripslashes($oku['haber_adi2']); ?></td>
 
       <td><?php echo $oku['haber_tarih']; ?></td>
 

@@ -119,39 +119,20 @@
 
 <!-- Slides Container -->
 <div u="slides" lang="tr" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 663px; height: 300px; overflow: hidden;">
+
+   <?php
+
+   $habercek = mysql_query("select * from haberler order by id DESC limit 8");
+
+while($oku = mysql_fetch_array($habercek)){
+    ?>
     <div>
-        <a href="#"><img u="image" src="images/01.jpg" /> <div class="haber-yazisi-anasayfadaki-ust">Körükspor'un yıldız oyuncusunda sakatlık belirtisi! </div><div class="haber-yazisi-anasayfadaki">Dizindeki ağrı, maça yetişmesi...</div> </a>
-        <img u="thumb" src="images/thumb-01.jpg" />
-    </div>
-    <div>
-        <a href="#"><img u="image" src="images/02.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
-        <img u="thumb" src="images/thumb-02.jpg" />
-    </div>
-    <div>
-        <a href="#"><img u="image" src="images/03.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
-        <img u="thumb" src="images/thumb-03.jpg" />
-    </div>
-    <div>
-        <a href="#"><img u="image" src="images/04.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
-        <img u="thumb" src="images/thumb-04.jpg" />
-    </div>
-    <div>
-        <a href="#"><img u="image" src="images/05.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
-        <img u="thumb" src="images/thumb-05.jpg" />
-    </div>
-    <div>
-        <a href="#"><img u="image" src="images/06.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
-        <img u="thumb" src="images/thumb-06.jpg" />
-    </div>
-    <div>
-        <a href="#"><img u="image" src="images/07.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
-        <img u="thumb" src="images/thumb-07.jpg" />
+        <a href="#"><img u="image" src="<?php echo $oku['haber_resim']; ?>" /> <div class="haber-yazisi-anasayfadaki-ust"><?php echo $oku['haber_adi']; ?> </div><div class="haber-yazisi-anasayfadaki"><?php echo $oku['haber_adi2']; ?></div> </a>
+        <img u="thumb" src="<?php echo $oku['haber_resim']; ?>" />
     </div>
 
-    <div>
-        <a href="#"><img u="image" src="images/07.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
-        <img u="thumb" src="images/thumb-07.jpg" />
-    </div>
+    <?php } ?>
+
 </div>
 
 <!--#region Arrow Navigator Skin Begin -->

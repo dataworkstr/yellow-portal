@@ -3,15 +3,15 @@
 session_start();
 ob_start();
 
- // $dbhost      = "localhost:1454";
- // $dbadi       = "yellowbulls";
- // $dbuser      = "root";
- // $dbpass      = "root";
+  $dbhost      = "localhost:1454";
+  $dbadi       = "yellowbulls";
+  $dbuser      = "root";
+  $dbpass      = "root";
 
-$dbhost      = "localhost";
-$dbadi       = "canagirk_yellowbulls";
-$dbuser      = "canagirk_yellowb";
-$dbpass      = "yellowbulls-db2015*";
+//$dbhost      = "localhost";
+//$dbadi       = "canagirk_yellowbulls";
+//$dbuser      = "canagirk_yellowb";
+//$dbpass      = "yellowbulls-db2015*";
 
 
 $baglanti = mysql_connect($dbhost,$dbuser,$dbpass);
@@ -80,6 +80,16 @@ function rastgele_sifre($num) {
     }
     return implode($pass);
 }
+
+function kisalt($kelime, $str = 10)
+   {
+      if (strlen($kelime) > $str)
+      {
+         if (function_exists("mb_substr")) $kelime = mb_substr($kelime, 0, $str, "UTF-8").'..';
+         else $kelime = substr($kelime, 0, $str).'..';
+      }
+      return $kelime;
+   }
 
 
 

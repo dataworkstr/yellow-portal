@@ -2,54 +2,26 @@
     <div class="news-header"> <h3><i class="fa fa-newspaper-o"></i> Haberler</h3></div>
     <div class="news-inner-container">
         <ul>
+
+         <?php
+
+           $habercekalti = mysql_query("select * from haberler order by id DESC limit 6");
+
+        while($okualti = mysql_fetch_array($habercekalti)){
+            ?>
+
             <li>
                 <div class="news-home-single">
-                    <a href="#"><img src="images/default-haber.jpg" width="194" height="88"/></a>
+                    <a href="#"><img src="<?php echo $okualti['haber_resim'] ?>" width="194" height="88"/></a>
                     <div class="anasayfa-haber-baslik">
-                        <a href="#">Haber Başlık 1</a><br/>
+                        <a href="#"><?php echo $okualti['haber_adi2']; ?></a><br/>
                     </div>
-                    <div class="haber-text">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem </div><div class="devami-butonu"><a href="#">Devamı..</a></div>
+                    <div class="haber-text"><?php echo kisalt($okualti['haber_icerik'],78); ?></div><div class="devami-butonu"><a href="#">Devamı..</a></div>
 
                 </div>
             </li>
+            <?php } ?>
 
-            <li>
-                <div class="news-home-single">
-                    <a href="#"><img src="images/default-haber.jpg" width="194" height="88"/></a>
-                    <div class="anasayfa-haber-baslik"><a href="#">Haber Başlık 2</a></div>
-                </div>
-            </li>
-
-            <li>
-                <div class="news-home-single">
-                    <a href="#"><img src="images/default-haber.jpg" width="194" height="88"/></a>
-                    <div class="anasayfa-haber-baslik"><a href="#">Haber Başlık 3</a></div>
-                </div>
-            </li>
-
-        </ul>
-
-        <ul>
-            <li>
-                <div class="news-home-single">
-                    <a href="#"><img src="images/default-haber.jpg" width="194" height="88"/></a>
-                    <div class="anasayfa-haber-baslik"><a href="#">Haber Başlık 4</a></div>
-                </div>
-            </li>
-
-            <li>
-                <div class="news-home-single">
-                    <a href="#"><img src="images/default-haber.jpg" width="194" height="88"/></a>
-                    <div class="anasayfa-haber-baslik"><a href="#">Haber Başlık 5</a></div>
-                </div>
-            </li>
-
-            <li>
-                <div class="news-home-single">
-                    <a href="#"><img src="images/default-haber.jpg" width="194" height="88"/></a>
-                    <div class="anasayfa-haber-baslik"><a href="#">Haber Başlık 6</a></div>
-                </div>
-            </li>
 
         </ul>
     </div>
