@@ -12,7 +12,7 @@
         <div class="sag-logo"><img src="images/fenerlogo.png" width="60" height="60"/></div>
         <div class="mac-bilgi">
            <i class="fa fa-calendar-o"></i>  <span>19 Temmuz 2015</span> - <span>19:07</span><br/>
-             <i class="fa fa-globe"></i> <span>Gültepe Arena</span>
+             <i class="fa fa-globe"></i> <span>Gültepe Arena</span>  <i class="fa"></i>/<i class="fa"></i>   <i class="fa fa-sun-o"></i> <span>Güneşli</span>
         </div>
         <hr/>
      </div>
