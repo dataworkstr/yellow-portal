@@ -1,8 +1,8 @@
 @import url('reset.css');
 
 body{
-background-color:#ddd;
-font-family: 'Open Sans', sans-serif;
+    background-color:#ddd;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .navbar-default {
@@ -97,7 +97,7 @@ font-family: 'Open Sans', sans-serif;
   padding: 0;
   list-style: none;
   font-size: 12px;
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 
@@ -131,7 +131,7 @@ font-family: 'Open Sans', sans-serif;
   padding: 0;
   list-style: none;
   font-size: 12px;
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .footer-logo {
@@ -141,43 +141,43 @@ font-family: 'Open Sans', sans-serif;
 }
 
 .news-header {
-width:100%;
-padding:10px 20px;
-background-color:#ffed00;
-font-size:16px;
-color:#1d1d1b;
-font-weight: 600;
+    width:100%;
+    padding:10px 20px;
+    background-color:#ffed00;
+    font-size:16px;
+    color:#1d1d1b;
+    font-weight: 600;
 }
 
 .row{
-width:976px;
-margin-left:auto;
-margin-right:auto;
+    width:976px;
+    margin-left:auto;
+    margin-right:auto;
 
 }
 
 .col-md-9{
-width:70%;
-padding-left:0px;
-padding-right:20px;
+    width:70%;
+    padding-left:0px;
+    padding-right:20px;
 }
 
 .col-md-3{
-padding-right:0px;
-padding-left:0px;
-width:30%;
-margin-bottom: -20px;
+    padding-right:0px;
+    padding-left:0px;
+    width:30%;
+    margin-bottom: -20px;
 }
 
 .maclar {
-height:231px;
-background-color:white;
--webkit-border-top-left-radius: 10px;
--webkit-border-top-right-radius: 10px;
--moz-border-radius-topleft: 10px;
--moz-border-radius-topright: 10px;
-border-top-left-radius: 10px;
-border-top-right-radius: 10px;
+    height:231px;
+    background-color:white;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .takimlar {
@@ -242,21 +242,21 @@ border-top-right-radius: 10px;
 }
 
 .puantablosu{
-height:160px;
-margin:20px 0px;
-background-color:white;
+    height:160px;
+    margin:20px 0px;
+    background-color:white;
 }
 
 .anket{
-height:149px;
-margin:20px 0px;
-background-color:white;
+    height:149px;
+    margin:20px 0px;
+    background-color:white;
 }
 
 .anket{
-height:175px;
-margin:20px 0px;
-background-color:white;
+    height:175px;
+    margin:20px 0px;
+    background-color:white;
 }
 
 .puantablosu table thead tr {
@@ -293,24 +293,24 @@ background-color:white;
 }
 
 .haber-text{
-   font-weight: 100;
-   padding: 0 10px;
-   font-size: 14px
+ font-weight: 100;
+ padding: 0 10px;
+ font-size: 14px
 
 }
 
 
 .news-home-container {
-width:100%;
-height:496px;
-margin-top:20px;
-background-color:white;
+    width:100%;
+    height:496px;
+    margin-top:20px;
+    background-color:white;
 }
 
 .haberler-sayfasi {
-width:100%;
-height:916px;
-background-color:white;
+    width:100%;
+    height:916px;
+    background-color:white;
 }
 
 .takim-sayfasi {
@@ -537,15 +537,29 @@ background-color:white;
 
 .haber-yazisi-anasayfadaki {
     position: absolute;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: bold;
     color: white;
     bottom: 0;
-    background: rgba(253,237,0,0.6);
+    background-color:rgba(0, 135, 0, 0.6);
     padding: 14px;
     width: 100%;
-    line-height: 41px;
+    line-height: 20px;
     text-shadow: 1px 1px 5px black;
+    text-decoration: uppercase;
+}
+
+.haber-yazisi-anasayfadaki-ust {
+    background-color:rgba(0, 0, 0, 0.6);
+    bottom:48px;
+    color:white;
+    font-size:20px;
+    font-weight:normal;
+    line-height:15px;
+    padding:14px;
+    position:absolute;
+    text-shadow:black 1px 1px 5px;
+    width:100%;
 }
 
 #formadanumaram {
@@ -774,20 +788,20 @@ background-color:white;
 	height:120px;
 	margin:20px 0px;
 	background-image: url("http://www.learnarabic.com/assets/images/st-banner-learnarabic.png");
-	
+
 }
 
 .navbar-header {
-float:right;
+    float:right;
 
 }
 
 a.navbar-brand {
-color:#ddd !important;
+    color:#ddd !important;
 }
 
 .container-fluid,.navbar-collapse{
-padding-left:0px;
+    padding-left:0px;
 }
 
 .navbar-nav>li>a:hover {
@@ -814,11 +828,11 @@ padding-left:0px;
 }
 
 .copyrightyazisi {
-      text-align: center;
-      font-size: 14px;
-      margin-top: 56px;
-      margin-right: 47px;
-      color:#454545;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 56px;
+  margin-right: 47px;
+  color:#454545;
 }
 }
 

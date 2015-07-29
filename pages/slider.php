@@ -1,58 +1,58 @@
 <script>
 
-        jQuery(document).ready(function ($) {
+    jQuery(document).ready(function ($) {
 
-            var _SlideshowTransitions = [
+        var _SlideshowTransitions = [
             //Fade in L
-                {$Duration: 1200, x: 0.3, $During: { $Left: [0.3, 0.7] }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            {$Duration: 1200, x: 0.3, $During: { $Left: [0.3, 0.7] }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
             //Fade out R
-                , { $Duration: 1200, x: -0.3, $SlideOut: true, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            , { $Duration: 1200, x: -0.3, $SlideOut: true, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
             //Fade in R
-                , { $Duration: 1200, x: -0.3, $During: { $Left: [0.3, 0.7] }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            , { $Duration: 1200, x: -0.3, $During: { $Left: [0.3, 0.7] }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
             //Fade out L
-                , { $Duration: 1200, x: 0.3, $SlideOut: true, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            , { $Duration: 1200, x: 0.3, $SlideOut: true, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
 
             //Fade in T
-                , { $Duration: 1200, y: 0.3, $During: { $Top: [0.3, 0.7] }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            , { $Duration: 1200, y: 0.3, $During: { $Top: [0.3, 0.7] }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
             //Fade out B
-                , { $Duration: 1200, y: -0.3, $SlideOut: true, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            , { $Duration: 1200, y: -0.3, $SlideOut: true, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
             //Fade in B
-                , { $Duration: 1200, y: -0.3, $During: { $Top: [0.3, 0.7] }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            , { $Duration: 1200, y: -0.3, $During: { $Top: [0.3, 0.7] }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
             //Fade out T
-                , { $Duration: 1200, y: 0.3, $SlideOut: true, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            , { $Duration: 1200, y: 0.3, $SlideOut: true, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
 
             //Fade in LR
-                , { $Duration: 1200, x: 0.3, $Cols: 2, $During: { $Left: [0.3, 0.7] }, $ChessMode: { $Column: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            , { $Duration: 1200, x: 0.3, $Cols: 2, $During: { $Left: [0.3, 0.7] }, $ChessMode: { $Column: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
             //Fade out LR
-                , { $Duration: 1200, x: 0.3, $Cols: 2, $SlideOut: true, $ChessMode: { $Column: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            , { $Duration: 1200, x: 0.3, $Cols: 2, $SlideOut: true, $ChessMode: { $Column: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
             //Fade in TB
-                , { $Duration: 1200, y: 0.3, $Rows: 2, $During: { $Top: [0.3, 0.7] }, $ChessMode: { $Row: 12 }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            , { $Duration: 1200, y: 0.3, $Rows: 2, $During: { $Top: [0.3, 0.7] }, $ChessMode: { $Row: 12 }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
             //Fade out TB
-                , { $Duration: 1200, y: 0.3, $Rows: 2, $SlideOut: true, $ChessMode: { $Row: 12 }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            , { $Duration: 1200, y: 0.3, $Rows: 2, $SlideOut: true, $ChessMode: { $Row: 12 }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
 
             //Fade in LR Chess
-                , { $Duration: 1200, y: 0.3, $Cols: 2, $During: { $Top: [0.3, 0.7] }, $ChessMode: { $Column: 12 }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            , { $Duration: 1200, y: 0.3, $Cols: 2, $During: { $Top: [0.3, 0.7] }, $ChessMode: { $Column: 12 }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
             //Fade out LR Chess
-                , { $Duration: 1200, y: -0.3, $Cols: 2, $SlideOut: true, $ChessMode: { $Column: 12 }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            , { $Duration: 1200, y: -0.3, $Cols: 2, $SlideOut: true, $ChessMode: { $Column: 12 }, $Easing: { $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
             //Fade in TB Chess
-                , { $Duration: 1200, x: 0.3, $Rows: 2, $During: { $Left: [0.3, 0.7] }, $ChessMode: { $Row: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            , { $Duration: 1200, x: 0.3, $Rows: 2, $During: { $Left: [0.3, 0.7] }, $ChessMode: { $Row: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
             //Fade out TB Chess
-                , { $Duration: 1200, x: -0.3, $Rows: 2, $SlideOut: true, $ChessMode: { $Row: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            , { $Duration: 1200, x: -0.3, $Rows: 2, $SlideOut: true, $ChessMode: { $Row: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
 
             //Fade in Corners
-                , { $Duration: 1200, x: 0.3, y: 0.3, $Cols: 2, $Rows: 2, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $ChessMode: { $Column: 3, $Row: 12 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            , { $Duration: 1200, x: 0.3, y: 0.3, $Cols: 2, $Rows: 2, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $ChessMode: { $Column: 3, $Row: 12 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
             //Fade out Corners
-                , { $Duration: 1200, x: 0.3, y: 0.3, $Cols: 2, $Rows: 2, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $SlideOut: true, $ChessMode: { $Column: 3, $Row: 12 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
+            , { $Duration: 1200, x: 0.3, y: 0.3, $Cols: 2, $Rows: 2, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $SlideOut: true, $ChessMode: { $Column: 3, $Row: 12 }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Outside: true }
 
             //Fade Clip in H
-                , { $Duration: 1200, $Delay: 20, $Clip: 3, $Assembly: 260, $Easing: { $Clip: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            , { $Duration: 1200, $Delay: 20, $Clip: 3, $Assembly: 260, $Easing: { $Clip: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
             //Fade Clip out H
-                , { $Duration: 1200, $Delay: 20, $Clip: 3, $SlideOut: true, $Assembly: 260, $Easing: { $Clip: $JssorEasing$.$EaseOutCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            , { $Duration: 1200, $Delay: 20, $Clip: 3, $SlideOut: true, $Assembly: 260, $Easing: { $Clip: $JssorEasing$.$EaseOutCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
             //Fade Clip in V
-                , { $Duration: 1200, $Delay: 20, $Clip: 12, $Assembly: 260, $Easing: { $Clip: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            , { $Duration: 1200, $Delay: 20, $Clip: 12, $Assembly: 260, $Easing: { $Clip: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
             //Fade Clip out V
-                , { $Duration: 1200, $Delay: 20, $Clip: 12, $SlideOut: true, $Assembly: 260, $Easing: { $Clip: $JssorEasing$.$EaseOutCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
-                ];
+            , { $Duration: 1200, $Delay: 20, $Clip: 12, $SlideOut: true, $Assembly: 260, $Easing: { $Clip: $JssorEasing$.$EaseOutCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
+            ];
 
             var options = {
                 $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
@@ -104,59 +104,59 @@
             //responsive code end
         });
     </script>
-<div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 663px;
-        height: 400px; background: #191919; overflow: hidden;">
+    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 663px;
+    height: 400px; background: #191919; overflow: hidden;">
 
-        <!-- Loading Screen -->
-        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
-                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
-            </div>
-            <div style="position: absolute; display: block; background: url(images/loading.gif) no-repeat center center;
-                top: 0px; left: 0px;width: 100%;height:100%;">
-            </div>
-        </div>
+    <!-- Loading Screen -->
+    <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+        <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+        background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+    </div>
+    <div style="position: absolute; display: block; background: url(images/loading.gif) no-repeat center center;
+    top: 0px; left: 0px;width: 100%;height:100%;">
+</div>
+</div>
 
-        <!-- Slides Container -->
-        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 663px; height: 300px; overflow: hidden;">
-            <div>
-                <a href="#"><img u="image" src="images/01.jpg" /> <div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... ŞOK TRANSFER </div> </a>
-                <img u="thumb" src="images/thumb-01.jpg" />
-            </div>
-            <div>
-                <a href="#"><img u="image" src="images/02.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
-                <img u="thumb" src="images/thumb-02.jpg" />
-            </div>
-            <div>
-                <a href="#"><img u="image" src="images/03.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
-                <img u="thumb" src="images/thumb-03.jpg" />
-            </div>
-            <div>
-                <a href="#"><img u="image" src="images/04.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
-                <img u="thumb" src="images/thumb-04.jpg" />
-            </div>
-            <div>
-                <a href="#"><img u="image" src="images/05.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
-                <img u="thumb" src="images/thumb-05.jpg" />
-            </div>
-            <div>
-                <a href="#"><img u="image" src="images/06.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
-                <img u="thumb" src="images/thumb-06.jpg" />
-            </div>
-            <div>
-                <a href="#"><img u="image" src="images/07.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
-                <img u="thumb" src="images/thumb-07.jpg" />
-            </div>
-			
-			<div>
-                <a href="#"><img u="image" src="images/07.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
-                <img u="thumb" src="images/thumb-07.jpg" />
-            </div>
-        </div>
-        
-        <!--#region Arrow Navigator Skin Begin -->
-        <style>
-            /* jssor slider arrow navigator skin 05 css */
+<!-- Slides Container -->
+<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 663px; height: 300px; overflow: hidden;">
+    <div>
+        <a href="#"><img u="image" src="images/01.jpg" /> <div class="haber-yazisi-anasayfadaki-ust">Körükspor'un yıldız oyuncusunda sakatlık belirtisi! </div><div class="haber-yazisi-anasayfadaki">Dizindeki ağrı, maça yetişmesi...</div> </a>
+        <img u="thumb" src="images/thumb-01.jpg" />
+    </div>
+    <div>
+        <a href="#"><img u="image" src="images/02.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
+        <img u="thumb" src="images/thumb-02.jpg" />
+    </div>
+    <div>
+        <a href="#"><img u="image" src="images/03.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
+        <img u="thumb" src="images/thumb-03.jpg" />
+    </div>
+    <div>
+        <a href="#"><img u="image" src="images/04.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
+        <img u="thumb" src="images/thumb-04.jpg" />
+    </div>
+    <div>
+        <a href="#"><img u="image" src="images/05.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
+        <img u="thumb" src="images/thumb-05.jpg" />
+    </div>
+    <div>
+        <a href="#"><img u="image" src="images/06.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
+        <img u="thumb" src="images/thumb-06.jpg" />
+    </div>
+    <div>
+        <a href="#"><img u="image" src="images/07.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
+        <img u="thumb" src="images/thumb-07.jpg" />
+    </div>
+
+    <div>
+        <a href="#"><img u="image" src="images/07.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
+        <img u="thumb" src="images/thumb-07.jpg" />
+    </div>
+</div>
+
+<!--#region Arrow Navigator Skin Begin -->
+<style>
+    /* jssor slider arrow navigator skin 05 css */
             /*
             .jssora05l                  (normal)
             .jssora05r                  (normal)
@@ -207,75 +207,75 @@
                 height: 100px;
             }
 
-                .jssort01 .p {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 72px;
-                    height: 72px;
-                }
+            .jssort01 .p {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 72px;
+                height: 72px;
+            }
 
-                .jssort01 .t {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    border: none;
-                }
+            .jssort01 .t {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
 
-                .jssort01 .w {
-                    position: absolute;
-                    top: 0px;
-                    left: 0px;
-                    width: 100%;
-                    height: 100%;
-                }
+            .jssort01 .w {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+            }
 
-                .jssort01 .c {
-                    position: absolute;
-                    top: 0px;
-                    left: 0px;
-                    width: 68px;
-                    height: 68px;
-                    border: #000 2px solid;
-                    box-sizing: content-box;
-					cursor:pointer;
-                }
+            .jssort01 .c {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 68px;
+                height: 68px;
+                border: #000 2px solid;
+                box-sizing: content-box;
+                cursor:pointer;
+            }
 
-                .jssort01 .pav .c {
-                    top: 2px;
-                    _top: 0px;
-                    left: 2px;
-                    _left: 0px;
-                    width: 68px;
-                    height: 68px;
-                    border: #000 0px solid;
-                    _border: #fff 2px solid;
-                    background-position: 50% 50%;
-                }
+            .jssort01 .pav .c {
+                top: 2px;
+                _top: 0px;
+                left: 2px;
+                _left: 0px;
+                width: 68px;
+                height: 68px;
+                border: #000 0px solid;
+                _border: #fff 2px solid;
+                background-position: 50% 50%;
+            }
 
-                .jssort01 .p:hover .c {
-                    top: 0px;
-                    left: 0px;
-                    width: 70px;
-                    height: 70px;
-                    border: #fff 1px solid;
-                    background-position: 50% 50%;
-                }
+            .jssort01 .p:hover .c {
+                top: 0px;
+                left: 0px;
+                width: 70px;
+                height: 70px;
+                border: #fff 1px solid;
+                background-position: 50% 50%;
+            }
 
-                .jssort01 .p.pdn .c {
-                    background-position: 50% 50%;
-                    width: 68px;
-                    height: 68px;
-                    border: #000 2px solid;
-                }
+            .jssort01 .p.pdn .c {
+                background-position: 50% 50%;
+                width: 68px;
+                height: 68px;
+                border: #000 2px solid;
+            }
 
-                * html .jssort01 .c, * html .jssort01 .pdn .c, * html .jssort01 .pav .c {
-                    /* ie quirks mode adjust */
-                    width /**/: 72px;
-                    height /**/: 72px;
-                }
+            * html .jssort01 .c, * html .jssort01 .pdn .c, * html .jssort01 .pav .c {
+                /* ie quirks mode adjust */
+                width /**/: 72px;
+                height /**/: 72px;
+            }
         </style>
 
         <!-- thumbnail navigator container -->
