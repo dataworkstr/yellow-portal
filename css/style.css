@@ -199,14 +199,41 @@ body{
   font-weight: 600;
   height: 22px;
 }
+
 .mac-devami-git a {
     color:#1d1d1b;
     text-decoration: inherit;
 }
+
 .mac-devami-git:hover {
     background-color: #ffed00;
 }
 
+.haber-devami-git {
+    border-top: 1px solid #ddd;
+    bottom:0;
+    font-size:12px;
+    font-weight:600;
+    height:22px;
+    padding-top:4px;
+    position:absolute;
+    text-align:center;
+    width:97%;
+}
+
+.haber-devami-git a {
+    color:#1d1d1b;
+    text-decoration: inherit;
+}
+
+.haber-devami-git:hover {
+    background-color: #ffed00;
+}
+
+.news-inner-container {
+    display: block;
+    clear: both;
+}
 
 .anasayfa-haber-baslik {
     width: 100%;
@@ -546,7 +573,7 @@ body{
     width: 100%;
     line-height: 20px;
     text-shadow: 1px 1px 5px black;
-    text-decoration: uppercase;
+    text-transform: uppercase;
 }
 
 .haber-yazisi-anasayfadaki-ust {
@@ -560,6 +587,7 @@ body{
     position:absolute;
     text-shadow:black 1px 1px 5px;
     width:100%;
+    text-transform: capitalize;
 }
 
 #formadanumaram {
@@ -718,7 +746,6 @@ body{
 .haber-detay-yazi {
     font-weight: 200;
     font-size: 15px;
-    font-family: tahoma;
     line-height: 150%;
     margin-bottom: 30px;
 }

@@ -118,7 +118,7 @@
 </div>
 
 <!-- Slides Container -->
-<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 663px; height: 300px; overflow: hidden;">
+<div u="slides" lang="tr" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 663px; height: 300px; overflow: hidden;">
     <div>
         <a href="#"><img u="image" src="images/01.jpg" /> <div class="haber-yazisi-anasayfadaki-ust">Körükspor'un yıldız oyuncusunda sakatlık belirtisi! </div><div class="haber-yazisi-anasayfadaki">Dizindeki ağrı, maça yetişmesi...</div> </a>
         <img u="thumb" src="images/thumb-01.jpg" />

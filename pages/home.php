@@ -1,11 +1,11 @@
 <div id="row">
 <div class="col-md-9">
-<?php include "pages/slider.php";?>
+	<?php include "components/slider.php";?>
 
-<?php include "pages/news-home.php";?>
+	<?php include "components/news-home.php";?>
 
 </div>
 
-<?php include "pages/side-panel.php";?>
+<?php include "components/side-panel.php";?>
 
 </div>

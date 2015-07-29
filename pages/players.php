@@ -58,6 +58,6 @@
 
 </div>
 
-<?php include "pages/side-panel.php";?>
+<?php include "components/side-panel.php";?>
 
 </div>
