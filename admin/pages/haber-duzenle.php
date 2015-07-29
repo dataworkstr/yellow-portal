@@ -19,15 +19,15 @@ if($kontrol)
    }
 
 
-   $icerik = str_replace("'", "\'", $_POST['icerik']);
+   $icerik = addslashes($_POST['icerik']);
 
-   $haber_baslik = str_replace("'", "\'", $_POST['baslik']);
+   $haber_baslik = addslashes($_POST['baslik']);
 
-   $haber_baslik2 = str_replace("'", "\'", $_POST['baslik2']);
+   $haber_baslik2 = addslashes($_POST['baslik2']);
 
    $etiket = $_POST['tags'];
 
-   $haber_baslikseo = cevir(str_replace("'", "\'", $_POST['baslik']));
+   $haber_baslikseo = cevir(addslashes($_POST['baslik']));
 
    $haberuye = $_SESSION["username"];
 

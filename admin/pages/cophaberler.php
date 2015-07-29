@@ -3,7 +3,7 @@
 
     <table class="table table-bordered">
   <thead>
-    <tr>
+    <tr style="font-weight: bold;background-color: #fded00;">
       <td>#</td>
       <td>Haber Başlığı 1</td>
 
