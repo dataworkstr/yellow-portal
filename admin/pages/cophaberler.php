@@ -1,6 +1,5 @@
 <div class="widgetbox box-inverse">
-                <h4 class="widgettitle">Haberler Listesi
-                <a href="admin.php?div=cophaberler" class="btn btn-default pull-right" style="float:right;margin-top: -7px;"><i class="fa fa-trash-o"></i> Çöp Kutusu</a></h4>
+                <h4 class="widgettitle">Çöp Haber Listesi </h4>
 
     <table class="table table-bordered">
   <thead>
@@ -13,7 +12,7 @@
       <td>Tarih</td>
 
       <td>Üye</td>
-      <td colspan="2">İşlemler</td>
+      <td>İşlemler</td>
     </tr>
     </thead>
 
@@ -27,7 +26,7 @@
 	$ssayisi = ceil($ksayisi / $limit);
 	$baslangic = ($sayfa*$limit)-$limit;
 
-  $calistir = mysql_query("select * from haberler order by id DESC LIMIT $baslangic, $limit") or die("Hata Olustu!");
+  $calistir = mysql_query("select * from haberlercop order by id DESC LIMIT $baslangic, $limit") or die("Hata Olustu!");
   mysql_query("SET NAMES 'utf8'");
   while($oku=mysql_fetch_assoc($calistir))
 
@@ -46,10 +45,9 @@
       <td><?php echo $oku['haber_uye']; ?></td>
 
       <td>
-      <a href="admin.php?div=haber-duzenle&id=<?php echo $oku['id']; ?>"><i class="fa fa-pencil-square-o" style="font-size: 20px;"></i></a>
+      <a href="admin.php?div=haber-geri-al&id=<?php echo $oku['id']; ?>"><i class="fa fa-undo" style="font-size: 20px;"></i></a>
       </td>
 
-      <td><a href="admin.php?div=haber-sil&id=<?php echo $oku['id']; ?>"><i class="fa fa-trash-o" style="font-size: 20px;"></i></a></td>
 
 
 
@@ -70,24 +68,17 @@ echo "</tr>"."</table>";
 			if($i==$sayfa){
 				echo "<li class='active'><span>".$i."</span></li>";
 			}else{
-				echo "<li><a href='?div=haberler&sayfa=$i'>$i</a></li>";
+				echo "<li><a href='?div=cophaberler&sayfa=$i'>$i</a></li>";
 			}
 		}
 	}
 	if($sayfa != $ssayisi){
-			echo "<li><a href="."?div=haberler&sayfa=".($sayfa+1).">&raquo</a></li>";
+			echo "<li><a href="."?div=cophaberler&sayfa=".($sayfa+1).">&raquo</a></li>";
 		}
 	echo '</ul></div>';
 
 
 ?>
-
-<div class="box-footer clearfix no-border">
-
-     <a href="admin.php?div=haber-ekle">
-        <button class="btn btn-default pull-right"><i class="fa fa-plus"></i> Yeni Haber Ekle</button>
-    </a>
- </div>
 
 
 </div>
