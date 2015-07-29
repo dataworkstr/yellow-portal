@@ -11,6 +11,6 @@
   </div>
 
   ";
-  header("Location: index.php");
+  header("Refresh:3; url=index.php");
   ob_end_flush();
 ?>

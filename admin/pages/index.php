@@ -24,6 +24,14 @@ switch($yello){
         include "pages/haber-sil.php";
         break;
 
+        case "cophaberler" :
+        include "pages/cophaberler.php";
+        break;
+
+        case "haber-geri-al" :
+        include "pages/haber-geri-al.php";
+        break;
+
     case "cikis" :
     include "pages/cikis.php";
     break;

@@ -30,12 +30,6 @@ mysql_set_charset('utf8',$baglanti);
 }
 
 
-function vericek ($tablo) {
-    $goster = mysql_fetch_array(mysql_query(select * from $tablo));
-
-    return $goster;
-}
-
  function format_date($str) {
         $month = array(" ", "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık");
         $y = explode(' ', $str);
