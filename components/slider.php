@@ -120,14 +120,21 @@
 <!-- Slides Container -->
 <div u="slides" lang="tr" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 663px; height: 300px; overflow: hidden;">
 
-   <?php
+ <?php
 
-   $habercek = mysql_query("select * from haberler order by id DESC limit 8");
+ $habercek = mysql_query("select * from haberler order by id DESC limit 8");
 
-while($oku = mysql_fetch_array($habercek)){
+ while($oku = mysql_fetch_array($habercek)){
     ?>
     <div>
-        <a href="#"><img u="image" src="<?php echo $oku['haber_resim']; ?>" /> <div class="haber-yazisi-anasayfadaki-ust"><?php echo $oku['haber_adi']; ?> </div><div class="haber-yazisi-anasayfadaki"><?php echo $oku['haber_adi2']; ?></div> </a>
+        <a href="#"><img u="image" src="<?php echo $oku['haber_resim']; ?>" /> 
+            <div class="haber-yazisi-anasayfadaki-ust">
+                <?php echo stripslashes($oku['haber_adi']); ?> 
+            </div>
+            <div class="haber-yazisi-anasayfadaki">
+                <?php echo stripslashes($oku['haber_adi2']); ?>
+            </div> 
+        </a>
         <img u="thumb" src="<?php echo $oku['haber_resim']; ?>" />
     </div>
 

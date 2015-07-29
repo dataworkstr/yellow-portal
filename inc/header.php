@@ -1,5 +1,8 @@
 <html>
-<?php include "admin/ayar.php"; ?>
+<?php 
+error_reporting(false);
+include "admin/ayar.php"; 
+?>
 <head>
 
   <meta charset="utf-8"/>
