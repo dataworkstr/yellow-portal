@@ -1,5 +1,5 @@
 <div class="widgetbox box-inverse">
-                <h4 class="widgettitle">Çöp Haber Listesi </h4>
+                <h4 class="widgettitle">Çöp Haber Listesi <a href="admin.php?div=haberler" class="btn btn-default pull-right" style="float:right;margin-top: -7px;"><i class="fa fa-arrow-circle-left"></i> Geri Dön</a></h4>
 
     <table class="table table-bordered">
   <thead>

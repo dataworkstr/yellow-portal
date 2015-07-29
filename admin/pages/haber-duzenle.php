@@ -131,7 +131,7 @@ $oku = mysql_fetch_array(mysql_query("select * from haberler where id='$kiminki'
 
 
         <p class="stdformbutton" style="text-align:center;">
-            <input class="btn btn-primary" type="submit" name="button" value="Gönder"/>
+            <input class="btn btn-primary" type="submit" name="button" value="Düzenle"/>
         </p>
     </form>
 </div>
