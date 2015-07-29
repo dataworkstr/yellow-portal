@@ -4,7 +4,7 @@
 
     <table class="table table-bordered">
   <thead>
-    <tr>
+    <tr style="font-weight: bold;background-color: #fded00;">
       <td>#</td>
       <td>Haber Başlığı 1</td>
 
@@ -45,11 +45,11 @@
 
       <td><?php echo $oku['haber_uye']; ?></td>
 
-      <td>
+      <td style="text-align: center;">
       <a href="admin.php?div=haber-duzenle&id=<?php echo $oku['id']; ?>"><i class="fa fa-pencil-square-o" style="font-size: 20px;"></i></a>
       </td>
 
-      <td><a href="admin.php?div=haber-sil&id=<?php echo $oku['id']; ?>"><i class="fa fa-trash-o" style="font-size: 20px;"></i></a></td>
+      <td style="text-align: center;"><a href="admin.php?div=haber-sil&id=<?php echo $oku['id']; ?>"><i class="fa fa-trash-o" style="font-size: 20px;"></i></a></td>
 
 
 

@@ -51,7 +51,7 @@ if($_SESSION['login'] != "true") die("permission denied");
 
     <div class="header">
             <div class="logo">
-                <a href="dashboard.html"><img src="images/logo.png" alt="" /></a>
+                <a href="admin.php"><img src="images/logo.png" alt="" /></a>
             </div>
             <div class="headerinner">
                 <ul class="headmenu">
@@ -132,13 +132,19 @@ if($_SESSION['login'] != "true") die("permission denied");
                             <li class="viewmore"><a href="charts.html">View More Statistics</a></li>
                         </ul>
                     </li>
+                    <?php
+
+
+                            $adi = $_SESSION["username"];
+                 $goster = mysql_fetch_array(mysql_query("select * from kullanicilar where username='$adi' "));
+
+                    ?>
                     <li class="right">
                         <div class="userloggedinfo">
-                            <img src="images/photos/thumb1.png" alt="" />
+                            <img src="../<?php echo $goster['profil_photo']; ?>" alt="" />
                             <div class="userinfo">
                                 <h5>
                                     <?php
-                                    $goster = mysql_fetch_array(mysql_query("select * from kullanicilar where id=1"));
                                     echo $goster['adsoyad'];
                                     ?>
 
