@@ -30,6 +30,7 @@ font-family: 'Open Sans', sans-serif;
 
 .anket-title {
     margin-left: 20px;
+    margin-bottom: 5px;
 }
 
 .anket-side form li input{
@@ -42,6 +43,14 @@ font-family: 'Open Sans', sans-serif;
 
 .anket-side form p input{
     width: 80px;
+    background-color: #fded00;
+    color: #1d1d1d;
+    border: 0;
+    margin: 8px;
+    padding: 8px;
+}
+
+.anket-side form p input:hover{
     background-color: #1d1d1d;
     color: #fded00;
 }
@@ -245,7 +254,7 @@ background-color:white;
 }
 
 .anket{
-height:149px;
+height:175px;
 margin:20px 0px;
 background-color:white;
 }
@@ -267,11 +276,12 @@ background-color:white;
 .menu-home-icon {
   line-height: 20px;
   font-size: 20px;
+  margin-right: -10px;
 }
 
 
 .puantablosu2{
-    height:316px;
+    height:290px;
     margin:20px 0px;
     background-color:white;
 }
@@ -316,11 +326,42 @@ background-color:white;
 }
 
 .oyuncu-liste {
-    float:left;
-    width: 110px;
-    height: 170px;
+    text-align: center;
     margin-left: 20px;
     margin-top: 20px;
+}
+
+.oyuncu-adi-container {
+    position: absolute;
+    bottom: 0;
+    width: 96%;
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    color: #1d1d1d;
+    background-color: #fded00;
+
+}
+
+.oyuncu-adi-container a{
+    color: #1d1d1d;
+    text-decoration: none;
+    font-weight: 500;
+
+}
+
+
+.oyuncu-liste2 {
+    float: left;
+    width: 110px;
+    height: 120px;
+    margin-left: 20px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.oyuncu-liste p {
+    margin-top:20px;
 }
 
 .oyuncuresim {
@@ -333,6 +374,255 @@ background-color:white;
     width: 100%;
     font-size: 14px;
     font-weight: 500;
+    margin-top: 20px;
+}
+
+.takim-detayi-sayfasi {
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.takim-detayi-sayfasi hr{
+    margin-top: 6px;
+}
+
+.takim-detayi-sayfasi h1{
+    text-align: left;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.takim-detayi-sayfasi ul{
+    text-align: left;
+    line-height: 24px;
+}
+
+.takim-detayi-sayfasi ul li label{
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.oyuncu-adi ul {
+    float:left;
+}
+.oyuncu-adi ul li {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.oyuncu-adi2 {
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.oyuncu-adi2 ul {
+    float:left;
+}
+.oyuncu-adi2 ul li {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+
+.sakatlanmis-oyuncu {
+    width: 35px;
+    font-weight: 700;
+    height: 20px;
+    font-size: 13px;
+    padding-top: 1px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: red;
+    color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.oyuncu-tablosu {
+
+}
+
+.yabanci-oyuncu {
+    width: 35px;
+    font-weight: 700;
+    height: 20px;
+    padding-top: 1px;
+    font-size: 13px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #3981C4;
+    color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.oyuncu-sol-resim {
+    margin:20px;
+    width: 38%;
+    float:left;
+    border: 3px solid #fded00;
+}
+
+.detayli-oyuncu-bilgi-kismi-alt {
+    width: 94%;
+    float: left;
+    padding: 20px;
+}
+
+.saha-resim-ust {
+    width: 94%;
+    margin: 20px;
+}
+
+.saha-detaylari-alt {
+    width: 94%;
+    margin: 20px;
+}
+
+.saha-detaylari-alt-yan1{
+    width: 46%;
+    float:left;
+    margin-right: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.saha-detaylari-alt-yan1 hr{
+    margin-top: 7px;
+}
+
+.saha-detaylari-alt-yan1 ul{
+    text-align: left;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.saha-detaylari-alt-yan1 ol{
+    text-align: center;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 29px;
+}
+
+.saha-detaylari-alt-yan1 ul li label{
+    font-weight: 600;
+}
+
+.baslik-yani-uzatici {
+    width: 5px;
+    background-color: #fded00;
+    height: 25px;
+    float:left;
+    margin-right: 5px;
+}
+
+.saha-linki {
+    text-align: center;
+    font-size: 15px;
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+
+.col-xs-12 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.haber-yazisi-anasayfadaki {
+    position: absolute;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    bottom: 0;
+    background: rgba(253,237,0,0.6);
+    padding: 14px;
+    width: 100%;
+    line-height: 41px;
+    text-shadow: 1px 1px 5px black;
+}
+
+#formadanumaram {
+    background-image: url("../images/formaresmi.png");
+    padding: 3px;
+    position: relative;
+    background-repeat: no-repeat;
+    font-size: 34px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    padding-left: 26px;
+    padding-bottom: 31px;
+    text-align: center;
+    width: 100px;
+    padding-top: 15px;
+    padding-right: 30px;
+    letter-spacing: -2px;
+    float: left;
+}
+
+.yanindaformaresmi {
+    float:left;
+    width: 240px;
+}
+
+.oyuncu-detay-yazi {
+    float:left;
+    width: 52%;
+    margin-top: 20px;
+}
+
+.oyuncu-detay-yazi ul {
+    display: inline-block;
+}
+
+.oyuncu-detay-yazi h1{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.oyuncu-detay-yazi label{
+    float:left;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.oyuncu-detay-yazi ul li{
+    line-height: 24px;
+}
+
+
+
+.oyuncu-detay-yazi b{
+    font-size: 19px;
+}
+
+.oyuncu-detay-yazi hr{
+    margin-top: 5px;
+}
+
+.oyuncu-detay-yazi ıl{
+    font-size:14px;
+}
+
+.yerli-oyuncu {
+    width: 35px;
+    font-weight: 700;
+    height: 20px;
+    font-size: 13px;
+    padding-top: 1px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #fded00;
+    color: #1d1d1d;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
 }
 
 .statlar {
@@ -340,18 +630,28 @@ background-color:white;
     margin-right: 20px;
     margin-top: 20px;
     float:left;
-    width: 280px;
+    width: 43%;
+    position: relative;
 }
 
 .statresmi {
-    width: 280px;
+    width: 100%;
 }
 
 .statismi {
     text-align: center;
-    margin: 11px;
     font-size: 17px;
     font-weight: 700;
+    position: absolute;
+    bottom: 0;
+    background-color: #fded00;
+    width: 100%;
+    padding: 8px;
+    color:#1d1d1d;
+}
+
+.statismi a{
+    color:#1d1d1d;
 }
 
 .haberler-sayfasi ul hr {
@@ -406,10 +706,11 @@ background-color:white;
     font-size: 15px;
     font-family: tahoma;
     line-height: 150%;
+    margin-bottom: 30px;
 }
 
 .haber-zamani {
-    margin-bottom: 14px;
+    margin-bottom: 30px;
     font-size: 13px;
 }
 

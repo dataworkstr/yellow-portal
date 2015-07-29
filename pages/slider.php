@@ -120,36 +120,36 @@
         <!-- Slides Container -->
         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 663px; height: 300px; overflow: hidden;">
             <div>
-                <img u="image" src="images/01.jpg" />
+                <a href="#"><img u="image" src="images/01.jpg" /> <div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... ŞOK TRANSFER </div> </a>
                 <img u="thumb" src="images/thumb-01.jpg" />
             </div>
             <div>
-                <img u="image" src="images/02.jpg" />
+                <a href="#"><img u="image" src="images/02.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
                 <img u="thumb" src="images/thumb-02.jpg" />
             </div>
             <div>
-                <img u="image" src="images/03.jpg" />
+                <a href="#"><img u="image" src="images/03.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
                 <img u="thumb" src="images/thumb-03.jpg" />
             </div>
             <div>
-                <img u="image" src="images/04.jpg" />
+                <a href="#"><img u="image" src="images/04.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
                 <img u="thumb" src="images/thumb-04.jpg" />
             </div>
             <div>
-                <img u="image" src="images/05.jpg" />
+                <a href="#"><img u="image" src="images/05.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
                 <img u="thumb" src="images/thumb-05.jpg" />
             </div>
             <div>
-                <img u="image" src="images/06.jpg" />
+                <a href="#"><img u="image" src="images/06.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
                 <img u="thumb" src="images/thumb-06.jpg" />
             </div>
             <div>
-                <img u="image" src="images/07.jpg" />
+                <a href="#"><img u="image" src="images/07.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
                 <img u="thumb" src="images/thumb-07.jpg" />
             </div>
 			
 			<div>
-                <img u="image" src="images/07.jpg" />
+                <a href="#"><img u="image" src="images/07.jpg" /><div class="haber-yazisi-anasayfadaki">ŞOK ŞOK ŞOK! YILIN KUMPASI... </div></a>
                 <img u="thumb" src="images/thumb-07.jpg" />
             </div>
         </div>

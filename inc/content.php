@@ -13,14 +13,27 @@
 		case "teams" :
 		include "pages/teams.php";
 		break;
+
+            case "takim-detay" :
+            include "pages/takim-detay.php";
+            break;
+
 		
 		case "players" :
 		include "pages/players.php";
 		break;
+
+            case "oyuncu-detay" :
+            include "pages/oyuncu-detay.php";
+            break;
 		
 		case "stadium" :
 		include "pages/stadium.php";
 		break;
+
+            case "saha-detay" :
+            include "pages/saha-detay.php";
+            break;
 		
 		default :
 		include "pages/home.php";

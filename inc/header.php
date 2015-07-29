@@ -1,6 +1,7 @@
 <html>
 
 <head>
+
         <meta charset="utf-8"/>
         <title>Yellow Pages Portal</title>
         <meta name="description" content="Yellow Pages Portal"/>     
@@ -18,6 +19,7 @@
 		<script type="text/javascript" src="js/jssor.js"></script>
         <script type="text/javascript" src="js/jssor.slider.js"></script>
 		
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -25,37 +27,37 @@
 		
 		<link rel="stylesheet" href="css/style.css">
 		
-		
+
 </head>
 
 <div id="tum-site" class="row">
 
-<!-- <div class="advertise-top"> </div> -->
+  <!-- <div class="advertise-top"> </div> -->
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="index.php"><div class="header-logo"><img src="images/logo.png" width="92" height="86"/></div></a>
-    </div>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.php"><div class="header-logo"><img src="images/logo.png" width="92" height="86"/></div></a>
+      </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="index.php"><div class="menu-home-icon"><i class="fa fa-home"></i></div> <span class="sr-only">(current)</span></a></li>
-        <li><a href="index.php?page=news">Haberler</a></li>
-		<li><a href="index.php?page=teams">Takımlar</a></li>
-		<li><a href="index.php?page=players">Oyuncular</a></li>
-		<li><a href="index.php?page=stadium">Sahalar</a></li>
-		
-      </ul>
-    
-   
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="index.php"><div class="menu-home-icon"><i class="fa fa-home"></i></div> <span class="sr-only">(current)</span></a></li>
+          <li><a href="index.php?page=news">Haberler</a></li>
+          <li><a href="index.php?page=teams">Takımlar</a></li>
+          <li><a href="index.php?page=players">Oyuncular</a></li>
+          <li><a href="index.php?page=stadium">Sahalar</a></li>
 
-<!-- <div class="advertise-bottom"></div> -->
+        </ul>
 
 
-<body>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <!-- <div class="advertise-bottom"></div> -->
+
+
+  <body>
