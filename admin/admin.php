@@ -173,6 +173,14 @@ switch ($menuyak){
     $yak1 = "class='active'";
     break;
 
+        case "haber-ekle" :
+        $yak1 = "class='active'";
+        break;
+
+        case "haber-duzenle" :
+        $yak1 = "class='active'";
+        break;
+
     case "takimlar" :
     $yak2 = "class='active'";
     break;
@@ -180,6 +188,14 @@ switch ($menuyak){
     case "oyuncular" :
     $yak3 = "class='active'";
     break;
+
+        case "oyuncu-ekle" :
+        $yak3 = "class='active'";
+        break;
+
+        case "oyuncu-duzenle" :
+        $yak3 = "class='active'";
+        break;
 
     case "sahalar" :
     $yak4 = "class='active'";

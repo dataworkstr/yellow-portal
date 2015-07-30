@@ -1,7 +1,7 @@
 
 <?php
 
- $fiddycent = $_GET['id'];
+$fiddycent = $_GET['id'];
 
 @$kontrol = $_POST['button'];
 
@@ -16,43 +16,45 @@ if($kontrol)
 
     if(in_array(strtolower($_FILES['resim']['type']),$uzanti)){
 
-       move_uploaded_file($_FILES['resim']['tmp_name'],"./$dizin/$sayi-{$_FILES['resim']['name']}");
+     move_uploaded_file($_FILES['resim']['tmp_name'],"./$dizin/$sayi-{$_FILES['resim']['name']}");
 
 
 
-   }
+ }
 
 
-   $oyuncu_adi = addslashes($_POST['oyuncu_adi']);
-   $dogum_yeri = addslashes($_POST['dogum_yeri']);
-   $boy = addslashes($_POST['boy']);
+ $oyuncu_adi = addslashes($_POST['oyuncu_adi']);
+ $dogum_yeri = addslashes($_POST['dogum_yeri']);
+ $boy = addslashes($_POST['boy']);
 
-   $kilo = addslashes($_POST['kilo']);
-   $yas = addslashes($_POST['yas']);
-   $dogum_tarihi = addslashes($_POST['dogum_tarihi']);
+ $kilo = addslashes($_POST['kilo']);
+ $yas = addslashes($_POST['yas']);
+ $dogum_tarihi = addslashes($_POST['dogum_tarihi']);
 
-   $uyruk = addslashes($_POST['uyruk']);
-   $kulup = addslashes($_POST['kulup']);
+ $uyruk = addslashes($_POST['uyruk']);
+ $kulup = addslashes($_POST['kulup']);
 
-    if($_POST['pozisyon2'] and $_POST['pozisyon']){
-        $pozisyon = $_POST['pozisyon333'];
-    }else{
-        $pozisyon = addslashes($_POST['pozisyon']." ".$_POST['pozisyon2']);
-    }
-
-
-   $sirtno = addslashes($_POST['sirtno']);
-   $durum = addslashes($_POST['durum']);
-   $oyuncu_adiseo = cevir($oyuncu_adi);
-
-   $deger = "1.000.000 $";
+ if($_POST['ikincipozisyon'] == ""){
+    $pozisyon = $_POST['pozisyon333'];
+}else{
+    $a = $_POST['ilkpozisyon'];
+    $b = $_POST['ikincipozisyon'];
+    $pozisyon = $a." ".$b;
+}
 
 
-   if($_FILES['resim']['name'] == ''){
+$sirtno = addslashes($_POST['sirtno']);
+$durum = addslashes($_POST['durum']);
+$oyuncu_adiseo = cevir($oyuncu_adi);
 
-     $haber_resim = "images/oyuncu/default.jpg";
+$deger = "1.000.000";
 
- }else{
+
+if($_FILES['resim']['name'] == ''){
+
+   $haber_resim = $_POST['eskiresmi'];
+
+}else{
 
     $dizin2 = "images/oyuncu/";
 
@@ -62,30 +64,30 @@ if($kontrol)
 
 
 mysql_query("UPDATE oyuncular SET
-ad_soyad = '$oyuncu_adi',
-dogum_yeri = '$dogum_yeri',
-oyuncu_photo = '$haber_resim',
-boy = '$boy',
-kilo = '$kilo',
-yas = '$yas',
-dogum_tarihi = '$dogum_tarihi',
-uyruk = '$uyruk',
-kulub = '$kulup',
-pozisyon = '$pozisyon',
-deger = '$deger',
-numara = '$sirtno',
-ad_soyadseo = '$oyuncu_adiseo',
-durum = '$durum' where id ='$fiddycent'",$baglanti) or die("Veri eklenemedi".mysql_error());
+    ad_soyad = '$oyuncu_adi',
+    dogum_yeri = '$dogum_yeri',
+    oyuncu_photo = '$haber_resim',
+    boy = '$boy',
+    kilo = '$kilo',
+    yas = '$yas',
+    dogum_tarihi = '$dogum_tarihi',
+    uyruk = '$uyruk',
+    kulub = '$kulup',
+    pozisyon = '$pozisyon',
+    deger = '$deger',
+    numara = '$sirtno',
+    ad_soyadseo = '$oyuncu_adiseo',
+    durum = '$durum' where id ='$fiddycent'",$baglanti) or die("Veri eklenemedi".mysql_error());
 
 echo "
 
 <div class='alert alert-success alert-dismissable'>
 
-   <i class='fa fa-check'></i>
+ <i class='fa fa-check'></i>
 
-   <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+ <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
 
-   Oyuncu başarılı bir şekilde düzenlendi. Oyuncu sayfasına yönlendiriliyorsunuz...
+ Oyuncu başarılı bir şekilde düzenlendi. Oyuncu sayfasına yönlendiriliyorsunuz...
 
 </div>
 
@@ -103,7 +105,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
 <?php $ugurdk = mysql_fetch_array(mysql_query("select * from oyuncular where id = '$fiddycent'"));  ?>
 
 <div class="widgetbox box-inverse">
-    <h4 class="widgettitle">Oyuncu Ekle</h4>
+    <h4 class="widgettitle">Oyuncu Düzenle <a href="admin.php?div=oyuncular" class="btn btn-default pull-right" style="float:right;margin-top: -7px;"><i class="fa fa-arrow-circle-left"></i> Geri Dön</a></h4>
     <div class="widgetcontent nopadding">
         <form class="stdform stdform2" method="post" enctype="multipart/form-data">
             <p>
@@ -116,36 +118,36 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                 <span class="field"><input type="text" name="dogum_yeri" id="firstname2" class="input-large" value="<?php echo $ugurdk['dogum_yeri']; ?>"/></span>
             </p>
 
-             <p>
+            <p>
                 <label>Boy</label>
                 <span class="field"><input type="text" name="boy" id="firstname2" class="input-large" value="<?php echo $ugurdk['boy']; ?>"/></span>
             </p>
 
-             <p>
+            <p>
                 <label>Kilo</label>
                 <span class="field"><input type="text" name="kilo" id="firstname2" class="input-large" value="<?php echo $ugurdk['kilo']; ?>"/></span>
             </p>
 
-             <p>
+            <p>
                 <label>Yaş</label>
                 <span class="field"><input type="text" name="yas" id="firstname2" class="input-large" value="<?php echo $ugurdk['yas']; ?>"/></span>
             </p>
 
-             <p>
+            <p>
                 <label>Doğum Tarihi</label>
                 <span class="field">
 
-                <input id="datepicker" type="text" name="dogum_tarihi" class="input-large hasDatepicker" value="<?php echo $ugurdk['dogum_tarihi']; ?>">
+                    <input id="datepicker" type="text" name="dogum_tarihi" class="input-large hasDatepicker" value="<?php echo $ugurdk['dogum_tarihi']; ?>">
 
                 </span>
             </p>
 
-             <p>
+            <p>
                 <label>Uyruk</label>
                 <span class="field"><input type="text" name="uyruk" id="firstname2" class="input-large" value="<?php echo $ugurdk['uyruk']; ?>"/></span>
             </p>
 
-             <p>
+            <p>
                 <label>Kulüp</label>
                 <span class="field">
 
@@ -157,91 +159,94 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                 </span>
             </p>
 
-             <p>
+            <p>
                 <label>Pozisyon</label>
                 <input name="pozisyon333" value="<?php echo $ugurdk['pozisyon']; ?>" style="display:none;">
                 <span class="field">
-                       <select name="pozisyon" id="selection2" class="uniformselect">
+                 <select name="ilkpozisyon" id="selection2" class="uniformselect">
 
-                                <option>GK</option>
-                                <option>D</option>
-                                <option>DM</option>
-                                <option>M</option>
-                                <option>AM</option>
-                                <option>FC</option>
-                                <option>ST</option>
-                       </select>
-                       <br/>
-                        <select data-placeholder="Pozisyon seçin..." class="chzn-select" multiple="multiple" style="width: 220px;display: -webkit-box;" tabindex="4" name="pozisyon2">
+                    <option>GK</option>
+                    <option>D</option>
+                    <option>DM</option>
+                    <option>M</option>
+                    <option>AM</option>
+                    <option>FC</option>
+                    <option>ST</option>
+                </select>
+                <br/>
+                <select name="ikincipozisyon" data-placeholder="Pozisyon seçin..." class="chzn-select" multiple="multiple" style="width: 220px;display: -webkit-box;">
 
-                                <option>R</option>
-                                <option>L</option>
-                                <option>C</option>
+                    <option>R</option>
+                    <option>L</option>
+                    <option>C</option>
 
-                       </select>
-                 </span>
-            </p>
+                </select>
+            </span>
+        </p>
 
-             <p>
-                <label>Sırt No</label>
-                <span class="field">
+        <p>
+            <label>Sırt No</label>
+            <span class="field">
 
-                 <select name="sirtno" id="selection2" class="uniformselect">
-                    <?php
+               <select name="sirtno" id="selection2" class="uniformselect">
+                <?php
 
-                        $numaracek= mysql_fetch_array(mysql_query("SELECT * FROM oyuncular where id='$fiddycent' "));
-                        echo "<option>".$ugurdk['numara']."</option>";
-                        for($a = 1 ; $a <100 ; $a++){
-                            if($numaracek['numara'] == $a){
-                                continue;
-                            }
+                $numaracek= mysql_fetch_array(mysql_query("SELECT * FROM oyuncular where id='$fiddycent' "));
+                echo "<option>".$ugurdk['numara']."</option>";
+                for($a = 1 ; $a <100 ; $a++){
+                    if($numaracek['numara'] == $a){
+                        continue;
+                    }
 
-                            echo "<option>".$a."</option>";
+                    echo "<option>".$a."</option>";
 
-                        }
-                   ?>
-                   </select>
-                </span>
-            </p>
+                }
+                ?>
+            </select>
+        </span>
+    </p>
 
-             <p>
-                <label>Durum</label>
-                <span class="field">
-                       <select data-placeholder="<?php echo $ugurdk['durum']; ?>" class="chzn-select" multiple="multiple" style="width:350px;" tabindex="4" name="durum">
-                                <option value="yerli">Yerli</option>
-                                <option value="sakat">Sakat</option>
-                                <option value="avrupa">Avrupa</option>
-                                <option value="yabanci">Yabancı</option>
+    <p>
+        <label>Durum</label>
+        <span class="field">
+         <select data-placeholder="<?php echo $ugurdk['durum']; ?>" class="chzn-select" multiple="multiple" style="width:350px;" tabindex="4" name="durum">
+            <option value="yerli">Yerli</option>
+            <option value="sakat">Sakat</option>
+            <option value="avrupa">Avrupa</option>
+            <option value="yabanci">Yabancı</option>
 
-                       </select>
-                 </span>
-            </p>
+        </select>
+    </span>
+</p>
 
-           <p>
-            <label>Oyuncu Resim</label>
-            <div class="field">
+<p>
+    <label>Oyuncu Resim</label>
+    <div class="field">
 
+        <div style="float:left;margin-right: 20px;margin-top: -10px;margin-bottom: -10px;margin-left: -10px;"><img src="../<?php echo $ugurdk['oyuncu_photo']; ?>" width="70" height="70"/></div>
 
-             <div class="fileupload fileupload-new" data-provides="fileupload">
-                <div class="input-append">
-                    <div class="uneditable-input span3">
-                        <i class="iconfa-file fileupload-exists"></i>
-                        <span class="fileupload-preview"></span>
-                    </div>
-                    <span class="btn btn-file"><span class="fileupload-new">Gözat</span>
-                    <input type="file" name="resim"></span>
+        <input name="eskiresmi" value="<?php echo $ugurdk['oyuncu_photo']; ?>" style="display:none;"/>
+
+        <div class="fileupload fileupload-new" data-provides="fileupload">
+            <div class="input-append">
+                <div class="uneditable-input span3">
+                    <i class="iconfa-file fileupload-exists"></i>
+                    <span class="fileupload-preview"></span>
                 </div>
+                <span class="btn btn-file"><span class="fileupload-new">Gözat</span>
+                <input type="file" name="resim"></span>
             </div>
-
-            Resim 250x300 px olacak
-
         </div>
-    </p>
+
+        Resim 250x300 px olacak
+
+    </div>
+</p>
 
 
-    <p class="stdformbutton" style="text-align:center;">
-        <input class="btn btn-primary" type="submit" name="button" value="Gönder"/>
-    </p>
+<p class="stdformbutton" style="text-align:center;">
+    <input class="btn btn-primary" type="submit" name="button" value="Düzenle"/>
+</p>
 
 
 
