@@ -21,7 +21,7 @@
     <?php
     $sayfa = (isset($_GET["sayfa"])) ? $_GET["sayfa"] : "";
 	if(!$sayfa) $sayfa = 1;
-	$limit = 8;
+	$limit = 10;
 	$ksayisi = mysql_num_rows(mysql_query("SELECT * FROM oyuncular"));
 	$ssayisi = ceil($ksayisi / $limit);
 	$baslangic = ($sayfa*$limit)-$limit;

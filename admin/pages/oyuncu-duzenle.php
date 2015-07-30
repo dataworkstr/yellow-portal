@@ -153,8 +153,8 @@ header("Refresh:2, url=admin.php?div=oyuncular");
 
                     <select name="kulup" id="selection2" class="uniformselect">
                         <option><?php echo $ugurdk['kulub']; ?></option>
-                        <option><?php if($ugurdk['kulub'] == Serbest){ echo "Körükspor";}else { echo "Serbest";} ?></option>
-                        <option><?php if($ugurdk['kulub'] == AAÜ Ejderhaspor){ echo "AAÜ Ejderhaspor";} ?></option>
+                        <option><?php if($ugurdk['kulub'] == "Serbest"){ echo "Körükspor";}else { echo "Serbest";} ?></option>
+                        <option><?php if($ugurdk['kulub'] == "AAÜ Ejderhaspor"){ echo "AAÜ Ejderhaspor";} ?></option>
                     </select>
 
                 </span>
@@ -166,7 +166,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                 <span class="field">
                  <select name="ilkpozisyon" id="selection2" class="uniformselect">
 
-                    <option></option>
+                    <option><?php echo boşluktankesme($ugurdk['pozisyon'],1) ?></option>
                     <option>GK</option>
                     <option>D</option>
                     <option>DM</option>
@@ -202,10 +202,9 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                 for($a = 1 ; $a <100 ; $a++){
                     if($numaracek['numara'] == $a){
                         continue;
-                    }
-
+                    }else{
                     echo "<option>".$a."</option>";
-
+                    }
                 }
                 ?>
             </select>
@@ -215,11 +214,11 @@ header("Refresh:2, url=admin.php?div=oyuncular");
     <p>
         <label>Durum</label>
         <span class="field">
-         <select data-placeholder="<?php echo $ugurdk['durum']; ?>" class="chzn-select" multiple="multiple" style="width:350px;" tabindex="4" name="durum">
-            <option value="yerli">Yerli</option>
-            <option value="sakat">Sakat</option>
-            <option value="avrupa">Avrupa</option>
-            <option value="yabanci">Yabancı</option>
+         <select data-placeholder="Durum belirtin" class="chzn-select" multiple="multiple" style="width:350px;" tabindex="4" name="durum">
+            <option>Yerli</option>
+            <option>Sakat</option>
+            <option>Avrupa</option>
+            <option>Yabancı</option>
 
         </select>
     </span>
