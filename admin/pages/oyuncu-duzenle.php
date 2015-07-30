@@ -1,4 +1,7 @@
-
+<?php
+include "../ayar.php";
+if($_SESSION['login'] != "true") die("permission denied");
+?>
 <?php
 
 $fiddycent = $_GET['id'];
