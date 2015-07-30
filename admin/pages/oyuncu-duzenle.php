@@ -153,8 +153,35 @@ header("Refresh:2, url=admin.php?div=oyuncular");
 
                     <select name="kulup" id="selection2" class="uniformselect">
                         <option><?php echo $ugurdk['kulub']; ?></option>
-                        <option><?php if($ugurdk['kulub'] == "Serbest"){ echo "Körükspor";}else { echo "Serbest";} ?></option>
-                        <option><?php if($ugurdk['kulub'] == "AAÜ Ejderhaspor"){ echo "AAÜ Ejderhaspor";} ?></option>
+                        <?php
+
+                        switch($ugurdk['kulub']){
+
+                            case 'Serbest':
+                            echo "
+                                <option>Körükspor</option>
+                                <option>AAÜ Ejderhaspor</option>
+                            ";
+                            break;
+
+                            case 'Körükspor':
+                            echo "
+                                <option>Serbest</option>
+                                <option>AAÜ Ejderhaspor</option>
+                            ";
+                            break;
+
+                            case 'AAÜ Ejderhaspor':
+                            echo "
+                                <option>Serbest</option>
+                                <option>Körükspor</option>
+                            ";
+                            break;
+
+                        }
+
+
+                        ?>
                     </select>
 
                 </span>
@@ -177,7 +204,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                 </select>
                 <br/>
                 <select name="ikincipozisyon"  id="selection2" class="uniformselect" >
-
+                    <option><?php echo substr($ugurdk['pozisyon'],2,10); ?></option>
                     <option>R</option>
                     <option>L</option>
                     <option>C</option>
