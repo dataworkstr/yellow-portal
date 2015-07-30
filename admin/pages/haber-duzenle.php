@@ -29,7 +29,11 @@ if($kontrol)
 
    $haber_baslikseo = cevir(addslashes($_POST['baslik']));
 
-   $haberuye = $_SESSION["username"];
+   $kim = $_SESSION["username"];
+
+   $uyeyiyaz = mysql_fetch_array(mysql_query("select * from kullanicilar where username = '$kim'"));
+
+   $haberuye = $uyeyiyaz['adsoyad'];
 
    if($_FILES['resim']['name'] == ''){
 
