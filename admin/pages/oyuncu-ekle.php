@@ -31,7 +31,13 @@ if($kontrol)
 
    $uyruk = addslashes($_POST['uyruk']);
    $kulup = addslashes($_POST['kulup']);
-   $pozisyon = $_POST['pozisyon']." ".$_POST['pozisyon2'];
+
+
+    $a = $_POST['ilkpozisyon'];
+    $b = $_POST['ikincipozisyon'];
+    $pozisyon = $a." ".$b;
+
+
 
    $sirtno = addslashes($_POST['sirtno']);
    $durum = addslashes($_POST['durum']);
@@ -155,8 +161,9 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                 <span class="field">
 
                     <select name="kulup" id="selection2" class="uniformselect">
-                        <option value="serbest">Serbest</option>
-                        <option value="korukspor">Körükspor</option>
+                        <option>Serbest</option>
+                        <option>Körükspor</option>
+                        <option>AAÜ Ejderhaspor</option>
                     </select>
 
                 </span>
@@ -165,24 +172,30 @@ header("Refresh:2, url=admin.php?div=oyuncular");
              <p>
                 <label>Pozisyon</label>
                 <span class="field">
-                       <select name="pozisyon" id="selection2" class="uniformselect">
-                                <option>GK</option>
-                                <option>D</option>
-                                <option>DM</option>
-                                <option>M</option>
-                                <option>AM</option>
-                                <option>FC</option>
-                                <option>ST</option>
-                       </select>
-                       <br/>
-                        <select data-placeholder="Pozisyon seçin..." class="chzn-select" multiple="multiple" style="width: 220px;display: -webkit-box;" tabindex="4" name="pozisyon2">
+                 <select name="ilkpozisyon" id="selection2" class="uniformselect">
 
-                                <option>R</option>
-                                <option>L</option>
-                                <option>C</option>
+                    <option></option>
+                    <option>GK</option>
+                    <option>D</option>
+                    <option>DM</option>
+                    <option>M</option>
+                    <option>AM</option>
+                    <option>FC</option>
+                    <option>ST</option>
+                </select>
+                <br/>
+                <select name="ikincipozisyon"  id="selection2" class="uniformselect" >
 
-                       </select>
-                 </span>
+                    <option>R</option>
+                    <option>L</option>
+                    <option>C</option>
+                    <option>RL</option>
+                    <option>LC</option>
+                    <option>RC</option>
+                    <option>RLC</option>
+
+                </select>
+            </span>
             </p>
 
              <p>
