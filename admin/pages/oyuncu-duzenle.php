@@ -44,7 +44,15 @@ if($kontrol)
 
 
 $sirtno = addslashes($_POST['sirtno']);
-$durum = addslashes($_POST['durum']);
+
+    if($_POST['durum'] == "") {
+        $durum = $_POST['ozandurum'];
+    }else {
+        $durum = addslashes($_POST['durum']);
+    }
+
+
+
 $oyuncu_adiseo = cevir($oyuncu_adi);
 
 $deger = "1.000.000";
@@ -137,7 +145,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                 <label>Doğum Tarihi</label>
                 <span class="field">
 
-                    <input id="datepicker" type="text" name="dogum_tarihi" class="input-large hasDatepicker" value="<?php echo $ugurdk['dogum_tarihi']; ?>">
+                    <input id="tarih" type="text" name="dogum_tarihi" class="input-large" value="<?php echo $ugurdk['dogum_tarihi']; ?>">
 
                 </span>
             </p>
@@ -241,6 +249,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
     <p>
         <label>Durum</label>
         <span class="field">
+        <input name="ozandurum" value="<?php echo $ugurdk['durum']; ?>" style="display:none;"/>
          <select data-placeholder="Durum belirtin" class="chzn-select" multiple="multiple" style="width:350px;" tabindex="4" name="durum">
             <option>Yerli</option>
             <option>Sakat</option>
@@ -287,3 +296,11 @@ header("Refresh:2, url=admin.php?div=oyuncular");
 </form>
 </div>
 </div>
+
+
+<script>
+$(function() {
+    $.datepicker.setDefaults($.datepicker.regional['tr']);
+    $( '#tarih' ).datepicker({ dateFormat: 'dd.mm.yy' });
+});
+</script>

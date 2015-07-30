@@ -1,4 +1,8 @@
-<div class="widgetbox box-inverse">
+<?php
+include "../ayar.php";
+if($_SESSION['login'] != "true") die("permission denied");
+?>
+               <div class="widgetbox box-inverse">
                 <h4 class="widgettitle">Oyuncular Listesi</h4>
 
     <table class="table table-bordered">
