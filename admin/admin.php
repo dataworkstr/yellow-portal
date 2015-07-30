@@ -207,13 +207,13 @@ switch ($menuyak){
         <div class="leftmenu">
             <ul class="nav nav-tabs nav-stacked">
             	<li class="nav-header">Menü</li>
-                <li <?php echo $yak6 ?></l>><a href="admin.php"><span class="iconfa-laptop"></span> Admin Paneli</a></li>
+                <li <?php echo $yak6 ?></l><a href="admin.php"><span class="iconfa-laptop"></span> Admin Paneli</a></li>
 
                 <li <?php echo $yak1 ?>><a href="admin.php?div=haberler"><span class="fa fa-newspaper-o"></span> Haberler</a></li>
 
                 <li <?php echo $yak2 ?>><a href="admin.php?div=haberler"><span class="fa fa-flag-checkered"></span> Takımlar</a></li>
 
-                <li <?php echo $yak3 ?>><a href="admin.php?div=haberler"><span class="fa fa-users"></span> Oyuncular</a></li>
+                <li <?php echo $yak3 ?>><a href="admin.php?div=oyuncular"><span class="fa fa-users"></span> Oyuncular</a></li>
 
                 <li <?php echo $yak4 ?>><a href="admin.php?div=haberler"><span class="fa fa-globe"></span> Sahalar</a></li>
 

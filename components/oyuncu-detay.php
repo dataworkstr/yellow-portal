@@ -35,7 +35,7 @@
     </ul>
 
     <br/><br/>
-    <b><div class="baslik-yani-uzatici"></div>Lisans Bilgiler</b>
+    <b><div class="baslik-yani-uzatici"></div>Lisans Bilgileri</b>
     <hr/>
     <ul class="yanindaformaresmi">
 

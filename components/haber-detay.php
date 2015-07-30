@@ -18,7 +18,7 @@
 
         <div class="haberler-sayfasi">
 
-            <div class="news-header"> <h3><i class="fa fa-newspaper-o"></i> <?php echo stripslashes($haberimioku['haber_adi2']); ?></h3></div>
+            <div class="news-header"> <h3><i class="fa fa-newspaper-o"></i> <?php echo stripslashes($haberimioku['haber_adi']); ?></h3></div>
 
 
             <div class="haber-detayi-kapsa">
@@ -32,7 +32,6 @@
 
                 <div class="haber-detay-yazi">
 
-                    <strong><?php echo stripslashes($haberimioku['haber_adi']); ?></strong><br/>
                     <?php echo stripslashes($haberimioku['haber_icerik']); ?>
                 </div>
 

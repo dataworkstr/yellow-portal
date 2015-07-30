@@ -32,6 +32,22 @@ switch($yello){
         include "pages/haber-geri-al.php";
         break;
 
+    case "oyuncular" :
+    include "pages/oyuncular.php";
+    break;
+
+        case "oyuncu-ekle" :
+        include "pages/oyuncu-ekle.php";
+        break;
+
+        case "oyuncu-duzenle" :
+        include "pages/oyuncu-duzenle.php";
+        break;
+
+        case "oyuncu-sil" :
+        include "pages/oyuncu-sil.php";
+        break;
+
     case "cikis" :
     include "pages/cikis.php";
     break;
