@@ -6,7 +6,7 @@ include "admin/ayar.php";
 <head>
 
   <meta charset="utf-8"/>
-  <title>Yellow Bulls - Resmi web sitesi</title>
+  <title>Yellow Bulls - Resmi Web Sitesi</title>
   <meta name="description" content="Yellow Pages Portal"/>     
   <meta name="author" content="Murat Bayri"/>
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
