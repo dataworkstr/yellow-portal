@@ -210,10 +210,10 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                         for($a = 1 ; $a <100 ; $a++){
                             if($numaracek['numara'] == $a){
                                 continue;
-                            }
+                            }else{
 
                             echo "<option>".$a."</option>";
-
+                            }
                         }
                    ?>
                    </select>

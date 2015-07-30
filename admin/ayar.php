@@ -116,6 +116,18 @@ function Zamagoster($par)
 
 }
 
+function boşluktankesme($degisken,$adet){
+	$degisken = addslashes($degisken);
+	$sonrasi = substr($degisken,$adet,strlen($degisken));
+	$ilk_yeri = strpos($sonrasi, " ", 0);
+	$kesilen = substr($degisken,0,($adet + $ilk_yeri));
+	if(strlen($degisken) >=$adet){
+		$kesilen .= "";
+	}
+	$kesilen = stripslashes($kesilen);
+	return $kesilen;
+};
+
 
 
 ?>
