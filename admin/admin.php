@@ -163,22 +163,63 @@ if($_SESSION['login'] != "true") die("permission denied");
 
     <div class="leftpanel">
 
+       <?php
+
+            $menuyak = $_GET['div'];
+
+switch ($menuyak){
+
+    case "haberler" :
+    $yak1 = "class='active'";
+    break;
+
+    case "takimlar" :
+    $yak2 = "class='active'";
+    break;
+
+    case "oyuncular" :
+    $yak3 = "class='active'";
+    break;
+
+    case "sahalar" :
+    $yak4 = "class='active'";
+    break;
+
+    case "maclar" :
+    $yak5 = "class='active'";
+    break;
+
+    case "genel-ayarlar" :
+    $yak = "class='active'";
+    break;
+
+    default:
+    $yak6 = "class='active'";
+    break;
+
+
+
+}
+
+       ?>
+
+
         <div class="leftmenu">
             <ul class="nav nav-tabs nav-stacked">
             	<li class="nav-header">Menü</li>
-                <li class="active"><a href="admin.php"><span class="iconfa-laptop"></span> Admin Paneli</a></li>
+                <li <?php echo $yak6 ?></l>><a href="admin.php"><span class="iconfa-laptop"></span> Admin Paneli</a></li>
 
-                <li><a href="admin.php?div=haberler"><span class="fa fa-newspaper-o"></span> Haberler</a></li>
+                <li <?php echo $yak1 ?>><a href="admin.php?div=haberler"><span class="fa fa-newspaper-o"></span> Haberler</a></li>
 
-                <li><a href="admin.php?div=haberler"><span class="fa fa-flag-checkered"></span> Takımlar</a></li>
+                <li <?php echo $yak2 ?>><a href="admin.php?div=haberler"><span class="fa fa-flag-checkered"></span> Takımlar</a></li>
 
-                <li><a href="admin.php?div=haberler"><span class="fa fa-users"></span> Oyuncular</a></li>
+                <li <?php echo $yak3 ?>><a href="admin.php?div=haberler"><span class="fa fa-users"></span> Oyuncular</a></li>
 
-                <li><a href="admin.php?div=haberler"><span class="fa fa-globe"></span> Sahalar</a></li>
+                <li <?php echo $yak4 ?>><a href="admin.php?div=haberler"><span class="fa fa-globe"></span> Sahalar</a></li>
 
-                <li><a href="admin.php?div=haberler"><span class="fa fa-futbol-o"></span> Maçlar</a></li>
+                <li <?php echo $yak5 ?>><a href="admin.php?div=haberler"><span class="fa fa-futbol-o"></span> Maçlar</a></li>
 
-                <li><a href="admin.php?div=haberler"><span class="fa fa-cog"></span> Genel Ayarlar</a></li>
+                <li <?php echo $yak ?>><a href="admin.php?div=haberler"><span class="fa fa-cog"></span> Genel Ayarlar</a></li>
 
             </ul>
         </div><!--leftmenu-->

@@ -97,7 +97,7 @@ $oku = mysql_fetch_array(mysql_query("select * from haberler where id='$kiminki'
 
             <p>
                 <label>Haber İçeriği</label>
-                <span class="field"><textarea type="text" name="icerik" id="cke_editor" class="input-xxlarge" style="height: 300px;" class="tinymce"><?php echo stripslashes($oku['haber_icerik']); ?></textarea></span>
+                <span class="field"><textarea type="text" name="icerik" class="input-xxlarge ckeditor" style="height: 300px;" ><?php echo stripslashes($oku['haber_icerik']); ?></textarea></span>
             </p>
 
             <p>
@@ -137,6 +137,3 @@ $oku = mysql_fetch_array(mysql_query("select * from haberler where id='$kiminki'
 </div>
 </div>
 
-<script>
-	cke_editor();
-</script>
