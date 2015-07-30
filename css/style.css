@@ -745,6 +745,10 @@ body{
     margin-bottom: 10px;
 }
 
+.haber-detay-baslik a{
+    text-transform: capitalize;
+}
+
 .haber-detay-yazi {
     font-weight: 200;
     font-size: 15px;
@@ -766,9 +770,10 @@ body{
 }
 
 .haber-detay-footer {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 100%;
+    display:inline-block;
+    margin-top:20px;
+    padding-bottom:40px;
+    width:100%;
 }
 
 .haber-detay-footer-etiketi{
