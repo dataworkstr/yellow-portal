@@ -174,11 +174,15 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                     <option>ST</option>
                 </select>
                 <br/>
-                <select name="ikincipozisyon" data-placeholder="Pozisyon seçin..." class="chzn-select" multiple="multiple" style="width: 220px;display: -webkit-box;">
+                <select name="ikincipozisyon"  id="selection2" class="uniformselect" >
 
                     <option>R</option>
                     <option>L</option>
                     <option>C</option>
+                    <option>RL</option>
+                    <option>LC</option>
+                    <option>RC</option>
+                    <option>RLC</option>
 
                 </select>
             </span>
