@@ -338,6 +338,8 @@ body{
     width:100%;
     min-height:916px;
     background-color:white;
+    display: inline-block;
+    padding-bottom: 10px;
 }
 
 .takim-sayfasi {
@@ -764,9 +766,10 @@ body{
 }
 
 .haber-detay-footer {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 100%;
+    display:inline-block;
+    margin-top:20px;
+    padding-bottom:40px;
+    width:100%;
 }
 
 .haber-detay-footer-etiketi{
