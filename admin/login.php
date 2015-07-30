@@ -10,7 +10,7 @@
     echo "Giriş sayfasına yönlendiriliyorsunuz.";
     header("Refresh: 2; url=index.php");
   }else {
-    $calistir = mysql_query("select * from kullanicilar where username = '$username' and password = '$password' and id = 1 ") or die("Hata Olustu!".mysql_error());
+    $calistir = mysql_query("select * from kullanicilar where username = '$username' and password = '$password' and admin = 1 ") or die("Hata Olustu!".mysql_error());
     mysql_query("SET NAMES 'utf8'");
         if (mysql_num_rows($calistir)>0){
 
