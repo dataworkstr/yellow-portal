@@ -6,104 +6,71 @@
 
 <div class="news-header"> <h3><i class="fa fa-newspaper-o"></i> Haberler</h3></div>
 <ul>
+
+    <?php
+
+        $sayfa = (isset($_GET["sayfa"])) ? $_GET["sayfa"] : "";
+        if(!$sayfa) $sayfa = 1;
+        $limit = 6;
+        $ksayisi = mysql_num_rows(mysql_query("SELECT * FROM haberler"));
+        $ssayisi = ceil($ksayisi / $limit);
+        $baslangic = ($sayfa*$limit)-$limit;
+
+           $habersayfasimenu = mysql_query("select * from haberler order by id DESC LIMIT $baslangic, $limit");
+
+           while($okumenuhaber = mysql_fetch_array($habersayfasimenu)){
+     ?>
+
 <li>
     <div class="haber-sayfasi-tek-haber">
-        <a href="index.php?page=haber-detay" class="haberin-resmi"><img src="images/default-haber.jpg" width="194" height="88"/></a>
+        <a href="index.php?page=haber-detay&haber=<?php echo $okumenuhaber['haber_adiseo'] ?>" class="haberin-resmi"><img src="<?php echo $okumenuhaber['haber_resim'] ?>" width="194" height="88"/></a>
         <div class="anasayfa-haber-baslik">
-            <a href="index.php?page=haber-detay">Haber Başlık 1</a><br/>
+            <a href="index.php?page=haber-detay&haber=<?php echo $okumenuhaber['haber_adiseo'] ?>"><?php echo stripslashes($okumenuhaber['haber_adi2']); ?></a><br/>
         </div>
-        <div class="haber-text">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem </div><div class="devami-butonu"><a href="index.php?page=haber-detay">Devamı..</a></div>
+        <div class="haber-text"><?php echo kisalt(stripslashes($okumenuhaber['haber_icerik']),78); ?> </div><div class="devami-butonu"><a href="index.php?page=haber-detay&haber=<?php echo $okumenuhaber['haber_adiseo'] ?>">Devamı..</a></div>
 
     </div>
 
 </li>
     <hr/>
 
-<li>
-    <div class="haber-sayfasi-tek-haber">
-        <a href="#" class="haberin-resmi"><img src="images/default-haber.jpg" width="194" height="88"/></a>
-        <div class="anasayfa-haber-baslik">
-            <a href="#">Haber Başlık 1</a><br/>
-        </div>
-        <div class="haber-text">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem </div><div class="devami-butonu"><a href="#">Devamı..</a></div>
-
-    </div>
-
-</li>
-    <hr/>
-    <li>
-    <div class="haber-sayfasi-tek-haber">
-        <a href="#" class="haberin-resmi"><img src="images/default-haber.jpg" width="194" height="88"/></a>
-        <div class="anasayfa-haber-baslik">
-            <a href="#">Haber Başlık 1</a><br/>
-        </div>
-        <div class="haber-text">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem </div><div class="devami-butonu"><a href="#">Devamı..</a></div>
-
-    </div>
-
-</li>
-    <hr/>
-    <li>
-    <div class="haber-sayfasi-tek-haber">
-        <a href="#" class="haberin-resmi"><img src="images/default-haber.jpg" width="194" height="88"/></a>
-        <div class="anasayfa-haber-baslik">
-            <a href="#">Haber Başlık 1</a><br/>
-        </div>
-        <div class="haber-text">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem </div><div class="devami-butonu"><a href="#">Devamı..</a></div>
-
-    </div>
-
-</li>
-<hr/>
-
-    <li>
-    <div class="haber-sayfasi-tek-haber">
-        <a href="#" class="haberin-resmi"><img src="images/default-haber.jpg" width="194" height="88"/></a>
-        <div class="anasayfa-haber-baslik">
-            <a href="index.php?page=haber-detay">Haber Başlık 1</a><br/>
-        </div>
-        <div class="haber-text">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem </div><div class="devami-butonu"><a href="#">Devamı..</a></div>
-
-    </div>
-
-</li>
-<hr/>
-
-    <li>
-    <div class="haber-sayfasi-tek-haber">
-        <a href="#" class="haberin-resmi"><img src="images/default-haber.jpg" width="194" height="88"/></a>
-        <div class="anasayfa-haber-baslik">
-            <a href="#">Haber Başlık 1</a><br/>
-        </div>
-        <div class="haber-text">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem </div><div class="devami-butonu"><a href="#">Devamı..</a></div>
-
-    </div>
-
-</li>
+    <?php } ?>
 
 
 
 </ul>
 
+
+
+
+
+
+
+
         <div class="sayfalama">
         <nav>
-  <ul class="pagination">
-    <li>
-      <a href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-    <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
+          <?php
+
+	echo "<ul class='pagination'>";
+	if($sayfa>1){
+			echo "<li class='disabled'><a href="."?div=haberler&sayfa=".($sayfa-1).">&laquo</a></li>";
+		}
+	for($i=1; $i<=$ksayisi; $i++){
+		if($i<=$ssayisi){
+			if($i==$sayfa){
+				echo "<li class='active'><span>".$i."</span></li>";
+			}else{
+				echo "<li><a href='?div=haberler&sayfa=$i'>$i</a></li>";
+			}
+		}
+	}
+	if($sayfa != $ssayisi){
+			echo "<li><a href="."?div=haberler&sayfa=".($sayfa+1).">&raquo</a></li>";
+		}
+	echo '</ul>';
+
+
+?>
 </nav>
      </div>
 

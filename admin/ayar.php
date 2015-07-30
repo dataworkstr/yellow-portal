@@ -93,5 +93,29 @@ function kisalt($kelime, $str = 10)
 }
 
 
+ function Zamagoster($par)
+   {
+      $explode = explode(" ", $par);
+      $explode2 = explode("-", $explode[0]);
+      $zaman = substr($explode[1], 0, 5);
+
+      if ($explode2[1] == "1") $ay = "Ocak";
+      elseif ($explode2[1] == "2") $ay = "Şubat";
+      elseif ($explode2[1] == "3") $ay = "Mart";
+      elseif ($explode2[1] == "4") $ay = "Nisan";
+      elseif ($explode2[1] == "5") $ay = "Mayıs";
+      elseif ($explode2[1] == "6") $ay = "Haziran";
+      elseif ($explode2[1] == "7") $ay = "Temmuz";
+      elseif ($explode2[1] == "8") $ay = "Ağustos";
+      elseif ($explode2[1] == "9") $ay = "Eylül";
+      elseif ($explode2[1] == "10") $ay = "Ekim";
+      elseif ($explode2[1] == "11") $ay = "Kasım";
+      elseif ($explode2[1] == "12") $ay = "Aralık";
+
+      return $explode2[2]." ".$ay." ".$explode2[0].", ".$zaman;
+
+   }
+
+
 
 ?>

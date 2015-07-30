@@ -20,7 +20,7 @@
                     <a href="#"><?php echo stripslashes($haberimioku['haber_adi2']); ?></a><br/>
                 </div>
 
-                <div class="haber-zamani"><i class="fa fa-user"></i><?php echo $haberimioku['haber_uye']; ?> &nbsp;&nbsp;&nbsp; <i class="fa fa-calendar"></i><?php echo $haberimioku['haber_tarih']; ?></div>
+                <div class="haber-zamani"><i class="fa fa-user"></i><?php echo $haberimioku['haber_uye']; ?> &nbsp;&nbsp;&nbsp; <i class="fa fa-calendar"></i><?php $zamanci = $haberimioku['haber_tarih']; echo  Zamagoster($zamanci); ?></div>
 
                 <div class="haber-detay-yazi">
 
