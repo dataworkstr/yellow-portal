@@ -320,9 +320,9 @@ body{
 }
 
 .haber-text{
-   font-weight: 100;
-   padding: 0 10px;
-   font-size: 14px
+ font-weight: 100;
+ padding: 0 10px;
+ font-size: 14px
 
 }
 
@@ -338,6 +338,8 @@ body{
     width:100%;
     min-height:916px;
     background-color:white;
+    display: inline-block;
+    padding-bottom: 10px;
 }
 
 .takim-sayfasi {
