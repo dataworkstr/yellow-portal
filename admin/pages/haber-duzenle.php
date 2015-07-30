@@ -128,7 +128,7 @@ $oku = mysql_fetch_array(mysql_query("select * from haberler where id='$kiminki'
                     </div>
                 </div>
 
-
+                Resim 665 x 300 px olacak
 
             </div>
         </p>

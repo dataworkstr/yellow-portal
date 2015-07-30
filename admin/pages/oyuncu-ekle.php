@@ -21,18 +21,24 @@ if($kontrol)
    }
 
 
-   $icerik = addslashes($_POST['icerik']);
+   $oyuncu_adi = addslashes($_POST['oyuncu_adi']);
+   $dogum_yeri = addslashes($_POST['dogum_yeri']);
+   $boy = addslashes($_POST['boy']);
 
-   $haber_baslik = addslashes($_POST['baslik']);
+   $kilo = addslashes($_POST['kilo']);
+   $yas = addslashes($_POST['yas']);
+   $dogum_tarihi = addslashes($_POST['dogum_tarihi']);
 
-   $haber_baslik2 = addslashes($_POST['baslik2']);
+   $uyruk = addslashes($_POST['uyruk']);
+   $kulup = addslashes($_POST['kulup']);
+   $pozisyon = addslashes($_POST['pozisyon']." ".$_POST['pozisyon2']);
 
+   $sirtno = addslashes($_POST['sirtno']);
+   $durum = addslashes($_POST['durum']);
+   $oyuncu_adiseo = cevir($oyuncu_adi);
 
-   $etiket = $_POST['tags'];
+   $deger = "1.000.000 $";
 
-   $haber_baslikseo = cevir($haber_baslik);
-
-   $haberuye = $_SESSION["username"];
 
    if($_FILES['resim']['name'] == ''){
 
@@ -47,7 +53,36 @@ if($kontrol)
 }
 
 
-mysql_query("insert into haberler(haber_adi,haber_adiseo,haber_resim,haber_icerik,haber_etiket,haber_uye,haber_adi2) values('$haber_baslik','$haber_baslikseo','$haber_resim','$icerik','$etiket','$haberuye','$haber_baslik2')",$baglanti) or die("Veri eklenemedi".mysql_error());
+mysql_query("insert into oyuncular(
+ad_soyad,
+dogum_yeri,
+oyuncu_photo,
+boy,
+kilo,
+yas,
+dogum_tarihi,
+uyruk,
+kulub,
+pozisyon,
+deger,
+numara,
+ad_soyadseo,
+durum) values(
+'$oyuncu_adi',
+'$dogum_yeri',
+'$haber_resim',
+'$boy',
+'$kilo',
+'$yas',
+'$dogum_tarihi',
+'$uyruk',
+'$kulup',
+'$pozisyon',
+'$deger',
+'$sirtno',
+'$oyuncu_adiseo',
+'$durum'
+)",$baglanti) or die("Veri eklenemedi".mysql_error());
 
 echo "
 
@@ -120,8 +155,8 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                 <span class="field">
 
                     <select name="kulup" id="selection2" class="uniformselect">
-                        <option>Serbest</option>
-                        <option>Körükspor</option>
+                        <option value="serbest">Serbest</option>
+                        <option value="korukspor">Körükspor</option>
                     </select>
 
                 </span>
@@ -130,21 +165,60 @@ header("Refresh:2, url=admin.php?div=oyuncular");
              <p>
                 <label>Pozisyon</label>
                 <span class="field">
-               <select name="pozisyon" id="selection2" class="uniformselect">
-                        <option>AMC</option>
-                        <option>ST</option>
-                    </select>
+                       <select name="pozisyon" id="selection2" class="uniformselect">
+                                <option>GK</option>
+                                <option>D</option>
+                                <option>DM</option>
+                                <option>M</option>
+                                <option>AM</option>
+                                <option>FC</option>
+                                <option>ST</option>
+                       </select>
+                       <br/>
+                        <select data-placeholder="Pozisyon seçin..." class="chzn-select" multiple="multiple" style="width: 220px;display: -webkit-box;" tabindex="4" name="pozisyon2">
+
+                                <option>R</option>
+                                <option>L</option>
+                                <option>C</option>
+
+                       </select>
                  </span>
             </p>
 
              <p>
                 <label>Sırt No</label>
-                <span class="field"><input type="text" name="sirtno" id="firstname2" class="input-large" /></span>
+                <span class="field">
+
+                 <select name="sirtno" id="selection2" class="uniformselect">
+                    <?php
+
+                        $numaracek= mysql_fetch_array(mysql_query("SELECT * FROM oyuncular"));
+
+                        for($a = 1 ; $a <100 ; $a++){
+                            if($numaracek['numara'] == $a){
+                                continue;
+                            }
+
+                            echo "<option>".$a."</option>";
+
+                        }
+                   ?>
+                   </select>
+                </span>
             </p>
 
              <p>
                 <label>Durum</label>
-                <span class="field"><input type="text" name="durum" id="firstname2" class="input-large" /></span>
+                <span class="field">
+                       <select data-placeholder="Durum seçin..." class="chzn-select" multiple="multiple" style="width:350px;" tabindex="4" name="durum">
+
+                                <option value="yerli">Yerli</option>
+                                <option value="sakat">Sakat</option>
+                                <option value="avrupa">Avrupa</option>
+                                <option value="yabanci">Yabancı</option>
+
+                       </select>
+                 </span>
             </p>
 
            <p>
@@ -163,7 +237,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                 </div>
             </div>
 
-
+            Resim 250x300 px olacak
 
         </div>
     </p>
@@ -172,6 +246,11 @@ header("Refresh:2, url=admin.php?div=oyuncular");
     <p class="stdformbutton" style="text-align:center;">
         <input class="btn btn-primary" type="submit" name="button" value="Gönder"/>
     </p>
+
+
+
+
+
 </form>
 </div>
 </div>

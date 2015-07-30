@@ -90,7 +90,7 @@ header("Refresh:2, url=admin.php?div=haberler");
 
             <p>
                 <label>Haber İçeriği</label>
-                <span class="field"><textarea type="text" name="icerik" id="lastname2" class="input-xxlarge" style="height: 300px;"></textarea></span>
+                <span class="field"><textarea type="text" name="icerik" class="input-xxlarge ckeditor" style="height: 300px;" ></textarea></span>
             </p>
 
             <p>
@@ -116,6 +116,7 @@ header("Refresh:2, url=admin.php?div=haberler");
                 </div>
             </div>
 
+            Resim 665 x 300 px olacak
 
 
         </div>
