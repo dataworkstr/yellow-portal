@@ -1,4 +1,8 @@
 <?php
+include "../ayar.php";
+if($_SESSION['login'] != "true") die("permission denied");
+?>
+<?php
 
 $yello = $_GET['div'];
 
