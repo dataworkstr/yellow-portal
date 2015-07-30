@@ -154,6 +154,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                     <select name="kulup" id="selection2" class="uniformselect">
                         <option><?php echo $ugurdk['kulub']; ?></option>
                         <option><?php if($ugurdk['kulub'] == Serbest){ echo "Körükspor";}else { echo "Serbest";} ?></option>
+                        <option><?php if($ugurdk['kulub'] == AAÜ Ejderhaspor){ echo "AAÜ Ejderhaspor";} ?></option>
                     </select>
 
                 </span>
@@ -165,6 +166,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                 <span class="field">
                  <select name="ilkpozisyon" id="selection2" class="uniformselect">
 
+                    <option></option>
                     <option>GK</option>
                     <option>D</option>
                     <option>DM</option>
