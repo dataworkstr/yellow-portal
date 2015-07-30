@@ -135,7 +135,7 @@
                 <?php echo stripslashes($oku['haber_adi2']); ?>
             </div> 
         </a>
-        <img u="thumb" src="<?php echo $oku['haber_resim']; ?>" />
+        <img u="thumb" src="<?php echo $oku['haber_resim']; ?>"/>
     </div>
 
     <?php } ?>
