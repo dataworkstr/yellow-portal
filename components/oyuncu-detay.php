@@ -12,7 +12,6 @@
                 <img src="images/oyuncu/ronaldinho.jpg" width="246" height="300"/>
 
             </div>
-            <div class="sakatlanmis-oyuncu">Skt</div>
 
             <div class="oyuncu-detay-yazi">
 
