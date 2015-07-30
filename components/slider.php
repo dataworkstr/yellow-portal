@@ -127,7 +127,7 @@
  while($oku = mysql_fetch_array($habercek)){
     ?>
     <div>
-        <a href="index.php?page=<?php echo $oku['haber_adiseo'] ?>"><img u="image" src="<?php echo $oku['haber_resim']; ?>" />
+        <a href="index.php?page=haber-detay&haber=<?php echo $oku['haber_adiseo'] ?>"><img u="image" src="<?php echo $oku['haber_resim']; ?>" />
             <div class="haber-yazisi-anasayfadaki-ust">
                 <?php echo stripslashes($oku['haber_adi']); ?> 
             </div>

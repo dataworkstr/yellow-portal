@@ -1,14 +1,14 @@
 <div>
     <div class="col-md-9">
 
-<?php
+        <?php
 
-    $enginx = $_GET['haber'];
+        $enginx = $_GET['haber'];
 
-    $haberimioku = mysql_fetch_array(mysql_query("select * from haberler where haber_adiseo = '$enginx'"));
+        $haberimioku = mysql_fetch_array(mysql_query("select * from haberler where haber_adiseo = '$enginx'"));
 
 
-?>
+        ?>
         <div class="haberler-sayfasi">
 
             <div class="news-header"> <h3><i class="fa fa-newspaper-o"></i> <?php echo stripslashes($haberimioku['haber_adi2']); ?></h3></div>
@@ -24,9 +24,8 @@
 
                 <div class="haber-detay-yazi">
 
-                   <b><?php echo stripslashes($haberimioku['haber_adi']); ?></b><br/>
+                    <strong><?php echo stripslashes($haberimioku['haber_adi']); ?></strong><br/>
                     <?php echo stripslashes($haberimioku['haber_icerik']); ?>
-
                 </div>
 
 
