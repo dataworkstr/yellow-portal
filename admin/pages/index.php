@@ -1,9 +1,10 @@
 <?php
+error_reporting(false);
 include "../ayar.php";
 if($_SESSION['login'] != "true") die("permission denied");
 ?>
 <?php
-error_reporting(false);
+
 $yello = $_GET['div'];
 
 switch($yello){
