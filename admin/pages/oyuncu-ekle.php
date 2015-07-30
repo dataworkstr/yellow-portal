@@ -31,13 +31,13 @@ if($kontrol)
 
    $uyruk = addslashes($_POST['uyruk']);
    $kulup = addslashes($_POST['kulup']);
-   $pozisyon = addslashes($_POST['pozisyon']." ".$_POST['pozisyon2']);
+   $pozisyon = $_POST['pozisyon']." ".$_POST['pozisyon2'];
 
    $sirtno = addslashes($_POST['sirtno']);
    $durum = addslashes($_POST['durum']);
    $oyuncu_adiseo = cevir($oyuncu_adi);
 
-   $deger = "1.000.000 $";
+   $deger = "1.000.000";
 
 
    if($_FILES['resim']['name'] == ''){

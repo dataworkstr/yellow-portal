@@ -17,36 +17,20 @@
             });
      </script>
 
+    <?php
 
+        $Macbookpro = mysql_query("select * from oyuncular order by ad_soyad DESC");
+
+        while ($oyuncugoster = mysql_fetch_array($Macbookpro)){
+
+    ?>
     <div class="oyuncu-liste2">
-         <div class="oyuncuresim"><a href="index.php?page=oyuncu-detay"><img src="images/oyuncu/ronaldinho.jpg" width="105" height="120"></a> <br/>
-          <div class="oyuncu-adi-container" style="display:none;"><a href="#" class="oyuncu-adison" >Ronaldinho</a></div>
+         <div class="oyuncuresim"><a href="index.php?page=oyuncu-detay&oyuncu=<?php echo $oyuncugoster['ad_soyadseo'] ?>"><img src="<?php echo $oyuncugoster['oyuncu_photo'] ?>" width="105" height="120"></a> <br/>
+          <div class="oyuncu-adi-container" style="display:none;"><a href="index.php?page=oyuncu-detay&oyuncu=<?php echo $oyuncugoster['ad_soyadseo'] ?>" class="oyuncu-adison" ><?php echo $oyuncugoster['ad_soyad'] ?></a>                </div>
          </div>
     </div>
 
-    <div class="oyuncu-liste2">
-         <div class="oyuncuresim"><a href="index.php?page=oyuncu-detay"><img src="images/oyuncu/ronaldinho.jpg" width="105" height="120"></a> <br/>
-          <div class="oyuncu-adi-container" style="display:none;"><a href="#" class="oyuncu-adison" >Ronaldinho</a></div>
-         </div>
-    </div>
-
-      <div class="oyuncu-liste2">
-         <div class="oyuncuresim"><a href="index.php?page=oyuncu-detay"><img src="images/oyuncu/ronaldinho.jpg" width="105" height="120"></a> <br/>
-          <div class="oyuncu-adi-container" style="display:none;"><a href="#" class="oyuncu-adison" >Ronaldinho</a></div>
-         </div>
-    </div>
-
-      <div class="oyuncu-liste2">
-         <div class="oyuncuresim"><a href="index.php?page=oyuncu-detay"><img src="images/oyuncu/ronaldinho.jpg" width="105" height="120"></a> <br/>
-          <div class="oyuncu-adi-container" style="display:none;"><a href="#" class="oyuncu-adison" >Ronaldinho</a></div>
-         </div>
-    </div>
-
-      <div class="oyuncu-liste2">
-         <div class="oyuncuresim"><a href="index.php?page=oyuncu-detay"><img src="images/oyuncu/ronaldinho.jpg" width="105" height="120"></a> <br/>
-          <div class="oyuncu-adi-container" style="display:none;"><a href="#" class="oyuncu-adison" >Ronaldinho</a></div>
-         </div>
-    </div>
+    <?php } ?>
 
 
 

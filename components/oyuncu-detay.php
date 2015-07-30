@@ -1,3 +1,8 @@
+<?php
+    $Redbull = $_GET['oyuncu'];
+
+    $oku = mysql_fetch_array(mysql_query("select * from oyuncular where ad_soyadseo = '$Redbull'"));
+?>
 <div>
 <div class="col-md-9">
 
@@ -9,28 +14,28 @@
 
 
 <div class="oyuncu-sol-resim">
-    <img src="images/oyuncu/ronaldinho.jpg" width="246" height="300"/>
+    <img src="<?php echo $oku['oyuncu_photo']; ?>" width="246" height="300"/>
 </div>
 
 <div class="oyuncu-detay-yazi">
 
 
-    <h1>MURATCAN TAVUKÇUOĞLU</h1>
+    <h1><?php echo $oku['ad_soyad']; ?></h1>
 
     <b><div class="baslik-yani-uzatici"></div>Kişisel Bilgiler</b>
     <hr/>
     <ul>
-    <li>  <label>Doğum Yeri :</label> İstanbul</li>
+    <li>  <label>Doğum Yeri :</label> <?php echo $oku['dogum_yeri']; ?></li>
 
-    <li>  <label>Boy :</label> 1.90 m</li>
+    <li>  <label>Boy :</label> <?php echo $oku['boy']; ?> cm</li>
 
-    <li>  <label>Kilo :</label> 90 kg</li>
+    <li>  <label>Kilo :</label> <?php echo $oku['kilo']; ?> kg</li>
 
-    <li>  <label>Yaş :</label> 25</li>
+    <li>  <label>Yaş :</label> <?php echo $oku['yas']; ?></li>
 
-    <li>  <label>Doğum Tarihi :</label> 27.08.1988</li>
+    <li>  <label>Doğum Tarihi :</label> <?php echo $oku['dogum_tarihi']; ?></li>
 
-    <li>  <label>Uyruk :</label> T.C.</li>
+    <li>  <label>Uyruk :</label> <?php echo $oku['uyruk']; ?></li>
 
     </ul>
 
@@ -39,14 +44,14 @@
     <hr/>
     <ul class="yanindaformaresmi">
 
-    <li>  <label>Kulübü :</label> Körükspor</li>
+    <li>  <label>Kulübü :</label> <?php echo $oku['kulub']; ?></li>
 
-    <li>  <label>Pozisyon :</label> AM R/C/L</li>
+    <li>  <label>Pozisyon :</label> <?php echo $oku['pozisyon']; ?></li>
 
-    <li>  <label>Değer :</label> 41.000.000 $</li>
+    <li>  <label>Değer :</label> <?php echo $oku['deger']; ?> $</li>
 
     </ul>
-    <div id="formadanumaram">27</div>
+    <div id="formadanumaram"><?php echo $oku['numara']; ?></div>
 
 </div>
 

@@ -34,10 +34,10 @@ if($kontrol)
    $uyruk = addslashes($_POST['uyruk']);
    $kulup = addslashes($_POST['kulup']);
 
-    if($_POST['pozisyon2'] and $_POST['pozisyon']){
+    if($_POST['ikincipozisyon'] == ""){
         $pozisyon = $_POST['pozisyon333'];
     }else{
-        $pozisyon = addslashes($_POST['pozisyon']." ".$_POST['pozisyon2']);
+        $pozisyon = $_POST['ilkpozisyon']." ".$_POST['ikincipozisyon'];
     }
 
 
@@ -45,12 +45,12 @@ if($kontrol)
    $durum = addslashes($_POST['durum']);
    $oyuncu_adiseo = cevir($oyuncu_adi);
 
-   $deger = "1.000.000 $";
+   $deger = "1.000.000";
 
 
    if($_FILES['resim']['name'] == ''){
 
-     $haber_resim = "images/oyuncu/default.jpg";
+     $haber_resim = $_POST['eskiresmi'];
 
  }else{
 
@@ -103,7 +103,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
 <?php $ugurdk = mysql_fetch_array(mysql_query("select * from oyuncular where id = '$fiddycent'"));  ?>
 
 <div class="widgetbox box-inverse">
-    <h4 class="widgettitle">Oyuncu Ekle</h4>
+    <h4 class="widgettitle">Oyuncu Düzenle <a href="admin.php?div=oyuncular" class="btn btn-default pull-right" style="float:right;margin-top: -7px;"><i class="fa fa-arrow-circle-left"></i> Geri Dön</a></h4>
     <div class="widgetcontent nopadding">
         <form class="stdform stdform2" method="post" enctype="multipart/form-data">
             <p>
@@ -161,7 +161,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                 <label>Pozisyon</label>
                 <input name="pozisyon333" value="<?php echo $ugurdk['pozisyon']; ?>" style="display:none;">
                 <span class="field">
-                       <select name="pozisyon" id="selection2" class="uniformselect">
+                       <select name="ilkpozisyon" id="selection2" class="uniformselect">
 
                                 <option>GK</option>
                                 <option>D</option>
@@ -172,7 +172,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                                 <option>ST</option>
                        </select>
                        <br/>
-                        <select data-placeholder="Pozisyon seçin..." class="chzn-select" multiple="multiple" style="width: 220px;display: -webkit-box;" tabindex="4" name="pozisyon2">
+                        <select name="ikincipozisyon" data-placeholder="Pozisyon seçin..." class="chzn-select" multiple="multiple" style="width: 220px;display: -webkit-box;">
 
                                 <option>R</option>
                                 <option>L</option>
@@ -221,6 +221,9 @@ header("Refresh:2, url=admin.php?div=oyuncular");
             <label>Oyuncu Resim</label>
             <div class="field">
 
+            <div style="float:left;margin-right: 20px;margin-top: -10px;margin-bottom: -10px;margin-left: -10px;"><img src="../<?php echo $ugurdk['oyuncu_photo']; ?>" width="70" height="70"/></div>
+
+             <input name="eskiresmi" value="<?php echo $ugurdk['oyuncu_photo']; ?>" style="display:none;"/>
 
              <div class="fileupload fileupload-new" data-provides="fileupload">
                 <div class="input-append">
@@ -240,7 +243,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
 
 
     <p class="stdformbutton" style="text-align:center;">
-        <input class="btn btn-primary" type="submit" name="button" value="Gönder"/>
+        <input class="btn btn-primary" type="submit" name="button" value="Düzenle"/>
     </p>
 
 
