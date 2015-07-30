@@ -1,3 +1,7 @@
+<?php
+include "../ayar.php";
+if($_SESSION['login'] != "true") die("permission denied");
+?>
 
 <?php
 
@@ -146,7 +150,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                 <label>Doğum Tarihi</label>
                 <span class="field">
 
-                <input id="datepicker" type="text" name="dogum_tarihi" class="input-large hasDatepicker">
+                <input id="tarih" type="text" name="dogum_tarihi" class="input-large">
 
                 </span>
             </p>
@@ -186,6 +190,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                 <br/>
                 <select name="ikincipozisyon"  id="selection2" class="uniformselect" >
 
+                    <option></option>
                     <option>R</option>
                     <option>L</option>
                     <option>C</option>
@@ -267,3 +272,10 @@ header("Refresh:2, url=admin.php?div=oyuncular");
 </form>
 </div>
 </div>
+
+<script>
+$(function() {
+    $.datepicker.setDefaults($.datepicker.regional['tr']);
+    $( '#tarih' ).datepicker({ dateFormat: 'dd.mm.yy' });
+});
+</script>

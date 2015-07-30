@@ -1,4 +1,7 @@
-
+<?php
+include "../ayar.php";
+if($_SESSION['login'] != "true") die("permission denied");
+?>
 <?php
 
 $fiddycent = $_GET['id'];
@@ -44,7 +47,15 @@ if($kontrol)
 
 
 $sirtno = addslashes($_POST['sirtno']);
-$durum = addslashes($_POST['durum']);
+
+    if($_POST['durum'] == "") {
+        $durum = $_POST['ozandurum'];
+    }else {
+        $durum = addslashes($_POST['durum']);
+    }
+
+
+
 $oyuncu_adiseo = cevir($oyuncu_adi);
 
 $deger = "1.000.000";
@@ -137,7 +148,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                 <label>Doğum Tarihi</label>
                 <span class="field">
 
-                    <input id="datepicker" type="text" name="dogum_tarihi" class="input-large hasDatepicker" value="<?php echo $ugurdk['dogum_tarihi']; ?>">
+                    <input id="tarih" type="text" name="dogum_tarihi" class="input-large" value="<?php echo $ugurdk['dogum_tarihi']; ?>">
 
                 </span>
             </p>
@@ -153,8 +164,35 @@ header("Refresh:2, url=admin.php?div=oyuncular");
 
                     <select name="kulup" id="selection2" class="uniformselect">
                         <option><?php echo $ugurdk['kulub']; ?></option>
-                        <option><?php if($ugurdk['kulub'] == "Serbest"){ echo "Körükspor";}else { echo "Serbest";} ?></option>
-                        <option><?php if($ugurdk['kulub'] == "AAÜ Ejderhaspor"){ echo "AAÜ Ejderhaspor";} ?></option>
+                        <?php
+
+                        switch($ugurdk['kulub']){
+
+                            case 'Serbest':
+                            echo "
+                                <option>Körükspor</option>
+                                <option>AAÜ Ejderhaspor</option>
+                            ";
+                            break;
+
+                            case 'Körükspor':
+                            echo "
+                                <option>Serbest</option>
+                                <option>AAÜ Ejderhaspor</option>
+                            ";
+                            break;
+
+                            case 'AAÜ Ejderhaspor':
+                            echo "
+                                <option>Serbest</option>
+                                <option>Körükspor</option>
+                            ";
+                            break;
+
+                        }
+
+
+                        ?>
                     </select>
 
                 </span>
@@ -177,7 +215,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                 </select>
                 <br/>
                 <select name="ikincipozisyon"  id="selection2" class="uniformselect" >
-
+                    <option><?php echo substr($ugurdk['pozisyon'],2,10); ?></option>
                     <option>R</option>
                     <option>L</option>
                     <option>C</option>
@@ -214,6 +252,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
     <p>
         <label>Durum</label>
         <span class="field">
+        <input name="ozandurum" value="<?php echo $ugurdk['durum']; ?>" style="display:none;"/>
          <select data-placeholder="Durum belirtin" class="chzn-select" multiple="multiple" style="width:350px;" tabindex="4" name="durum">
             <option>Yerli</option>
             <option>Sakat</option>
@@ -260,3 +299,11 @@ header("Refresh:2, url=admin.php?div=oyuncular");
 </form>
 </div>
 </div>
+
+
+<script>
+$(function() {
+    $.datepicker.setDefaults($.datepicker.regional['tr']);
+    $( '#tarih' ).datepicker({ dateFormat: 'dd.mm.yy' });
+});
+</script>

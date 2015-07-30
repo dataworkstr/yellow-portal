@@ -18,6 +18,12 @@ if($_SESSION['login'] != "true") die("permission denied");
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/responsive-tables.css">
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="http://jquery-ui.googlecode.com/svn/tags/1.6rc5/ui/i18n/ui.datepicker-tr.js"></script>
+
+
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="js/jquery-migrate-1.1.1.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.9.2.min.js"></script>
@@ -38,6 +44,8 @@ if($_SESSION['login'] != "true") die("permission denied");
 <script type="text/javascript" src="js/ui.spinner.min.js"></script>
 <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
 <script type="text/javascript" src="js/forms.js"></script>
+
+
 
 
 
