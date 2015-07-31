@@ -13,7 +13,11 @@ if($_SESSION['login'] != "true") die("permission denied");
 
       <td>Pozisyon</td>
 
+      <td>Takımı</td>
+
       <td>Attığı Gol</td>
+
+      <td>Durumu</td>
 
       <td>Değer</td>
       <td colspan="2">İşlemler</td>
@@ -44,7 +48,11 @@ if($_SESSION['login'] != "true") die("permission denied");
 
       <td><?php echo stripslashes($oku['pozisyon']); ?></td>
 
+      <td><?php echo stripslashes($oku['kulub']); ?></td>
+
       <td> 0 </td>
+
+      <td><?php echo stripslashes($oku['durum']); ?></td>
 
       <td><?php echo $oku['deger']; ?></td>
 
