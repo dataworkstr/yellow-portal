@@ -235,7 +235,9 @@ header("Refresh:2, url=admin.php?div=oyuncular");
              <select name="sirtno" id="selection2" class="uniformselect">
                 <?php
 
-                $numaracek= mysql_fetch_array(mysql_query("SELECT * FROM oyuncular where id='$fiddycent' "));
+               $nomber = mysql_query("SELECT * FROM oyuncular where id='$fiddycent' ");
+
+            while($numaracek= mysql_fetch_array($nomber)){
                 echo "<option>".$ugurdk['numara']."</option>";
                 for($a = 1 ; $a <100 ; $a++){
                     if($numaracek['numara'] == $a){
@@ -243,7 +245,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                     }else{
                         echo "<option>".$a."</option>";
                     }
-                }
+                }}
                 ?>
             </select>
         </span>
