@@ -35,7 +35,7 @@ while ($oku = mysql_fetch_array($goster)){
                 ?>
 
                         <tr>
-                          <th scope="row">1</th>
+                          <th scope="row"><?php echo $gelsinbakalim['numara'] ?></th>
                           <td>
                               <?php
 
@@ -58,6 +58,10 @@ while ($oku = mysql_fetch_array($goster)){
                                     echo "<div class='hafif-sakat'>Skt</div>";
                                     break;
 
+                                    default :
+                                    echo "";
+                                    break;
+
 
                                 }
 
@@ -68,7 +72,7 @@ while ($oku = mysql_fetch_array($goster)){
                           <td><?php echo $gelsinbakalim['ad_soyad']; ?></td>
                         </tr>
 
-                       <?php } ?>
+                       <?php }} ?>
 
 
 
