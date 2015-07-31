@@ -1,65 +1,94 @@
-<div>
-<div class="col-md-9">
+  <div>
+    <div class="col-md-9">
 
 
-    <div class="haberler-sayfasi">
+      <div class="haberler-sayfasi">
 
-<div class="news-header"> <h3><i class="fa fa-th-list"></i> Takımlar</h3></div>
+        <div class="news-header"> <h3><i class="fa fa-th-list"></i> Takımlar</h3></div>
 
-<?php
+        <?php
 
-    $goster = mysql_query("select * from takimlar");
+        $goster = mysql_query("select * from takimlar");
 
-while ($oku = mysql_fetch_array($goster)){
-?>
+        while ($oku = mysql_fetch_array($goster)){
+          ?>
 
-<div class="col-xs-6">
-<div class="oyuncu-liste">
-       <a href="index.php?page=takim-detay&takim=<?php echo $oku['takim_adiseo'] ?>"><img src="images/fenerlogo.png" width="100" height="100"/></a>  <br/>
-       <p><a href="index.php?page=takim-detay&takim=<?php echo $oku['takim_adiseo'] ?>"><?php echo $oku['takim_adi'] ?></a></p>
+          <div class="col-xs-6">
+            <div class="oyuncu-liste">
+             <a href="index.php?page=takim-detay&takim=<?php echo $oku['takim_adiseo'] ?>"><img src="<?php echo $oku['logo'] ?>" width="100" height="100"/></a>  <br/>
+             <p><a href="index.php?page=takim-detay&takim=<?php echo $oku['takim_adiseo'] ?>"><?php echo $oku['takim_adi'] ?></a></p>
 
-        <div class="oyuncu-adi">
+             <div class="oyuncu-adi">
 
 
-            <table class="table">
+              <table class="table">
+                <tbody>
+                  <?php
 
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td><div class="sakatlanmis-oyuncu">Skt</div></td>
-                          <td>OZAN</td>
-                        </tr>
 
-                        <tr>
-                          <th scope="row">2</th>
-                          <td><div class="yabanci-oyuncu">Ybn</div></td>
-                          <td>RONALDO</td>
-                        </tr>
+                  $metin= $oku['oyuncular'];
+                  $yenimetin = explode(',',$metin);
+                  foreach($yenimetin as $yazdir){
+                    $oyuncukimki = mysql_query("select * from oyuncular where ad_soyadseo = '$yazdir'");
 
-                           <tr>
-                          <th scope="row">2</th>
-                          <td><div class="yerli-oyuncu">Avp</div></td>
-                          <td>RONALDO</td>
-                        </tr>
+                    while ($gelsinbakalim = mysql_fetch_array($oyuncukimki)){
+                      ?>
 
-                      </tbody>
-            </table>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>
+                          <?php
+
+                          $durumucek = $gelsinbakalim['durum'];
+                          switch($durumucek){
+
+                            case "Sakat":
+                            echo "<div class='sakatlanmis-oyuncu'>Skt</div>";
+                            break;
+
+                            case "Avrupa":
+                            echo "<div class='yerli-oyuncu'>Avp</div>";
+                            break;
+
+                            case "Yabanci":
+                            echo "<div class='yabanci-oyuncu'>Avp</div>";
+                            break;
+
+                            case "hafifsakat":
+                            echo "<div class='hafif-sakat'>Skt</div>";
+                            break;
+
+
+                          }
+
+                          ?>
+
+
+                        </td>
+                        <td><?php echo $gelsinbakalim['ad_soyad']; ?></td>
+                      </tr>
+
+                      <?php } ?>
+
+
+
+                    </tbody>
+                  </table>
+
+
+                </div>
+              </div>
+            </div>
+
+            <?php }} ?>
+
+
+          </div>
+
+
 
 
         </div>
-    </div>
-        </div>
 
-        <?php } ?>
-
-
-</div>
-
-
-
-
-</div>
-
-<?php include "components/side-panel.php";?>
-
-</div>
+        <?php include "components/side-panel.php";?>
+      </div>

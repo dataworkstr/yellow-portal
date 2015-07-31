@@ -235,17 +235,17 @@ header("Refresh:2, url=admin.php?div=oyuncular");
              <select name="sirtno" id="selection2" class="uniformselect">
                 <?php
 
-               $nomber = mysql_query("SELECT * FROM oyuncular where id='$fiddycent' ");
+                $numaracek = mysql_fetch_array(mysql_query("SELECT * FROM oyuncular"));
 
-            while($numaracek= mysql_fetch_array($nomber)){
                 echo "<option>".$ugurdk['numara']."</option>";
                 for($a = 1 ; $a <100 ; $a++){
+
                     if($numaracek['numara'] == $a){
                         continue;
                     }else{
                         echo "<option>".$a."</option>";
                     }
-                }}
+                }
                 ?>
             </select>
         </span>
@@ -256,10 +256,11 @@ header("Refresh:2, url=admin.php?div=oyuncular");
         <span class="field">
         <input name="ozandurum" value="<?php echo $ugurdk['durum']; ?>" style="display:none;"/>
          <select data-placeholder="Durum belirtin" class="chzn-select" multiple="multiple" style="width:350px;" tabindex="4" name="durum">
-            <option>Yerli</option>
-            <option>Sakat</option>
-            <option>Avrupa</option>
-            <option>Yabancı</option>
+                                <option value="Yerli">Yerli</option>
+                                <option value="Sakat">Sakat</option>
+                                <option value="hafifsakat">Hafif Sakat</option>
+                                <option value="Avrupa">Avrupa</option>
+                                <option value="Yabanci">Yabancı</option>
 
         </select>
     </span>
