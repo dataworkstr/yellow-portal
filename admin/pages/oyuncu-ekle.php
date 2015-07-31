@@ -231,10 +231,11 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                 <span class="field">
                        <select data-placeholder="Durum seçin..." class="chzn-select" multiple="multiple" style="width:350px;" tabindex="4" name="durum">
 
-                                <option value="yerli">Yerli</option>
-                                <option value="sakat">Sakat</option>
-                                <option value="avrupa">Avrupa</option>
-                                <option value="yabanci">Yabancı</option>
+                                <option value="Yerli">Yerli</option>
+                                <option value="Sakat">Sakat</option>
+                                <option value="hafifsakat">Hafif Sakat</option>
+                                <option value="Avrupa">Avrupa</option>
+                                <option value="Yabanci">Yabancı</option>
 
                        </select>
                  </span>
