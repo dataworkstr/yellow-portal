@@ -45,7 +45,17 @@ if($kontrol)
 
    $telefon = addslashes($_POST['telefon']);
 
+   $takimiceka2 = mysql_fetch_array(mysql_query("select * from takimlar where id = '$yellowcek'"));
+
    $oyuncular = $_POST['tumlistesioyuncu'].$_POST['serbest'];
+
+    $virgulleayir = explode(', ',$oyuncular);
+    foreach($virgulleayir as $tektek){
+        $kulub = $takimiceka2['takim_adi'];
+        mysql_query("update oyuncular set kulub = '$kulub'  where ad_soyadseo = '$tektek'",$baglanti) or die("Veri eklenemedi".mysql_error());
+
+    }
+
 
 
    if($_FILES['resim']['name'] == ''){
@@ -73,7 +83,7 @@ baskan = '$baskan',
 merkez = '$merkez',
 email = '$eposta',
 telefon = '$telefon'
-",$baglanti) or die("Veri eklenemedi".mysql_error());
+ where id = '$yellowcek'",$baglanti) or die("Veri eklenemedi".mysql_error());
 
 echo "
 
@@ -142,22 +152,14 @@ header("Refresh:2, url=admin.php?div=takimlar");
                                     $getirin2 = mysql_query("select * from oyuncular where kulub ='$gamers'");
                                         while($oku2 = mysql_fetch_array($getirin2)){
                                       ?>
-
                                       <?php echo $oku2['ad_soyad']; ?><br/>
-
                                     <?php } ?>
 
                            <input name="tumlistesioyuncu" value="<?php
-
                                     $gamers4 = $gosterbize['takim_adi'];
                                     $getirin5 = mysql_query("select * from oyuncular where kulub ='$gamers4'");
                                         while($oku5 = mysql_fetch_array($getirin5)){
-                                      ?>
-
-                                      <?php echo $oku5['ad_soyadseo'].","; ?>
-
-
-                                    <?php } ?>" style="display:none;"/>
+                                      ?><?php echo $oku5['ad_soyadseo'].","; ?> <?php } ?>" style="display:none;"/>
 
 
                 </span>
