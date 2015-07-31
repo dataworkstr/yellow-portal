@@ -159,7 +159,7 @@ header("Refresh:2, url=admin.php?div=takimlar");
                                     $gamers4 = $gosterbize['takim_adi'];
                                     $getirin5 = mysql_query("select * from oyuncular where kulub ='$gamers4'");
                                         while($oku5 = mysql_fetch_array($getirin5)){
-                                      ?><?php echo $oku5['ad_soyadseo'].","; ?> <?php } ?>" style="display:none;"/>
+                                       echo $oku5['ad_soyadseo'].",";  } ?>" style="display:none;"/>
 
 
                 </span>
