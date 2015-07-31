@@ -45,7 +45,8 @@ if($kontrol)
 
    $telefon = addslashes($_POST['telefon']);
 
-   $oyuncular = addslashes($_POST['oyuncular']);
+$oyuncular = $_POST['oyuncular'];
+
 
 
    if($_FILES['resim']['name'] == ''){
@@ -134,38 +135,36 @@ header("Refresh:2, url=admin.php?div=takimlar");
             <p>
                 <label>Oyuncular</label>
 
-                <span id="dualselect" class="dualselect">
+                <span class="field">
 
-                            	   <select name="oyuncular" multiple="multiple" size="10">
-                                <?php
+
+                               <?php
                                     $gamers = $gosterbize['oyuncular'];
                                     $yenimetin = explode(',',$gamers);
                                     foreach($yenimetin as $yazdir){
                                        $getirin2 = mysql_query("select * from oyuncular where ad_soyadseo ='$yazdir'");
                                         while($oku2 = mysql_fetch_array($getirin2)){
                                       ?>
-                      <option value="<?php echo $oku2['ad_soyadseo']; ?>"><?php echo $oku2['ad_soyad']; ?></option>
+
+                                      <?php echo $oku2['ad_soyad']; ?>
 
                                     <?php }} ?>
-                                </select>
 
+                </span>
+                      <span class="field">
 
-                                <span class="ds_arrow">
-                                    <button class="btn ds_prev"><i class="iconfa-chevron-left"></i></button><br />
-                                    <button class="btn ds_next"><i class="iconfa-chevron-right"></i></button>
-                                </span>
+                        <select name="serbest" data-placeholder="Serbest Oyuncular..." class="chzn-select" multiple="multiple" style="width:350px;" tabindex="4">
 
-                             <select multiple="multiple" size="10">
-
-                                       <?php
-
-                                    while($oku = mysql_fetch_array($getirin)){
+                           <?php
+                                      $getirin = mysql_query("select * from oyuncular where durum = 'Serbest'");
+                                      while($oku = mysql_fetch_array($getirin)){
                                 ?>
-                           <option value="<?php echo $oku['ad_soyadseo']; ?>"><?php echo $oku['ad_soyad']; ?></option>
+                            <option value="<?php echo $oku['ad_soyadseo']; ?>"><?php echo $oku['ad_soyad']; ?></option>
                                  <?php } ?>
-                                </select>
+                     </select>
 
-                            </span>
+
+                 </span>
 
             </p>
 

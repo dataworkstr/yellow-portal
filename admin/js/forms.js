@@ -19,8 +19,8 @@ jQuery(document).ready(function(){
 
 	// Dual Box Select
 	var db = jQuery('#dualselect').find('.ds_arrow button');	//get arrows of dual select
-	var sel1 = jQuery('#dualselect select:first-child');		//get first select element
-	var sel2 = jQuery('#dualselect select:last-child');			//get second select element
+	var sel2 = jQuery('#dualselect select:first-child');		//get first select element
+	var sel1 = jQuery('#dualselect select:last-child');			//get second select element
 
 	sel2.empty(); //empty it first from dom.
 
