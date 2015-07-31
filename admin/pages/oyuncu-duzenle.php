@@ -19,25 +19,25 @@ if($kontrol)
 
     if(in_array(strtolower($_FILES['resim']['type']),$uzanti)){
 
-     move_uploaded_file($_FILES['resim']['tmp_name'],"./$dizin/$sayi-{$_FILES['resim']['name']}");
+       move_uploaded_file($_FILES['resim']['tmp_name'],"./$dizin/$sayi-{$_FILES['resim']['name']}");
 
 
 
- }
+   }
 
 
- $oyuncu_adi = addslashes($_POST['oyuncu_adi']);
- $dogum_yeri = addslashes($_POST['dogum_yeri']);
- $boy = addslashes($_POST['boy']);
+   $oyuncu_adi = addslashes($_POST['oyuncu_adi']);
+   $dogum_yeri = addslashes($_POST['dogum_yeri']);
+   $boy = addslashes($_POST['boy']);
 
- $kilo = addslashes($_POST['kilo']);
- $yas = addslashes($_POST['yas']);
- $dogum_tarihi = addslashes($_POST['dogum_tarihi']);
+   $kilo = addslashes($_POST['kilo']);
+   $yas = addslashes($_POST['yas']);
+   $dogum_tarihi = addslashes($_POST['dogum_tarihi']);
 
- $uyruk = addslashes($_POST['uyruk']);
- $kulup = addslashes($_POST['kulup']);
+   $uyruk = addslashes($_POST['uyruk']);
+   $kulup = addslashes($_POST['kulup']);
 
- if($_POST['ikincipozisyon'] == ""){
+   if($_POST['ikincipozisyon'] == ""){
     $pozisyon = $_POST['pozisyon333'];
 }else{
     $a = $_POST['ilkpozisyon'];
@@ -63,7 +63,7 @@ $deger = "1.000.000";
 
 if($_FILES['resim']['name'] == ''){
 
-   $haber_resim = $_POST['eskiresmi'];
+ $haber_resim = $_POST['eskiresmi'];
 
 }else{
 
@@ -94,11 +94,11 @@ echo "
 
 <div class='alert alert-success alert-dismissable'>
 
- <i class='fa fa-check'></i>
+   <i class='fa fa-check'></i>
 
- <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+   <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
 
- Oyuncu başarılı bir şekilde düzenlendi. Oyuncu sayfasına yönlendiriliyorsunuz...
+   Oyuncu başarılı bir şekilde düzenlendi. Oyuncu sayfasına yönlendiriliyorsunuz...
 
 </div>
 
@@ -202,7 +202,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                 <label>Pozisyon</label>
                 <input name="pozisyon333" value="<?php echo $ugurdk['pozisyon']; ?>" style="display:none;">
                 <span class="field">
-                 <select name="ilkpozisyon" id="selection2" class="uniformselect">
+                   <select name="ilkpozisyon" id="selection2" class="uniformselect">
 
                     <option><?php echo boşluktankesme($ugurdk['pozisyon'],1) ?></option>
                     <option>GK</option>
@@ -232,7 +232,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
             <label>Sırt No</label>
             <span class="field">
 
-               <select name="sirtno" id="selection2" class="uniformselect">
+             <select name="sirtno" id="selection2" class="uniformselect">
                 <?php
 
                 $numaracek= mysql_fetch_array(mysql_query("SELECT * FROM oyuncular where id='$fiddycent' "));
@@ -241,7 +241,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                     if($numaracek['numara'] == $a){
                         continue;
                     }else{
-                    echo "<option>".$a."</option>";
+                        echo "<option>".$a."</option>";
                     }
                 }
                 ?>
