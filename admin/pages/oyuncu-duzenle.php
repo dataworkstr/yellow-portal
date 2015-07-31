@@ -51,7 +51,7 @@ $sirtno = addslashes($_POST['sirtno']);
     if($_POST['durum'] == "") {
         $durum = $_POST['ozandurum'];
     }else {
-        $durum = addslashes($_POST['durum']);
+        $durum = $_POST['durum'];
     }
 
 
@@ -210,7 +210,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                     <option>DM</option>
                     <option>M</option>
                     <option>AM</option>
-                    <option>FC</option>
+                    <option>F</option>
                     <option>ST</option>
                 </select>
                 <br/>
@@ -255,7 +255,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
         <label>Durum</label>
         <span class="field">
         <input name="ozandurum" value="<?php echo $ugurdk['durum']; ?>" style="display:none;"/>
-         <select data-placeholder="Durum belirtin" class="chzn-select" multiple="multiple" style="width:350px;" tabindex="4" name="durum">
+         <select data-placeholder="Durum belirtin" class="chzn-select" name="durum[]" multiple="multiple" style="width:350px;" tabindex="4" >
                                 <option value="Yerli">Yerli</option>
                                 <option value="Sakat">Sakat</option>
                                 <option value="hafifsakat">Hafif Sakat</option>
