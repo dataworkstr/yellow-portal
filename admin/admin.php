@@ -193,6 +193,14 @@ switch ($menuyak){
     $yak2 = "class='active'";
     break;
 
+        case "takim-ekle" :
+        $yak2 = "class='active'";
+        break;
+
+        case "takim-duzenle" :
+        $yak2 = "class='active'";
+        break;
+
     case "oyuncular" :
     $yak3 = "class='active'";
     break;
@@ -235,7 +243,7 @@ switch ($menuyak){
 
                 <li <?php echo $yak1 ?>><a href="admin.php?div=haberler"><span class="fa fa-newspaper-o"></span> Haberler</a></li>
 
-                <li <?php echo $yak2 ?>><a href="admin.php?div=haberler"><span class="fa fa-flag-checkered"></span> Takımlar</a></li>
+                <li <?php echo $yak2 ?>><a href="admin.php?div=takimlar"><span class="fa fa-flag-checkered"></span> Takımlar</a></li>
 
                 <li <?php echo $yak3 ?>><a href="admin.php?div=oyuncular"><span class="fa fa-users"></span> Oyuncular</a></li>
 
