@@ -45,8 +45,7 @@ if($kontrol)
 
    $telefon = addslashes($_POST['telefon']);
 
-$oyuncular = $_POST['oyuncular'];
-
+   $oyuncular = $_POST['tumlistesioyuncu'].$_POST['serbest'];
 
 
    if($_FILES['resim']['name'] == ''){
@@ -137,18 +136,29 @@ header("Refresh:2, url=admin.php?div=takimlar");
 
                 <span class="field">
 
-
                                <?php
-                                    $gamers = $gosterbize['oyuncular'];
-                                    $yenimetin = explode(',',$gamers);
-                                    foreach($yenimetin as $yazdir){
-                                       $getirin2 = mysql_query("select * from oyuncular where ad_soyadseo ='$yazdir'");
+
+                                    $gamers = $gosterbize['takim_adi'];
+                                    $getirin2 = mysql_query("select * from oyuncular where kulub ='$gamers'");
                                         while($oku2 = mysql_fetch_array($getirin2)){
                                       ?>
 
-                                      <?php echo $oku2['ad_soyad']; ?>
+                                      <?php echo $oku2['ad_soyad']; ?><br/>
 
-                                    <?php }} ?>
+                                    <?php } ?>
+
+                           <input name="tumlistesioyuncu" value="<?php
+
+                                    $gamers4 = $gosterbize['takim_adi'];
+                                    $getirin5 = mysql_query("select * from oyuncular where kulub ='$gamers4'");
+                                        while($oku5 = mysql_fetch_array($getirin5)){
+                                      ?>
+
+                                      <?php echo $oku5['ad_soyadseo'].","; ?>
+
+
+                                    <?php } ?>" style="display:none;"/>
+
 
                 </span>
                       <span class="field">
@@ -156,7 +166,7 @@ header("Refresh:2, url=admin.php?div=takimlar");
                         <select name="serbest" data-placeholder="Serbest Oyuncular..." class="chzn-select" multiple="multiple" style="width:350px;" tabindex="4">
 
                            <?php
-                                      $getirin = mysql_query("select * from oyuncular where durum = 'Serbest'");
+                                      $getirin = mysql_query("select * from oyuncular where kulub = 'Serbest'");
                                       while($oku = mysql_fetch_array($getirin)){
                                 ?>
                             <option value="<?php echo $oku['ad_soyadseo']; ?>"><?php echo $oku['ad_soyad']; ?></option>
