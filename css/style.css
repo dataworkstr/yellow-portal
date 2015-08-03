@@ -320,9 +320,9 @@ body{
 }
 
 .haber-text{
- font-weight: 100;
- padding: 0 10px;
- font-size: 14px
+   font-weight: 100;
+   padding: 0 10px;
+   font-size: 14px
 
 }
 
@@ -470,6 +470,22 @@ body{
     color: white;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
+}
+
+.hafif-sakat {
+    width: 35px;
+    font-weight: 700;
+    height: 20px;
+    font-size: 13px;
+    padding-top: 1px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: darkorange;
+    color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    float:left;
+    margin-right: 10px;
 }
 
 .oyuncu-tablosu {
