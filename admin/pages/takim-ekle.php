@@ -43,7 +43,7 @@ if($kontrol)
 
    $telefon = addslashes($_POST['telefon']);
 
-   $oyuncular = addslashes($_POST['oyuncular']);
+   $oyuncular = implode($_POST['oyuncular'],', ');
 
 
    if($_FILES['resim']['name'] == ''){
@@ -115,10 +115,10 @@ header("Refresh:2, url=admin.php?div=takimlar");
                 <label>Oyuncular</label>
                 <span class="field">
 
-                           <select name="serbest" data-placeholder="Serbest Oyuncular..." class="chzn-select" multiple="multiple" style="width:350px;" tabindex="4">
+                           <select name="oyuncular[]" data-placeholder="Serbest Oyuncular..." class="chzn-select" multiple="multiple" style="width:350px;" tabindex="4">
 
                            <?php
-                                      $getirin = mysql_query("select * from oyuncular where durum = 'Serbest'");
+                                      $getirin = mysql_query("select * from oyuncular where kulub = 'serbest'");
                                       while($oku = mysql_fetch_array($getirin)){
                                 ?>
                             <option value="<?php echo $oku['ad_soyadseo']; ?>"><?php echo $oku['ad_soyad']; ?></option>

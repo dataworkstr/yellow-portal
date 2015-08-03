@@ -278,6 +278,94 @@ h1,h2,h3,h4,h5 { font-weight: normal; line-height: normal; }
 
 
 
+.yerli-oyuncu {
+    width: 35px;
+    font-weight: 700;
+    height: 20px;
+    font-size: 13px;
+    padding-top: 1px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #fded00;
+    color: #1d1d1d;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    float:left;
+    margin-right: 10px;
+}
+
+
+.avrupa-oyuncu {
+    width: 35px;
+    font-weight: 700;
+    height: 20px;
+    font-size: 13px;
+    padding-top: 1px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #1d1d1d;
+    color: #fded00;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    float:left;
+    margin-right: 10px;
+}
+
+.yabanci-oyuncu {
+    width: 35px;
+    font-weight: 700;
+    height: 20px;
+    padding-top: 1px;
+    font-size: 13px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #3981C4;
+    color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    float:left;
+    margin-right: 10px;
+}
+
+
+.sakatlanmis-oyuncu {
+    width: 35px;
+    font-weight: 700;
+    height: 20px;
+    font-size: 13px;
+    padding-top: 1px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: red;
+    color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    float:left;
+    margin-right: 10px;
+}
+
+
+.hafif-sakat-oyuncu {
+    width: 35px;
+    font-weight: 700;
+    height: 20px;
+    font-size: 13px;
+    padding-top: 1px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: darkorange;
+    color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    float:left;
+    margin-right: 10px;
+}
+
+
+
+
+
+
 
 /*** HEADERS AND BOXES ***/
 

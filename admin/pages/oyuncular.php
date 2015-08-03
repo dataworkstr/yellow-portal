@@ -48,11 +48,49 @@ if($_SESSION['login'] != "true") die("permission denied");
 
       <td><?php echo stripslashes($oku['pozisyon']); ?></td>
 
-      <td><?php echo stripslashes($oku['kulub']); ?></td>
+      <td><?php $hangisi = $oku['kulub']; $gosterbanayuzunu = mysql_fetch_array(mysql_query("select * from takimlar where takim_adiseo = '$hangisi'"));  if(mysql_num_rows(mysql_query("select * from takimlar where takim_adiseo = '$hangisi'")) < 1) {echo "Serbest";}else { echo $gosterbanayuzunu['takim_adi'];}  ?></td>
 
       <td> 0 </td>
 
-      <td><?php echo stripslashes($oku['durum']); ?></td>
+      <td><?php
+
+      $metin= $oku['durum'];
+        $yenimetin = explode(', ',$metin);
+        foreach($yenimetin as $yazdir){
+
+                switch($yazdir){
+
+                    case "yerli" :
+                    echo "<div class='yerli-oyuncu'>Yrl</div>";
+                    break;
+
+                    case "sakat" :
+                    echo "<div class='sakatlanmis-oyuncu'>Skt</div>";
+                    break;
+
+                    case "hafifsakat" :
+                    echo "<div class='hafif-sakat-oyuncu'>Skt</div>";
+                    break;
+
+                    case "avp" :
+                    echo "<div class='avrupa-oyuncu'>Avp</div>";
+                    break;
+
+                    case "yabanci" :
+                    echo "<div class='yabanci-oyuncu'>Ybn</div>";
+                    break;
+
+                }
+
+
+        }
+
+
+          ?>
+
+
+
+       </td>
 
       <td><?php echo $oku['deger']; ?></td>
 
