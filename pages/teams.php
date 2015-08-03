@@ -72,7 +72,7 @@
 
 
                         </td>
-                        <td><?php echo $gelsinbakalim['ad_soyad']; ?></td>
+                        <td><a href="index.php?page=oyuncu-detay&oyuncu=<?php echo $gelsinbakalim['ad_soyadseo']; ?>"><?php echo $gelsinbakalim['ad_soyad']; ?></a></td>
                       </tr>
 
                       <?php }} ?>

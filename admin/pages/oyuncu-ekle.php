@@ -36,6 +36,14 @@ if($kontrol)
    $uyruk = addslashes($_POST['uyruk']);
    $kulup = addslashes($_POST['kulup']);
 
+    $oyuncu_adiseo = cevir($oyuncu_adi);
+
+    $hangitakimaeklenece = mysql_fetch_array(mysql_query("select * from takimlar where takim_adiseo = '$kulup'"));
+
+    $ensonekleneceksey = $hangitakimaeklenece['oyuncular'].", ".$oyuncu_adiseo;
+
+    mysql_query("update takimlar set oyuncular = '$ensonekleneceksey' where takim_adiseo ='$kulup'",$baglanti) or die("Veri eklenemedi".mysql_error());
+
 
     $a = $_POST['ilkpozisyon'];
     $b = $_POST['ikincipozisyon'];
@@ -45,7 +53,7 @@ if($kontrol)
 
    $sirtno = addslashes($_POST['sirtno']);
    $durum = implode($_POST['durum'],', ');
-   $oyuncu_adiseo = cevir($oyuncu_adi);
+
 
    $deger = "1.000.000";
 
