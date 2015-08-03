@@ -73,6 +73,8 @@
 
                         </td>
                         <td><a href="index.php?page=oyuncu-detay&oyuncu=<?php echo $gelsinbakalim['ad_soyadseo']; ?>" class="oyuncu-linkleri-rengi"><?php echo $gelsinbakalim['ad_soyad']; ?></a></td>
+
+                        <td><?php echo $gelsinbakalim['pozisyon']; ?></td>
                       </tr>
 
                       <?php }} ?>
