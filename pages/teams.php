@@ -146,6 +146,8 @@
 
                         </td>
                         <td><a href="index.php?page=oyuncu-detay&oyuncu=<?php echo $asdx['ad_soyadseo']; ?>" class="oyuncu-linkleri-rengi"><?php echo $asdx['ad_soyad']; ?></a></td>
+
+                        <td><?php echo $asdx['pozisyon']; ?></td>
                       </tr>
 
 
