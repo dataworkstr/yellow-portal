@@ -195,7 +195,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                     <option>DM</option>
                     <option>M</option>
                     <option>AM</option>
-                    <option>FC</option>
+                    <option>F</option>
                     <option>ST</option>
                 </select>
                 <br/>
