@@ -1,6 +1,11 @@
 <div>
   <div class="col-md-9">
 
+    <?php
+        $iskendercek = $_GET['sahalar'];
+
+        $gosterbanaiskenderi = mysql_fetch_array(mysql_query("select * from sahalar where saha_adiseo = '$iskendercek'"));
+    ?>
 
     <div class="haberler-sayfasi">
 
@@ -9,7 +14,7 @@
 
 
       <div class="saha-resim-ust">
-        <img src="images/stat/stat2.jpg" class="img-responsive" />
+        <img src="<?php echo $gosterbanaiskenderi['saha_resim'] ?>" class="img-responsive" />
       </div>
 
       <div class="saha-detaylari-alt">
@@ -19,13 +24,13 @@
          <hr/>
 
          <ul>
-           <li><label>Seyirci Kapasitesi :</label> 82</li>
-           <li><label>Oyun Alanı Ölçüsü :</label> 43x26 m</li>
-           <li><label>Zemin Türü :</label> Suni çim</li>
-           <li><label>Işıklandırma :</label> Var</li>
-           <li><label>Koltuklandırma :</label> Yok</li>
-           <li><label>Diğer Bilgiler :</label> Ücretsiz Otopark, Su, 4 Soyunma Odası, 8 Duşakabin</li><br/>
-           <li><label>Adres :</label> Talatpaşa Caddesi. Hudut Sokak. No: 4 Gültepe-Kâğıthane / İSTANBUL</li>
+           <li><label>Seyirci Kapasitesi :</label> <?php echo $gosterbanaiskenderi['saha_kapasite'] ?></li>
+           <li><label>Oyun Alanı Ölçüsü :</label> <?php echo $gosterbanaiskenderi['saha_boyut'] ?></li>
+           <li><label>Zemin Türü :</label> <?php echo $gosterbanaiskenderi['saha_zemin'] ?></li>
+           <li><label>Işıklandırma :</label> <?php echo $gosterbanaiskenderi['saha_isiklandirma'] ?></li>
+           <li><label>Koltuklandırma :</label> <?php echo $gosterbanaiskenderi['saha_koltuklandirma'] ?></li>
+           <li><label>Diğer Bilgiler :</label> <?php echo $gosterbanaiskenderi['saha_digerbilgiler'] ?></li><br/>
+           <li><label>Adres :</label> <?php echo $gosterbanaiskenderi['saha_adres'] ?></li>
          </ul>
 
        </div>
@@ -44,7 +49,7 @@
        </div>
 
        <div class="saha-linki">
-        <a href="#">Websitesi için tıklayın</a>
+        <a href="<?php echo $gosterbanaiskenderi['saha_link'] ?>">Websitesi için tıklayın</a>
       </div>
 
     </div>

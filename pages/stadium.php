@@ -16,15 +16,18 @@
             });
      </script>
 
+    <?php
+        $sahacekelim = mysql_query("select * from sahalar");
+
+while($gostersahalari = mysql_fetch_array($sahacekelim)){
+    ?>
+
      <div class="statlar">
-         <a href="index.php?page=saha-detay"><div class="statresmi" ><img src="images/stat/stat1.jpg" class="img-responsive"/></div></a>
-        <a href="index.php?page=saha-detay"> <div class="statismi" style="display:none;"> Gültepe Arena </div></a>
+         <a href="index.php?page=saha-detay&sahalar=<?php echo $gostersahalari['saha_adiseo']; ?>"><div class="statresmi" ><img src="<?php echo $gostersahalari['saha_resim']; ?>" class="img-responsive"/></div></a>
+        <a href="index.php?page=saha-detay&sahalar=<?php echo $gostersahalari['saha_adiseo']; ?>"> <div class="statismi" style="display:none;"> <?php echo $gostersahalari['saha_adi']; ?> </div></a>
      </div>
 
-      <div class="statlar">
-         <div class="statresmi"><img src="images/stat/stat1.jpg" class="img-responsive"/></div>
-         <div class="statismi" style="display:none;"> Gültepe Arena </div>
-     </div>
+        <?php } ?>
 
 
 
