@@ -82,7 +82,8 @@ ilk_baskan = '$ilkbaskan',
 baskan = '$baskan',
 merkez = '$merkez',
 email = '$eposta',
-telefon = '$telefon'
+telefon = '$telefon',
+logo = '$logo'
  where id = '$yellowcek'",$baglanti) or die("Veri eklenemedi".mysql_error());
 
 echo "

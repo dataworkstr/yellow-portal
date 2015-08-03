@@ -59,7 +59,7 @@ if($kontrol)
 }
 
 
-mysql_query("insert into takimlar(takim_adi,takim_adiseo,yil,yer,kurucular,ilk_baskan,baskan,merkez,email,telefon,logo,oyuncular) values('$takimadi','$takimadiseo','$yil','$yer','$kurucular','$ilkbaskan','$baskan','$merkez','$eposta','$telefon','$logo','$oyuncular')",$baglanti) or die("Veri eklenemedi".mysql_error());
+mysql_query("insert into takimlar(takim_adi,takim_adiseo,yil,yer,kurucular,ilk_baskan,baskan,merkez,email,telefon,logo,oyuncular,logo) values('$takimadi','$takimadiseo','$yil','$yer','$kurucular','$ilkbaskan','$baskan','$merkez','$eposta','$telefon','$logo','$oyuncular','$logo')",$baglanti) or die("Veri eklenemedi".mysql_error());
 
 echo "
 
