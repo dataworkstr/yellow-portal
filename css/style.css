@@ -344,9 +344,9 @@ body{
 }
 
 .haber-text{
-   font-weight: 100;
-   padding: 0 10px;
-   font-size: 14px
+ font-weight: 100;
+ padding: 0 10px;
+ font-size: 14px
 
 }
 
@@ -908,10 +908,17 @@ a.navbar-brand {
   margin-right: 47px;
   color:#454545;
 }
-}
 
 
 ::selection {
     background: #fded00;
     color:#1d1d1d;
+}
+
+.saha-isim {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.2);
+    height: 30px;
+    width: 100%;
 }

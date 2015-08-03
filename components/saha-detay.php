@@ -2,9 +2,9 @@
   <div class="col-md-9">
 
     <?php
-        $iskendercek = $_GET['sahalar'];
+    $iskendercek = $_GET['sahalar'];
 
-        $gosterbanaiskenderi = mysql_fetch_array(mysql_query("select * from sahalar where saha_adiseo = '$iskendercek'"));
+    $gosterbanaiskenderi = mysql_fetch_array(mysql_query("select * from sahalar where saha_adiseo = '$iskendercek'"));
     ?>
 
     <div class="haberler-sayfasi">
@@ -15,6 +15,7 @@
 
       <div class="saha-resim-ust">
         <img src="<?php echo $gosterbanaiskenderi['saha_resim'] ?>" class="img-responsive" />
+        <div class="saha-isim"><?php echo $gosterbanaiskenderi['saha_adi'] ?></div>
       </div>
 
       <div class="saha-detaylari-alt">
