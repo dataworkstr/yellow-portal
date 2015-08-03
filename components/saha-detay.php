@@ -9,13 +9,12 @@
 
     <div class="haberler-sayfasi">
 
-      <div class="news-header"> <h3><i class="fa fa-newspaper-o"></i> Saha Bilgileri</h3></div>
+      <div class="news-header"> <h3><i class="fa fa-newspaper-o"></i><?php echo $gosterbanaiskenderi['saha_adi'] ?></h3></div>
 
 
 
       <div class="saha-resim-ust">
         <img src="<?php echo $gosterbanaiskenderi['saha_resim'] ?>" class="img-responsive" />
-        <div class="saha-isim"><?php echo $gosterbanaiskenderi['saha_adi'] ?></div>
       </div>
 
       <div class="saha-detaylari-alt">

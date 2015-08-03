@@ -62,7 +62,18 @@ if($kontrol)
 }
 
 
-mysql_query("insert into sahalar(saha_adi,saha_adiseo,saha_resim,saha_kapasite,saha_boyut,saha_zemin,saha_isiklandirma,saha_koltuklandirma,saha_digerbilgiler,saha_adres,saha_link) values('$adi','$adiseo','$saha_resim','$kapasite','$boyut','$zemin','$isiklandirma','$koltuklandirma','$diger','$adres','$linki')",$baglanti) or die("Veri eklenemedi".mysql_error());
+mysql_query("update sahalar set
+saha_adi = '$adi',
+saha_adiseo = '$adiseo',
+saha_resim = '$saha_resim',
+saha_kapasite = '$kapasite',
+saha_boyut = '$boyut',
+saha_zemin = '$zemin',
+saha_isiklandirma = '$isiklandirma',
+saha_koltuklandirma = '$koltuklandirma',
+saha_digerbilgiler = '$diger',
+saha_adres = '$adres',
+saha_link = '$linki' where id ='$kiminsahasi'",$baglanti) or die("Veri eklenemedi".mysql_error());
 
 echo "
 
@@ -165,7 +176,7 @@ header("Refresh:0, url=admin.php?div=sahalar");
 
 
     <p class="stdformbutton" style="text-align:center;">
-        <input class="btn btn-primary" type="submit" name="button" value="Gönder"/>
+        <input class="btn btn-primary" type="submit" name="button" value="Düzenle"/>
     </p>
 </form>
 </div>
