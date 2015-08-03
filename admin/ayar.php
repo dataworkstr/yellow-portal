@@ -3,7 +3,6 @@
 session_start();
 ob_start();
 
-
  // $dbhost      = "localhost:3195";
  // $dbadi       = "yellowbulls";
  // $dbuser      = "root";
