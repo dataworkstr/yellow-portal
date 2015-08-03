@@ -27,9 +27,11 @@ while ($oku = mysql_fetch_array($goster)){
 
 
                   $metin= $oku['oyuncular'];
-                  $yenimetin = explode(',',$metin);
+                  $yenimetin = explode(', ',$metin);
                   foreach($yenimetin as $yazdir){
-                    $oyuncukimki = mysql_query("select * from oyuncular where ad_soyadseo = '$yazdir'");
+
+                      $hangitakim = $oku['takim_adiseo'];
+                    $oyuncukimki = mysql_query("select * from oyuncular where ad_soyadseo = '$yazdir' and kulub = '$hangitakim'");
 
                       while ($gelsinbakalim = mysql_fetch_array($oyuncukimki)){
                 ?>
@@ -55,7 +57,7 @@ while ($oku = mysql_fetch_array($goster)){
                                         break;
 
                                         case "yabanci":
-                                        echo "<div class='yabanci-oyuncu'>Avp</div>";
+                                        echo "<div class='yabanci-oyuncu'>Ybn</div>";
                                         break;
 
                                         case "hafifsakat":
