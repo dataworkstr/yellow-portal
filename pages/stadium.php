@@ -1,41 +1,41 @@
 <div>
-<div class="col-md-9">
+    <div class="col-md-9">
 
 
-    <div class="oyuncular-sayfasi">
+        <div class="oyuncular-sayfasi">
 
-<div class="news-header"> <h3><i class="fa fa-th-list"></i> Statlar</h3></div>
+            <div class="news-header"> <h3><i class="fa fa-th-list"></i> Statlar</h3></div>
 
-      <script type="text/javascript">
-            $(document).ready( function() {
+            <script type="text/javascript">
+                $(document).ready( function() {
 
-                $('.statlar').hover( function() {
-                    $(this).find('.statismi').slideToggle(300);
+                    $('.statlar').hover( function() {
+                        $(this).find('.statismi').slideToggle(300);
+                    });
+
                 });
+            </script>
 
-            });
-     </script>
+            <?php
+            $sahacekelim = mysql_query("select * from sahalar");
 
-    <?php
-        $sahacekelim = mysql_query("select * from sahalar");
+            while($gostersahalari = mysql_fetch_array($sahacekelim)){
+                ?>
 
-while($gostersahalari = mysql_fetch_array($sahacekelim)){
-    ?>
+                <div class="statlar">
+                   <a href="index.php?page=saha-detay&sahalar=<?php echo $gostersahalari['saha_adiseo']; ?>"><div class="statresmi" ><img src="<?php echo $gostersahalari['saha_resim']; ?>" class="img-responsive" style="height:150px"/></div></a>
+                   <a href="index.php?page=saha-detay&sahalar=<?php echo $gostersahalari['saha_adiseo']; ?>"> <div class="statismi" style="display:none;"> <?php echo $gostersahalari['saha_adi']; ?> </div></a>
+               </div>
 
-     <div class="statlar">
-         <a href="index.php?page=saha-detay&sahalar=<?php echo $gostersahalari['saha_adiseo']; ?>"><div class="statresmi" ><img src="<?php echo $gostersahalari['saha_resim']; ?>" class="img-responsive"/></div></a>
-        <a href="index.php?page=saha-detay&sahalar=<?php echo $gostersahalari['saha_adiseo']; ?>"> <div class="statismi" style="display:none;"> <?php echo $gostersahalari['saha_adi']; ?> </div></a>
-     </div>
-
-        <?php } ?>
+               <?php } ?>
 
 
 
 
-</div>
+           </div>
 
-</div>
+       </div>
 
-<?php include "components/side-panel.php";?>
+       <?php include "components/side-panel.php";?>
 
-</div>
+   </div>

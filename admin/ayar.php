@@ -14,6 +14,7 @@ $dbuser      = "canagirk_yellowb";
 $dbpass      = "yellowbulls-db2015*";
 
 
+
 $baglanti = mysql_connect($dbhost,$dbuser,$dbpass);
 if(! $baglanti) die("MYSQL Bağlantısı sağlanamadı");
 
