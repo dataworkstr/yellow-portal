@@ -27,7 +27,7 @@
 
 
                   $metin= $oku['oyuncular'];
-                  $yenimetin = explode(',',$metin);
+                  $yenimetin = explode(', ',$metin);
                   foreach($yenimetin as $yazdir){
                     $oyuncukimki = mysql_query("select * from oyuncular where ad_soyadseo = '$yazdir'");
 
