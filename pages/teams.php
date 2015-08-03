@@ -72,7 +72,7 @@
 
 
                         </td>
-                        <td><a href="index.php?page=oyuncu-detay&oyuncu=<?php echo $gelsinbakalim['ad_soyadseo']; ?>"><?php echo $gelsinbakalim['ad_soyad']; ?></a></td>
+                        <td><a href="index.php?page=oyuncu-detay&oyuncu=<?php echo $gelsinbakalim['ad_soyadseo']; ?>" class="oyuncu-linkleri-rengi"><?php echo $gelsinbakalim['ad_soyad']; ?></a></td>
                       </tr>
 
                       <?php }} ?>
@@ -88,6 +88,82 @@
             </div>
 
             <?php } ?>
+
+
+                      <div class="col-xs-8 ortala">
+
+                                  <div class="oyuncu-liste">
+                                        <div class="oyuncu-adi">
+                                                 <table class="table">
+                                                    <tbody>
+
+
+                                  <h1 class="serbest-oyuncular-basligi">Serbest Oyuncular</h1>
+
+                                  <?php
+                                    $bosoyuncucek = mysql_query("select * from oyuncular where kulub = 'Serbest'");
+
+                                while($asdx = mysql_fetch_array($bosoyuncucek)){
+
+                                  ?>
+
+
+                                     <tr>
+                        <th scope="row"><?php echo $asdx['numara'] ?></th>
+                        <td>
+                          <?php
+
+                          $durumucek3 = $asdx['durum'];
+
+                          $yenidurum2 = explode(', ',$durumucek3);
+
+                          foreach($yenidurum2 as $durumyaz3){
+                            switch($durumyaz3){
+
+                              case "sakat":
+                              echo "<div class='sakatlanmis-oyuncu'>Skt</div>";
+                              break;
+
+                              case "avp":
+                              echo "<div class='yerli-oyuncu'>Avp</div>";
+                              break;
+
+                              case "yabanci":
+                              echo "<div class='yabanci-oyuncu'>Ybn</div>";
+                              break;
+
+                              case "hafifsakat":
+                              echo "<div class='hafif-sakat'>Skt</div>";
+                              break;
+
+
+
+                            }
+                          }
+
+                          ?>
+
+
+                        </td>
+                        <td><a href="index.php?page=oyuncu-detay&oyuncu=<?php echo $asdx['ad_soyadseo']; ?>" class="oyuncu-linkleri-rengi"><?php echo $asdx['ad_soyad']; ?></a></td>
+                      </tr>
+
+
+
+
+
+
+
+                                  <?php } ?>
+
+                                                     </tbody>
+                                                </table>
+                                          </div>
+
+                                  </div>
+
+                      </div>
+
 
 
           </div>

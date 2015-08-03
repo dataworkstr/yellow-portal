@@ -116,6 +116,30 @@ body{
   margin: 20px 0 0 0;
 }
 
+.serbest-oyuncular-basligi {
+
+    font-size: 21px;
+    margin: 15px;
+    font-weight: 500;
+
+}
+
+.col-xs-8, .ortala {
+
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+
+}
+
+.oyuncu-linkleri-rengi {
+
+    text-decoration: none;
+    color: #1d1d1d;
+
+}
+
 .footer-sonuclar a {
   color: #454545;
   font-size: 12px;
