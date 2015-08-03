@@ -4,15 +4,15 @@ session_start();
 ob_start();
 
 
-       $dbhost      = "localhost:3195";
-       $dbadi       = "yellowbulls";
-       $dbuser      = "root";
-       $dbpass      = "root";
+// $dbhost      = "localhost:3195";
+// $dbadi       = "yellowbulls";
+// $dbuser      = "root";
+// $dbpass      = "root";
 
-//$dbhost      = "localhost";
-//$dbadi       = "canagirk_yellowbulls";
-//$dbuser      = "canagirk_yellowb";
-//$dbpass      = "yellowbulls-db2015*";
+$dbhost      = "localhost";
+$dbadi       = "canagirk_yellowbulls";
+$dbuser      = "canagirk_yellowb";
+$dbpass      = "yellowbulls-db2015*";
 
 
 $baglanti = mysql_connect($dbhost,$dbuser,$dbpass);
