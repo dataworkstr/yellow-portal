@@ -44,7 +44,7 @@ if($kontrol)
 
 
    $sirtno = addslashes($_POST['sirtno']);
-   $durum = addslashes($_POST['durum']);
+   $durum = implode($_POST['durum'],', ');
    $oyuncu_adiseo = cevir($oyuncu_adi);
 
    $deger = "1.000.000";
@@ -165,9 +165,20 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                 <span class="field">
 
                     <select name="kulup" id="selection2" class="uniformselect">
-                        <option>Serbest</option>
-                        <option>Körükspor</option>
-                        <option>AAÜ Ejderhaspor</option>
+
+                        <option value="serbest">Serbest</option>
+
+                        <?php
+                            $takimlarigetir = mysql_query("select * from takimlar order by takim_adi ASC");
+
+                        while($takimgoster = mysql_fetch_array($takimlarigetir)){
+                        ?>
+
+                        <option value="<?php echo $takimgoster['takim_adiseo'] ?>"><?php echo $takimgoster['takim_adi'] ?></option>
+
+                        <?php } ?>
+
+
                     </select>
 
                 </span>
@@ -229,7 +240,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
              <p>
                 <label>Durum</label>
                 <span class="field">
-                       <select data-placeholder="Durum seçin..." class="chzn-select" multiple="multiple" style="width:350px;" tabindex="4" name="durum">
+                       <select data-placeholder="Durum seçin..." name="durum[]" class="chzn-select" multiple="multiple" style="width:350px;" tabindex="4">
 
                                 <option value="Yerli">Yerli</option>
                                 <option value="Sakat">Sakat</option>

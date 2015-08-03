@@ -26,24 +26,41 @@ if($kontrol)
    }
 
 
-   $oyuncu_adi = addslashes($_POST['oyuncu_adi']);
-   $dogum_yeri = addslashes($_POST['dogum_yeri']);
-   $boy = addslashes($_POST['boy']);
+   $oyuncu_adi = $_POST['oyuncu_adi'];
+   $dogum_yeri = $_POST['dogum_yeri'];
+   $boy = $_POST['boy'];
 
-   $kilo = addslashes($_POST['kilo']);
-   $yas = addslashes($_POST['yas']);
-   $dogum_tarihi = addslashes($_POST['dogum_tarihi']);
+   $kilo = $_POST['kilo'];
+   $yas = $_POST['yas'];
+   $dogum_tarihi = $_POST['dogum_tarihi'];
 
-   $uyruk = addslashes($_POST['uyruk']);
-   $kulup = addslashes($_POST['kulup']);
+   $uyruk = $_POST['uyruk'];
+   $kulup = $_POST['kulup'];
 
-   if($_POST['ikincipozisyon'] == ""){
-    $pozisyon = $_POST['pozisyon333'];
-}else{
+   $klubuguncelle = mysql_query("select * from takimlar");
+
+    while($takimguncelle = mysql_fetch_array($klubuguncelle)){
+
+        $hangioyuncuki = mysql_fetch_array(mysql_query("select * from oyuncular where id = '$fiddycent'"));
+
+        $nekiacaba = $hangioyuncuki['ad_soyadseo'].", ";
+
+        str_replace($nekiacaba,"",$takimguncelle['oyuncular']);
+    }
+
+    $hangitakimaeklenece = mysql_fetch_array(mysql_query("select * from takimlar where takim_adiseo = '$kulup'"));
+
+    $hangioyuncuki2 = mysql_fetch_array(mysql_query("select * from oyuncular where id = '$fiddycent'"));
+
+    $ensonekleneceksey = $hangitakimaeklenece['oyuncular'].", ".$hangioyuncuki2['ad_soyadseo'];
+
+    mysql_query("update takimlar set oyuncular = '$ensonekleneceksey' where takim_adiseo ='$kulup'",$baglanti) or die("Veri eklenemedi".mysql_error());
+
+
     $a = $_POST['ilkpozisyon'];
     $b = $_POST['ikincipozisyon'];
     $pozisyon = $a." ".$b;
-}
+
 
 
 $sirtno = addslashes($_POST['sirtno']);
@@ -51,7 +68,8 @@ $sirtno = addslashes($_POST['sirtno']);
     if($_POST['durum'] == "") {
         $durum = $_POST['ozandurum'];
     }else {
-        $durum = addslashes($_POST['durum']);
+        $durum = implode($_POST['durum'],', ');
+
     }
 
 
@@ -163,36 +181,25 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                 <span class="field">
 
                     <select name="kulup" id="selection2" class="uniformselect">
-                        <option><?php echo $ugurdk['kulub']; ?></option>
-                        <?php
-
-                        switch($ugurdk['kulub']){
-
-                            case 'Serbest':
-                            echo "
-                                <option>Körükspor</option>
-                                <option>AAÜ Ejderhaspor</option>
-                            ";
-                            break;
-
-                            case 'Körükspor':
-                            echo "
-                                <option>Serbest</option>
-                                <option>AAÜ Ejderhaspor</option>
-                            ";
-                            break;
-
-                            case 'AAÜ Ejderhaspor':
-                            echo "
-                                <option>Serbest</option>
-                                <option>Körükspor</option>
-                            ";
-                            break;
-
-                        }
+                        <?php $klubu = $ugurdk['kulub']; $gosterbize = mysql_fetch_array(mysql_query("select * from takimlar where takim_adiseo = '$klubu'"));?>
+                        <option value="<?php echo $gosterbize['takim_adiseo'] ?>"><?php echo $gosterbize['takim_adi'] ?></option>
+                        <option value="serbest">Serbest</option>
+                      <?php
 
 
+                            $takimlarigetir = mysql_query("select * from takimlar order by takim_adi ASC");
+
+                        while($takimgoster = mysql_fetch_array($takimlarigetir)){
+
+                            if($gosterbize['takim_adi'] == $takimgoster['takim_adi']){
+                                continue;
+                            }else{
                         ?>
+
+                        <option value="<?php echo $takimgoster['takim_adiseo'] ?>"><?php echo $takimgoster['takim_adi'] ?></option>
+
+                        <?php }} ?>
+
                     </select>
 
                 </span>
@@ -205,6 +212,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                    <select name="ilkpozisyon" id="selection2" class="uniformselect">
 
                     <option><?php echo boşluktankesme($ugurdk['pozisyon'],1) ?></option>
+                    <option></option>
                     <option>GK</option>
                     <option>D</option>
                     <option>DM</option>
@@ -216,6 +224,7 @@ header("Refresh:2, url=admin.php?div=oyuncular");
                 <br/>
                 <select name="ikincipozisyon"  id="selection2" class="uniformselect" >
                     <option><?php echo substr($ugurdk['pozisyon'],2,10); ?></option>
+                    <option></option>
                     <option>R</option>
                     <option>L</option>
                     <option>C</option>
@@ -235,17 +244,25 @@ header("Refresh:2, url=admin.php?div=oyuncular");
              <select name="sirtno" id="selection2" class="uniformselect">
                 <?php
 
-                $numaracek = mysql_fetch_array(mysql_query("SELECT * FROM oyuncular"));
+
 
                 echo "<option>".$ugurdk['numara']."</option>";
-                for($a = 1 ; $a <100 ; $a++){
 
-                    if($numaracek['numara'] == $a){
-                        continue;
-                    }else{
-                        echo "<option>".$a."</option>";
+
+
+
+                for($a = 1; $a < 99 ; $a++){
+
+                     echo "<option>".$a."</option>";
+
+
+
                     }
-                }
+
+
+
+
+
                 ?>
             </select>
         </span>
@@ -255,12 +272,12 @@ header("Refresh:2, url=admin.php?div=oyuncular");
         <label>Durum</label>
         <span class="field">
         <input name="ozandurum" value="<?php echo $ugurdk['durum']; ?>" style="display:none;"/>
-         <select data-placeholder="Durum belirtin" class="chzn-select" multiple="multiple" style="width:350px;" tabindex="4" name="durum">
-                                <option value="Yerli">Yerli</option>
-                                <option value="Sakat">Sakat</option>
+         <select data-placeholder="Durum belirtin" class="chzn-select" name="durum[]" multiple="multiple" style="width:350px;" tabindex="4" >
+                                <option value="yerli">Yerli</option>
+                                <option value="sakat">Sakat</option>
                                 <option value="hafifsakat">Hafif Sakat</option>
-                                <option value="Avrupa">Avrupa</option>
-                                <option value="Yabanci">Yabancı</option>
+                                <option value="avp">Avrupa</option>
+                                <option value="yabanci">Yabancı</option>
 
         </select>
     </span>

@@ -47,11 +47,11 @@ if($kontrol)
 
    $takimiceka2 = mysql_fetch_array(mysql_query("select * from takimlar where id = '$yellowcek'"));
 
-   $oyuncular = $_POST['tumlistesioyuncu'].$_POST['serbest'];
+   $oyuncular = $_POST['tumlistesioyuncu'].implode($_POST['serbest'],', ');;
 
     $virgulleayir = explode(', ',$oyuncular);
     foreach($virgulleayir as $tektek){
-        $kulub = $takimiceka2['takim_adi'];
+        $kulub = $takimiceka2['takim_adiseo'];
         mysql_query("update oyuncular set kulub = '$kulub'  where ad_soyadseo = '$tektek'",$baglanti) or die("Veri eklenemedi".mysql_error());
 
     }
@@ -148,7 +148,7 @@ header("Refresh:2, url=admin.php?div=takimlar");
 
                                <?php
 
-                                    $gamers = $gosterbize['takim_adi'];
+                                    $gamers = $gosterbize['takim_adiseo'];
                                     $getirin2 = mysql_query("select * from oyuncular where kulub ='$gamers'");
                                         while($oku2 = mysql_fetch_array($getirin2)){
                                       ?>
@@ -156,16 +156,16 @@ header("Refresh:2, url=admin.php?div=takimlar");
                                     <?php } ?>
 
                            <input name="tumlistesioyuncu" value="<?php
-                                    $gamers4 = $gosterbize['takim_adi'];
+                                    $gamers4 = $gosterbize['takim_adiseo'];
                                     $getirin5 = mysql_query("select * from oyuncular where kulub ='$gamers4'");
                                         while($oku5 = mysql_fetch_array($getirin5)){
-                                       echo $oku5['ad_soyadseo'].",";  } ?>" style="display:none;"/>
+                                       echo $oku5['ad_soyadseo'].", ";  } ?>" style="display:none;"/>
 
 
                 </span>
                       <span class="field">
 
-                        <select name="serbest" data-placeholder="Serbest Oyuncular..." class="chzn-select" multiple="multiple" style="width:350px;" tabindex="4">
+                        <select name="serbest[]" data-placeholder="Serbest Oyuncular..." class="chzn-select" multiple="multiple" style="width:350px;" tabindex="4">
 
                            <?php
                                       $getirin = mysql_query("select * from oyuncular where kulub = 'Serbest'");

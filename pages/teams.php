@@ -33,32 +33,36 @@
 
                     while ($gelsinbakalim = mysql_fetch_array($oyuncukimki)){
                       ?>
-
                       <tr>
-                        <th scope="row">1</th>
+                        <th scope="row"><?php echo $gelsinbakalim['numara'] ?></th>
                         <td>
                           <?php
 
                           $durumucek = $gelsinbakalim['durum'];
-                          switch($durumucek){
 
-                            case "Sakat":
-                            echo "<div class='sakatlanmis-oyuncu'>Skt</div>";
-                            break;
+                          $yenidurum = explode(', ',$durumucek);
 
-                            case "Avrupa":
-                            echo "<div class='yerli-oyuncu'>Avp</div>";
-                            break;
+                          foreach($yenidurum as $durumyaz){
+                            switch($durumyaz){
 
-                            case "Yabanci":
-                            echo "<div class='yabanci-oyuncu'>Avp</div>";
-                            break;
+                              case "sakat":
+                              echo "<div class='sakatlanmis-oyuncu'>Skt</div>";
+                              break;
 
-                            case "hafifsakat":
-                            echo "<div class='hafif-sakat'>Skt</div>";
-                            break;
+                              case "avp":
+                              echo "<div class='yerli-oyuncu'>Avp</div>";
+                              break;
+
+                              case "yabanci":
+                              echo "<div class='yabanci-oyuncu'>Avp</div>";
+                              break;
+
+                              case "hafifsakat":
+                              echo "<div class='hafif-sakat'>Skt</div>";
+                              break;
 
 
+                            }
                           }
 
                           ?>
@@ -68,7 +72,7 @@
                         <td><?php echo $gelsinbakalim['ad_soyad']; ?></td>
                       </tr>
 
-                      <?php } ?>
+                      <?php }} ?>
 
 
 
