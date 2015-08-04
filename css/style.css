@@ -344,9 +344,9 @@ body{
 }
 
 .haber-text{
- font-weight: 100;
- padding: 0 10px;
- font-size: 14px
+   font-weight: 100;
+   padding: 0 10px;
+   font-size: 14px
 
 }
 
@@ -921,4 +921,44 @@ a.navbar-brand {
     background: rgba(0,0,0,0.2);
     height: 30px;
     width: 100%;
+}
+
+.son-maclar-ikon {
+    width: auto;
+    float: right;
+}
+
+.son-maclar-ikon i {
+    padding: 5px;
+    margin-top: -5px;
+    background: black;
+    color: #fded00;
+    border-radius: 5px;
+}
+
+.son-maclar-ikon i:hover {
+    cursor: pointer;
+    padding: 4px;
+    margin-top: -5px;
+    background: #fded00;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.disabled {
+    display: none;
+}
+
+.solla {
+    margin-right: 46px;
+}
+
+.avrupa-maci{
+    width:100%;
+    padding:10px 20px;
+    background-color:navy;
+    font-size:16px;
+    color:white;
+    font-weight: 600;
 }
