@@ -1,8 +1,15 @@
 <div class="col-md-3">
 
   <div class="maclar">
-    <div class="news-header"><i class="fa fa-bullhorn"></i> Son Maçlar</div>
-    <div class="mac-detayi">
+    <div class="news-header">
+      <i class="fa fa-bullhorn"></i>
+      <span> Son Maçlar</span>
+      <div class="son-maclar-ikon">
+        <i class="fa fa-chevron-left"></i>
+        <i class="fa fa-chevron-right"></i>
+      </div>
+    </div>
+    <div class="mac-detayi" style="display:none;">
       <div class="takimlar">
         <span>Körükspor</span> - <span>AAÜ Ejderhaspor</span>
       </div>
@@ -15,16 +22,69 @@
      </div>
      <hr/>
    </div>
-
-
-
-   <div class="mac-devami-git"> <a href="#"><i class="fa fa-chevron-circle-right"></i> Tüm maçları görüntülemek için tıklayın..</a></div>
-
-
-
-
-
+   <div class="mac-detayi" style="display:none;">
+    <div class="takimlar">
+      <span>Körükspor</span> - <span>AAÜ Ejderhaspor</span>
+    </div>
+    <div class="sol-logo"><img src="images/fenerlogo.png" width="60" height="60"/></div>
+    <div class="skor">0 - 0</div>
+    <div class="sag-logo"><img src="images/fenerlogo.png" width="60" height="60"/></div>
+    <div class="mac-bilgi">
+     <i class="fa fa-calendar-o"></i>  <span>19 Temmuz 2015</span> - <span>19:07</span><br/>
+     <i class="fa fa-globe"></i> <span>Gültepe Arena</span>  <i class="fa"></i>/<i class="fa"></i>   <i class="fa fa-sun-o"></i><span>34°</span>&nbsp;<span>Güneşli</span>
+   </div>
+   <hr/>
  </div>
+ <div class="mac-detayi" style="display:none;">
+  <div class="takimlar">
+    <span>Körükspor</span> - <span>AAÜ Ejderhaspor</span>
+  </div>
+  <div class="sol-logo"><img src="images/fenerlogo.png" width="60" height="60"/></div>
+  <div class="skor">1 - 0</div>
+  <div class="sag-logo"><img src="images/fenerlogo.png" width="60" height="60"/></div>
+  <div class="mac-bilgi">
+   <i class="fa fa-calendar-o"></i>  <span>19 Temmuz 2015</span> - <span>19:07</span><br/>
+   <i class="fa fa-globe"></i> <span>Gültepe Arena</span>  <i class="fa"></i>/<i class="fa"></i>   <i class="fa fa-sun-o"></i><span>34°</span>&nbsp;<span>Güneşli</span>
+ </div>
+ <hr/>
+</div>
+
+<div class="mac-detayi" style="display:none;">
+  <div class="takimlar">
+    <span>Körükspor</span> - <span>AAÜ Ejderhaspor</span>
+  </div>
+  <div class="sol-logo"><img src="images/fenerlogo.png" width="60" height="60"/></div>
+  <div class="skor">2 - 0</div>
+  <div class="sag-logo"><img src="images/fenerlogo.png" width="60" height="60"/></div>
+  <div class="mac-bilgi">
+   <i class="fa fa-calendar-o"></i>  <span>19 Temmuz 2015</span> - <span>19:07</span><br/>
+   <i class="fa fa-globe"></i> <span>Gültepe Arena</span>  <i class="fa"></i>/<i class="fa"></i>   <i class="fa fa-sun-o"></i><span>34°</span>&nbsp;<span>Güneşli</span>
+ </div>
+ <hr/>
+</div>
+<div class="mac-detayi avrupa" style="display:none;">
+  <div class="takimlar">
+    <span>Körükspor</span> - <span>AAÜ Ejderhaspor</span>
+  </div>
+  <div class="sol-logo"><img src="images/fenerlogo.png" width="60" height="60"/></div>
+  <div class="skor">99 - 99</div>
+  <div class="sag-logo"><img src="images/fenerlogo.png" width="60" height="60"/></div>
+  <div class="mac-bilgi">
+   <i class="fa fa-calendar-o"></i>  <span>19 Temmuz 2015</span> - <span>19:07</span><br/>
+   <i class="fa fa-globe"></i> <span>Gültepe Arena</span>  <i class="fa"></i>/<i class="fa"></i>   <i class="fa fa-sun-o"></i><span>34°</span>&nbsp;<span>Güneşli</span>
+ </div>
+ <hr/>
+</div>
+
+
+
+<div class="mac-devami-git"> <a href="#"><i class="fa fa-chevron-circle-right"></i> Tüm maçları görüntülemek için tıklayın..</a></div>
+
+
+
+
+
+</div>
 
 <?php include "anket.php"; ?>
 
