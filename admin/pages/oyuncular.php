@@ -46,7 +46,16 @@ if($_SESSION['login'] != "true") die("permission denied");
 
       <td><?php echo stripslashes($oku['ad_soyad']); ?></td>
 
-      <td><?php echo stripslashes($oku['pozisyon']); ?></td>
+      <td>
+
+      <?php
+
+        $yeniposition = explode(",",$oku['pozisyon']);
+        echo  $yeniposition[1];
+
+      ?>
+
+      </td>
 
       <td><?php $hangisi = $oku['kulub']; $gosterbanayuzunu = mysql_fetch_array(mysql_query("select * from takimlar where takim_adiseo = '$hangisi'"));  if(mysql_num_rows(mysql_query("select * from takimlar where takim_adiseo = '$hangisi'")) < 1) {echo "Serbest";}else { echo $gosterbanayuzunu['takim_adi'];}  ?></td>
 

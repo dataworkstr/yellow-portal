@@ -74,7 +74,7 @@
                         </td>
                         <td><a href="index.php?page=oyuncu-detay&oyuncu=<?php echo $gelsinbakalim['ad_soyadseo']; ?>" class="oyuncu-linkleri-rengi"><?php echo $gelsinbakalim['ad_soyad']; ?></a></td>
 
-                        <td style="width:70px;"><?php echo $gelsinbakalim['pozisyon']; ?></td>
+                        <td style="width:70px;"><?php $yeniposition = explode(",",$gelsinbakalim['pozisyon']); echo $yeniposition[1]; ?></td>
                       </tr>
 
                       <?php }} ?>
