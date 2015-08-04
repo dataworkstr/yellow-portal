@@ -6,7 +6,7 @@ include "admin/ayar.php";
 $oylanankisi = $_POST['radio1'];
 
 
-$query = mysql_query("SELECT * FROM haftaninoyuncusu WHERE adi LIKE '$oylanankisi'");
+$query = mysql_query("SELECT * FROM haftaninoyuncusu WHERE adi = '$oylanankisi'");
 $count = mysql_num_rows($query);
 
 if($count < 1){
