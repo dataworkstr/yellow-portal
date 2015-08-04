@@ -213,13 +213,13 @@ header("Refresh:0, url=admin.php?div=oyuncular");
 
                     <option><?php echo boşluktankesme($ugurdk['pozisyon'],1) ?></option>
                     <option></option>
-                    <option value="1,GK">GK</option>
-                    <option value="2,D">D</option>
-                    <option value="3,DM">DM</option>
-                    <option value="4,M">M</option>
-                    <option value="5,AM">AM</option>
-                    <option value="6,F">F</option>
-                    <option value="7,ST">ST</option>
+                    <option value="1,">GK</option>
+                    <option value="2,">D</option>
+                    <option value="3,">DM</option>
+                    <option value="4,">M</option>
+                    <option value="5,">AM</option>
+                    <option value="6,">F</option>
+                    <option value="7,">ST</option>
                 </select>
                 <br/>
                 <select name="ikincipozisyon"  id="selection2" class="uniformselect" >
