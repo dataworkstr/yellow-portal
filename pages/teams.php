@@ -31,7 +31,7 @@
                   foreach($yenimetin as $yazdir){
 
                       $hangitakim = $oku['takim_adiseo'];
-                    $oyuncukimki = mysql_query("select * from oyuncular where ad_soyadseo = '$yazdir' and kulub = '$hangitakim'");
+                    $oyuncukimki = mysql_query("select * from oyuncular where ad_soyadseo = '$yazdir' and kulub = '$hangitakim' order by pozisyon ASC");
 
                     while ($gelsinbakalim = mysql_fetch_array($oyuncukimki)){
                       ?>
@@ -74,7 +74,7 @@
                         </td>
                         <td><a href="index.php?page=oyuncu-detay&oyuncu=<?php echo $gelsinbakalim['ad_soyadseo']; ?>" class="oyuncu-linkleri-rengi"><?php echo $gelsinbakalim['ad_soyad']; ?></a></td>
 
-                        <td><?php echo $gelsinbakalim['pozisyon']; ?></td>
+                        <td style="width:70px;"><?php echo $gelsinbakalim['pozisyon']; ?></td>
                       </tr>
 
                       <?php }} ?>
@@ -103,7 +103,7 @@
                                   <h1 class="serbest-oyuncular-basligi">Serbest Oyuncular</h1>
 
                                   <?php
-                                    $bosoyuncucek = mysql_query("select * from oyuncular where kulub = 'Serbest'");
+                                    $bosoyuncucek = mysql_query("select * from oyuncular where kulub = 'Serbest' order by pozisyon ASC");
 
                                 while($asdx = mysql_fetch_array($bosoyuncucek)){
 
