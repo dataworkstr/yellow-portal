@@ -14,6 +14,8 @@ if($kontrol)
 
    $baslik = $_POST['baslik'];
 
+   $baslikseo = cevir($baslik);
+
    $bir = $_POST['birdeger'];
 
    $iki = $_POST['ikideger'];
@@ -24,7 +26,7 @@ if($kontrol)
 
 
 
-mysql_query("insert into anketler(anket_baslik,deger1,deger2,deger3,deger1_say,deger2_say,deger3_say,anasayfa) values('$baslik','$bir','$iki','$uc','0','0','0','$anasayfa')",$baglanti) or die("Veri eklenemedi".mysql_error());
+mysql_query("insert into anketler(anket_baslik,baslik_seo,deger1,deger2,deger3,deger1_say,deger2_say,deger3_say,anasayfa) values('$baslik','$baslikseo','$bir','$iki','$uc','0','0','0','$anasayfa')",$baglanti) or die("Veri eklenemedi".mysql_error());
 
 echo "
 

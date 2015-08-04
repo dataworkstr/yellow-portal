@@ -16,6 +16,8 @@ if($kontrol)
 
    $baslik = $_POST['baslik'];
 
+   $baslikseo = cevir($_POST['baslik']);
+
    $bir = $_POST['birdeger'];
 
    $iki = $_POST['ikideger'];
@@ -34,6 +36,7 @@ if($kontrol)
 
 mysql_query("update anketler set
 anket_baslik = '$baslik',
+baslik_seo = '$baslikseo',
 deger1 = '$bir',
 deger2 = '$iki',
 deger3 = '$uc',
