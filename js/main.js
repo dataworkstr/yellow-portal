@@ -1,4 +1,13 @@
 $(document).ready(function() {
+
+	$('.next-match').hover(function() {
+		$('.next-match-detail').addClass('color-white', 200);
+		$('.next-match-detail2').addClass('color-white', 200);
+	}, function() {
+		$('.next-match-detail').removeClass('color-white', 200);
+		$('.next-match-detail2').removeClass('color-white', 200);
+	});
+
 // 	$('.mac-detayi').first('.mac-detayi').css({
 // 		display: 'inherit'
 // 	});

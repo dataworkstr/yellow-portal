@@ -7,7 +7,7 @@ include "admin/ayar.php";
 
   <meta charset="utf-8"/>
   <title>Yellow Bulls - Resmi Web Sitesi</title>
-  <meta name="description" content="Yellow Pages Portal"/>     
+  <meta name="description" content="Yellow Pages Portal"/>
   <meta name="author" content="Murat Bayri"/>
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
   <meta name="robots" content="ALL"/>
@@ -60,7 +60,39 @@ include "admin/ayar.php";
     </div><!-- /.container-fluid -->
   </nav>
 
-  <!-- <div class="advertise-bottom"></div> -->
+  <div class="next-match">
+    <div class="countdown">
+     <span id="clock"></span>
+   </div>
+   <div class="next-match-home-team-logo"></div>
+   <div class="next-match-home-team-name">Körükspor</div>
+   <div class="next-match-away-team-logo"></div>
+   <div class="next-match-away-team-name">AAÜ Ejderhaspor</div>
+   <div class="next-match-detail">12 Aralık 2012 - 19:07</div>
+   <div class="next-match-detail2">Gültepe Arena / 34 Güneşli</div>
+ </div>
 
 
-  <body>
+ <body>
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+
+      $('#clock').countdown('2015/08/07 20:00:00')
+      .on('update.countdown', function(event) {
+        var format = '%H saat %M dakika %S saniye';
+        if(event.offset.days > 0) {
+          format = '%-d gün%!d ' + format;
+        }
+        if(event.offset.weeks > 0) {
+          format = '%-w hafta%!w ' + format;
+        }
+        $(this).html(event.strftime(format));
+      })
+      .on('finish.countdown', function(event) {
+        $(this).html('Maç Oynandı!');
+        $(this).parent().addClass('disabled')
+
+      });
+    });
+  </script>
