@@ -9,7 +9,7 @@ $oku = mysql_fetch_array(mysql_query("select * from anket where baslik_seo = '$R
 
            <div class="haberler-sayfasi">
 
-            <div class="news-header"> <h3><i class="fa fa-newspaper-o"></i> Anket Sonuçları</h3></div>
+            <div class="news-header"> <h3><i class="fa fa-comments"></i> Anket Sonuçları</h3></div>
 
 
 
