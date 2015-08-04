@@ -55,6 +55,60 @@ body{
     color: #fded00;
 }
 
+.anket-side form p a{
+    width: 80px;
+    background-color: #fded00;
+    color: #1d1d1d;
+    border: 0;
+    margin: 8px;
+    padding: 5px;
+    text-decoration: none;
+
+}
+
+.anket-side form p a:hover{
+    background-color: #1d1d1d;
+    color: #fded00;
+}
+
+
+.anket-side p input{
+    width: 80px;
+    background-color: #fded00;
+    color: #1d1d1d;
+    border: 0;
+    margin: 8px;
+    padding: 8px;
+}
+
+.anket-side p input:hover{
+    background-color: #1d1d1d;
+    color: #fded00;
+}
+
+.anket-side p a{
+    width: 80px;
+    background-color: #fded00;
+    color: #1d1d1d;
+    border: 0;
+    margin: 8px;
+    padding: 5px;
+    text-decoration: none;
+
+}
+
+.anket-side p a:hover{
+    background-color: #1d1d1d;
+    color: #fded00;
+}
+
+.oylama-success {
+    text-align: center;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    color: rgba(0, 135, 0, 1);
+}
+
 .header-logo {
     margin-top: -32px;
 }
@@ -344,9 +398,9 @@ body{
 }
 
 .haber-text{
- font-weight: 100;
- padding: 0 10px;
- font-size: 14px
+   font-weight: 100;
+   padding: 0 10px;
+   font-size: 14px
 
 }
 

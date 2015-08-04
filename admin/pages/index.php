@@ -13,6 +13,22 @@ switch($yello){
     include "pages/anasayfa.php";
     break;
 
+    case "anketler" :
+    include "pages/anketler.php";
+    break;
+
+        case "anket-ekle" :
+        include "pages/anket-ekle.php";
+        break;
+
+        case "anket-duzenle" :
+        include "pages/anket-duzenle.php";
+        break;
+
+        case "anket-sil" :
+        include "pages/anket-sil.php";
+        break;
+
     case "sahalar" :
     include "pages/sahalar.php";
     break;

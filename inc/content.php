@@ -18,6 +18,10 @@ switch($yellowcek){
 	include "components/takim-detay.php";
 	break;
 
+    case "anket-sonucu" :
+	include "components/anket-sonuclari.php";
+	break;
+
 
 	case "players" :
 	include "pages/players.php";
