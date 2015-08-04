@@ -33,7 +33,7 @@
   	var post_edilecek_veriler = isim_degiskeni;
   	$.ajax({
   		type:'POST',
-  		url:'components/anketoyla.php',
+  		url:'anketoyla.php',
   		data:post_edilecek_veriler,
   		success:function(cevap){
   			$("#sonuc").html(cevap);

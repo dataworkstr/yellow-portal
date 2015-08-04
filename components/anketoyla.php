@@ -3,13 +3,13 @@
 include "admin/ayar.php";
 
 
-$oylanankisi = $_POST['radio1'];
+$oylanankisi = $_GET['radio1'];
 
 
-$query = mysql_query("SELECT * FROM haftaninoyuncusu WHERE adi = '$oylanankisi'");
+$query = mysql_query("select * from haftaninoyuncusu where adi = '$oylanankisi'");
 $count = mysql_num_rows($query);
 
-if($count < 1){
+if($count == 0){
 
 mysql_query("insert into haftaninoyuncusu (adi) values ('$oylanankisi')",$baglanti) or die("Veri eklenemedi".mysql_error());
 
@@ -19,7 +19,7 @@ mysql_query("insert into haftaninoyuncusu (adi) values ('$oylanankisi')",$baglan
 
     $yenilesay = $oku['say']+1;
 
-    mysql_query("update haftaninoyuncusu set (say) values ('$yenilesay') where adi = '$oylanankisi'",$baglanti) or die("Veri güncellenemedi".mysql_error());
+    mysql_query("update haftaninoyuncusu set say ='$yenilesay' where adi = '$oylanankisi'",$baglanti) or die("Veri güncellenemedi".mysql_error());
 
 }
 
