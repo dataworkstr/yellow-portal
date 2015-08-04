@@ -26,12 +26,8 @@
                   <?php
 
 
-                  $metin= $oku['oyuncular'];
-                  $yenimetin = explode(', ',$metin);
-                  foreach($yenimetin as $yazdir){
-
-                      $hangitakim = $oku['takim_adiseo'];
-                    $oyuncukimki = mysql_query("select * from oyuncular where ad_soyadseo = '$yazdir' and kulub = '$hangitakim' order by pozisyon ASC");
+                    $hangitakim = $oku['takim_adiseo'];
+                    $oyuncukimki = mysql_query("select * from oyuncular where kulub = '$hangitakim' order by pozisyon ASC");
 
                     while ($gelsinbakalim = mysql_fetch_array($oyuncukimki)){
                       ?>
@@ -77,7 +73,7 @@
                         <td style="width:70px;"><?php $yeniposition = explode(",",$gelsinbakalim['pozisyon']); echo $yeniposition[1]; ?></td>
                       </tr>
 
-                      <?php }} ?>
+                      <?php } ?>
 
 
 
@@ -149,7 +145,10 @@
                         </td>
                         <td><a href="index.php?page=oyuncu-detay&oyuncu=<?php echo $asdx['ad_soyadseo']; ?>" class="oyuncu-linkleri-rengi"><?php echo $asdx['ad_soyad']; ?></a></td>
 
-                        <td><?php echo $asdx['pozisyon']; ?></td>
+                        <td><?php
+                                    $yeniposition2 = explode(",",$asdx['pozisyon']); echo $yeniposition2[1];
+
+                            ?></td>
                       </tr>
 
 
