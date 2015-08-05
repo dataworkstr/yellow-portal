@@ -16,7 +16,7 @@ if($kontrol)
 
    $baslik = $_POST['baslik'];
 
-   $baslikseo = cevir($_POST['baslik']);
+   $baslikseo = cevir($baslik);
 
    $bir = $_POST['birdeger'];
 
