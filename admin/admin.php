@@ -233,6 +233,18 @@ switch ($menuyak){
     $yak = "class='active'";
     break;
 
+    case "anketler" :
+    $yak7 = "class='active'";
+    break;
+
+        case "anket-ekle" :
+        $yak7 = "class='active'";
+        break;
+
+        case "anket-duzenle" :
+        $yak7 = "class='active'";
+        break;
+
     default:
     $yak6 = "class='active'";
     break;
@@ -256,6 +268,7 @@ switch ($menuyak){
                 <li <?php echo $yak3 ?>><a href="admin.php?div=oyuncular"><span class="fa fa-users"></span> Oyuncular</a></li>
 
                 <li <?php echo $yak4 ?>><a href="admin.php?div=sahalar"><span class="fa fa-globe"></span> Sahalar</a></li>
+                 <li <?php echo $yak7 ?>><a href="admin.php?div=anketler"><span class="fa fa-comments-o"></span> Anketler</a></li>
 
                 <li <?php echo $yak5 ?>><a href="admin.php?div=haberler"><span class="fa fa-futbol-o"></span> Maçlar</a></li>
 
