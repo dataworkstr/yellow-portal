@@ -141,6 +141,15 @@ if($_SESSION['login'] != "true") die("permission denied");
                             <li class="viewmore"><a href="charts.html">View More Statistics</a></li>
                         </ul>
                     </li>
+
+
+                    <li>
+                        <a href="http://yellowbulls.org" style="text-align:center;" target="_blank">
+                            <span class="fa fa-link" style="font-size:50px;"></span>
+                            <span class="headmenu-label">Siteyi Göster</span>
+                        </a>
+                    </li>
+
                     <?php
 
 
