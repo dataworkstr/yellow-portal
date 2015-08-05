@@ -44,21 +44,21 @@ $oku = mysql_fetch_array(mysql_query("select * from anket where baslik_seo = '$R
     <div class="row">
          <div class="col-md-3 col-sm-6" style="width: 220px;">
             <div class="knob-container" style="text-align: center; margin: 20px;">
-                <input class="knob" data-width="140" data-min="0" data-max="100" data-displayPrevious="true" value="<?php echo $deger1_yuzde; ?>" data-fgColor="#92A3C2" data-readOnly=true;>
+                <input class="knob" data-width="140" data-min="0" data-max="100" data-displayPrevious="true" value="<?php echo round($deger1_yuzde); ?>" data-fgColor="#92A3C2" data-readOnly=true;>
                 <h3 class="text-muted text-center"><?php echo $oku['deger1']; ?></h3>
             </div>
         </div>
 
          <div class="col-md-3 col-sm-6" style="width: 220px;">
             <div class="knob-container" style="text-align: center; margin: 20px;">
-                <input class="knob" data-width="140" data-min="0" data-max="100" data-displayPrevious="true" value="<?php echo $deger2_yuzde; ?>" data-fgColor="#92A3C2" data-readOnly=true;>
+                <input class="knob" data-width="140" data-min="0" data-max="100" data-displayPrevious="true" value="<?php echo round($deger2_yuzde); ?>" data-fgColor="#92A3C2" data-readOnly=true;>
                 <h3 class="text-muted text-center"><?php echo $oku['deger2']; ?></h3>
             </div>
         </div>
 
          <div class="col-md-3 col-sm-6" style="width: 220px;">
             <div class="knob-container" style="text-align: center; margin: 20px;">
-                <input class="knob" data-width="140" data-min="0" data-max="100" data-displayPrevious="true" value="<?php echo $deger3_yuzde; ?>" data-fgColor="#92A3C2" data-readOnly=true;>
+                <input class="knob" data-width="140" data-min="0" data-max="100" data-displayPrevious="true" value="<?php echo round($deger3_yuzde); ?>" data-fgColor="#92A3C2" data-readOnly=true;>
                 <h3 class="text-muted text-center"><?php echo $oku['deger3']; ?></h3>
             </div>
         </div>
