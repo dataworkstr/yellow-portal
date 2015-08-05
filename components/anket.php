@@ -52,11 +52,13 @@
 
             }
 
-        }
-
-        echo "<div class='oylama-success'><i class='fa fa-check-circle'></i> Oyunuz başarılı bir şekilde gönderildi.</div>";
+             echo "<div class='oylama-success'><i class='fa fa-check-circle'></i> Oyunuz başarılı bir şekilde gönderildi.</div>";
 
         echo "<div style='text-align: center; margin-top: 40px;'><p><a href='index.php?page=anket-sonucu&anket=".$oku['baslik_seo']."' id='gonder'>Sonuçlar</a></p></div>";
+
+        }
+
+
 
 
         }
