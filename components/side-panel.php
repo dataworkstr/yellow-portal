@@ -10,45 +10,6 @@
       </div>
     </div>
 
-       <?php
-
-        $api_url="http://api.openweathermap.org/data/2.5/forecast/?id=745044&lang=tr";
-        $weather_data = file_get_contents($api_url);
-        $json = json_decode($weather_data, TRUE);
-
-
-        foreach($json['list']as $k){
-
-        if($k['dt_txt']=="2015-08-07 21:00:00")
-        {
-            $hava_durumu = substr($k['main']['temp'],0,2);
-
-            $nasilhavalaroralarda =  $k['weather'][0]['main'];
-
-            switch($nasilhavalaroralarda){
-
-                case "Clouds" :
-                $nasılhavalaroralarda2 = "Bulutlu";
-                $nekihava = "fa fa-cloud";
-                break;
-
-                default:
-                $nasılhavalaroralarda2 = $nasilhavalaroralarda;
-                $nekihava = "fa fa-sun-o";
-                break;
-
-            }
-        }
-
-        }
-
-
-
-
-
-   ?>
-
-
     <div class="mac-detayi" style="display:none;">
       <div class="takimlar">
         <span>Körükspor</span> - <span>AAÜ Ejderhaspor</span>
@@ -58,7 +19,7 @@
       <div class="sag-logo"><img src="images/fenerlogo.png" width="60" height="60"/></div>
       <div class="mac-bilgi">
        <i class="fa fa-calendar-o"></i>  <span>19 Temmuz 2015</span> - <span>19:07</span><br/>
-       <i class="fa fa-globe"></i> <span>Gültepe Arena</span>  <i class="fa"></i>/<i class="fa"></i>   <i class="<?php echo $nekihava;?>"></i><span><?php echo $hava_durumu; ?></span>°&nbsp;<span><?php echo $nasılhavalaroralarda2; ?></span>
+       <i class="fa fa-globe"></i> <span>Gültepe Arena</span>  <i class="fa"></i>/<i class="fa"></i>   <i class="<?php echo $nekihava;?>"></i><span><?php echo $hava_durumu; ?></span>°&nbsp;<span><?php echo $nasilhavalaroralarda2; ?></span>
      </div>
      <hr/>
    </div>

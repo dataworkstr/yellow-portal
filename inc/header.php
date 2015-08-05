@@ -60,6 +60,43 @@ include "admin/ayar.php";
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
+  <?php
+
+  $api_url="http://api.openweathermap.org/data/2.5/forecast/?id=745044&lang=tr";
+  $weather_data = file_get_contents($api_url);
+  $json = json_decode($weather_data, TRUE);
+
+
+  foreach($json['list']as $k){
+
+    if($k['dt_txt']=="2015-08-07 21:00:00")
+    {
+      $hava_durumu = substr($k['main']['temp'],0,2);
+
+      $nasilhavalaroralarda =  $k['weather'][0]['main'];
+
+      switch($nasilhavalaroralarda){
+
+        case "Clouds" :
+        $nasilhavalaroralarda2 = "Bulutlu";
+        $nekihava = "fa fa-cloud";
+        break;
+
+        default:
+        $nasilhavalaroralarda2 = $nasilhavalaroralarda;
+        $nekihava = "fa fa-sun-o";
+        break;
+
+      }
+    }
+
+  }
+
+
+
+
+
+  ?>
 
   <div class="next-match">
     <div class="countdown">
@@ -70,7 +107,7 @@ include "admin/ayar.php";
    <div class="next-match-away-team-logo"></div>
    <div class="next-match-away-team-name">AAÜ Ejderhaspor</div>
    <div class="next-match-detail">12 Aralık 2012 - 19:07</div>
-   <div class="next-match-detail2">Çolak Giyim Demirlispor Spor Kompleksi  / 34 Güneşli</div>
+   <div class="next-match-detail2">Çolak Giyim Demirlispor Spor Kompleksi  / &nbsp;<span><?php echo $hava_durumu; ?>°&nbsp;</span>&nbsp;<span style="margin-left:20px;"><?php echo $nasilhavalaroralarda2; ?></span></div>
  </div>
 
 
