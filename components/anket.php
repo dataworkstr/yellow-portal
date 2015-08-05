@@ -22,7 +22,7 @@
 
         echo  "<li><input type='radio' id='oyuncu' name='oyuncu' value='".$neceksek['deger3']."'/>".$neceksek['deger3']."<br/></li>";
 
-      echo "<p><input id='gonder' name='gonder' type='submit' value='Oyla'/><a href='#' id='gonder'>Sonuçlar</a></p>";
+      echo "<p><input id='gonder' name='gonder' type='submit' value='Oyla'/><a href='".$neceksek['baslik_seo']."' id='gonder'>Sonuçlar</a></p>";
 
     }else{
 
@@ -55,7 +55,9 @@
         }
 
         echo "<div class='oylama-success'><i class='fa fa-check-circle'></i> Oyunuz başarılı bir şekilde gönderildi.</div>";
-           echo "<div style='text-align: center; margin-top: 40px;'><p><a href='index.php?page=anket-sonucu&anket=".$oku['baslik_seo']."' id='gonder'>Sonuçlar</a></p></div>";
+
+        echo "<div style='text-align: center; margin-top: 40px;'><p><a href='index.php?page=anket-sonucu&anket=".$oku['baslik_seo']."' id='gonder'>Sonuçlar</a></p></div>";
+
 
         }
 
