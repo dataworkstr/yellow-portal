@@ -64,6 +64,7 @@
 </footer>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/countdown.js"></script>
+<script type="text/javascript" src="js/hava.js"></script>
 
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
