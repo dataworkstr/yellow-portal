@@ -69,7 +69,7 @@ include "admin/ayar.php";
    <div class="next-match-away-team-logo"></div>
    <div class="next-match-away-team-name">AAÜ Ejderhaspor</div>
    <div class="next-match-detail">12 Aralık 2012 - 19:07</div>
-   <div class="next-match-detail2">Gültepe Arena / 34 Güneşli</div>
+   <div class="next-match-detail2">Çolak Giyim Demirlispor Spor Kompleksi  / 34 Güneşli</div>
  </div>
 
 
