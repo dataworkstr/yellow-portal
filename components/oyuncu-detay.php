@@ -51,7 +51,7 @@ $oku = mysql_fetch_array(mysql_query("select * from oyuncular where
 
                            <li>  <label>Kulübü :</label><?php $hangisi = $oku['kulub']; $gosterbanayuzunu = mysql_fetch_array(mysql_query("select * from takimlar where takim_adiseo = '$hangisi'"));  echo $gosterbanayuzunu['takim_adi'];  ?></li>
 
-                           <li>  <label>Pozisyon :</label> <?php echo $oku['pozisyon']; ?></li>
+                           <li>  <label>Pozisyon :</label> <?php echo boşluktankesme($oku['pozisyon'],1) ?></li>
 
                            <li>  <label>Değer :</label> <?php echo $oku['deger']; ?> $</li>
 
