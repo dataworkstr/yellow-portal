@@ -34,7 +34,7 @@ if($kontrol)
 
 
 
-mysql_query("update anketler set
+mysql_query("update anket set
 anket_baslik = '$baslik',
 baslik_seo = '$baslikseo',
 deger1 = '$bir',
