@@ -22,7 +22,7 @@
 
         echo  "<li><input type='radio' id='oyuncu' name='oyuncu' value='".$neceksek['deger3']."'/>".$neceksek['deger3']."<br/></li>";
 
-      echo "<p><input id='gonder' name='gonder' type='submit' value='Oyla'/><a href='".$neceksek['baslik_seo']."' id='gonder'>Sonuçlar</a></p>";
+      echo "<p><input id='gonder' name='gonder' type='submit' value='Oyla'/><a href='index.php?page=anket-sonucu&anket=".$neceksek['baslik_seo']."' id='gonder'>Sonuçlar</a></p>";
 
     }else{
 
