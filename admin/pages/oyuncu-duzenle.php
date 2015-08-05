@@ -57,9 +57,15 @@ if($kontrol)
     mysql_query("update takimlar set oyuncular = '$ensonekleneceksey' where takim_adiseo ='$kulup'",$baglanti) or die("Veri eklenemedi".mysql_error());
 
 
-    $a = $_POST['ilkpozisyon'];
+    if($_POST['ilkpozisyon'] == "" and $_POST['ikincipozisyon'] == ""){
+       $pozisyon = $_POST['pozisyon333'];
+    }else{
+        $a = $_POST['ilkpozisyon'];
     $b = $_POST['ikincipozisyon'];
     $pozisyon = $a." ".$b;
+    }
+
+
 
 
 

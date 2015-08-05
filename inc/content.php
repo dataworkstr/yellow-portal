@@ -22,6 +22,9 @@ switch($yellowcek){
 	include "components/anket-sonuclari.php";
 	break;
 
+    case "mac-detay" :
+    include "pages/mac-detay.php";
+    break;
 
 	case "players" :
 	include "pages/players.php";
