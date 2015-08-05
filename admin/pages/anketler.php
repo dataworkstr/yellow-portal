@@ -25,7 +25,7 @@ if($_SESSION['login'] != "true") die("permission denied");
 	$ssayisi = ceil($ksayisi / $limit);
 	$baslangic = ($sayfa*$limit)-$limit;
 
-  $calistir = mysql_query("select * from anketler order by id DESC LIMIT $baslangic, $limit") or die("Hata Olustu!");
+  $calistir = mysql_query("select * from anket order by id DESC LIMIT $baslangic, $limit") or die("Hata Olustu!");
   mysql_query("SET NAMES 'utf8'");
   while($oku=mysql_fetch_assoc($calistir))
 
