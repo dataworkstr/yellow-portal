@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  <div class="anket">
    <div class="news-header"><i class="fa fa-question"></i> Anket</div>
 
@@ -75,29 +76,9 @@
 
         }
 
-
-
-
         }
 
-
-
-     ?>
-
-
-
-
+        ?>
     </form>
-
-
-
-  </div>
-
-
-
 </div>
-
-
-
-
-
+</div>
