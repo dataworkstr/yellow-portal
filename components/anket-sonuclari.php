@@ -62,7 +62,34 @@ $oku = mysql_fetch_array(mysql_query("select * from anket where baslik_seo = '$R
                 <h3 class="text-muted text-center"><?php echo $oku['deger3']; ?></h3>
             </div>
         </div>
-     </div>
+
+
+        </div>
+
+         <h1 class="anket-oy-toplami">Toplam <?php echo $oku['deger1_say']+$oku['deger2_say']+$oku['deger3_say']; ?> kişi oy kullandı. </h1>
+
+
+        <hr/>
+
+
+
+        <h1 class="anket-sonuc-basligi"><i class="fa fa-folder-open"></i> Eski Anketler </h1><br/>
+
+
+        <?php
+
+            $eskilericek = mysql_query("select * from anket");
+
+            while($eskilerdenkimkaldi = mysql_fetch_array($eskilericek)){
+        ?>
+
+       <?php  if($eskilerdenkimkaldi['baslik_seo'] == $Redbull) { continue;}else{  ?>
+            <ul>
+                <li><?php echo $eskilerdenkimkaldi['anket_baslik']; ?><?php echo "<div style='text-align: center; margin-top: 40px;'><p><a href='index.php?page=anket-sonucu&anket=".$eskilerdenkimkaldi['baslik_seo']."' id='gonder'>Sonuçlar</a></p></div>"; ?></li>
+            </ul>
+
+
+        <?php } } ?>
 
 
 
