@@ -19,15 +19,32 @@
 
         <div class="col-md-12">
 
-            <div class="col-md-4">Ev Sahibi</div>
+            <div class="col-md-4" style="padding-left: 45px; margin-top: 15px; margin-bottom: 25px;">Ev Sahibi</div>
             <div class="col-md-4"></div>
-            <div class="col-md-4">Deplasman</div>
+            <div class="col-md-4" style="padding-left: 85px; margin-top: 15px; margin-bottom: 25px;">Deplasman</div>
 
         </div>
+        <style>
+            hr {
+                margin-top:10px;
+                margin-bottom:10px;
+            }
+        </style>
 
          <div class="col-md-12">
 
-            <div class="col-md-4">Kadrolar ev</div>
+             <div class="col-md-4">
+                 <ul>
+                     <li>Adı</li><hr/>
+                     <li>Adı</li><hr/>
+                     <li>Adı</li><hr/>
+
+                 </ul>
+
+             </div>
+
+
+
             <div class="col-md-4">Maç Bilgileri</div>
             <div class="col-md-4">Kadrolar Dep</div>
 

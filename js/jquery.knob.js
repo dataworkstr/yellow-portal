@@ -108,7 +108,7 @@
                     height : this.$.data('height') || 150,
                     displayInput : this.$.data('displayinput') == null || this.$.data('displayinput'),
                     displayPrevious : this.$.data('displayprevious'),
-                    fgColor : this.$.data('fgcolor') || '#87CEEB',
+                    fgColor : this.$.data('fgcolor') || '#fded00',
                     inputColor: this.$.data('inputcolor'),
                     font: this.$.data('font') || 'Arial',
                     fontWeight: this.$.data('font-weight') || 'bold',
@@ -506,7 +506,7 @@
         this.extend = function () {
             this.o = $.extend(
                 {
-                    bgColor : this.$.data('bgcolor') || '#EEEEEE',
+                    bgColor : this.$.data('bgcolor') || '#fff352',
                     angleOffset : this.$.data('angleoffset') || 0,
                     angleArc : this.$.data('anglearc') || 360,
                     inline : true

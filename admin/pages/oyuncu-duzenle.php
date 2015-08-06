@@ -217,7 +217,7 @@ header("Refresh:0, url=admin.php?div=oyuncular");
                 <span class="field">
                    <select name="ilkpozisyon" id="selection2" class="uniformselect">
 
-                    <option><?php $gosterbanabe =  explode(",",$oku['pozisyon']); echo $gosterbanabe[1]; ?></option>
+
                     <option></option>
                     <option value="1,GK">GK</option>
                     <option value="2,D">D</option>
@@ -229,7 +229,7 @@ header("Refresh:0, url=admin.php?div=oyuncular");
                 </select>
                 <br/>
                 <select name="ikincipozisyon"  id="selection2" class="uniformselect" >
-                    <option><?php echo substr($ugurdk['pozisyon'],2,10); ?></option>
+
                     <option></option>
                     <option>R</option>
                     <option>L</option>
