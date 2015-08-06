@@ -116,6 +116,13 @@ body{
     color: rgba(0, 135, 0, 1);
 }
 
+.oylama-wrong {
+    text-align: center;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    color: firebrick;
+}
+
 .header-logo {
     margin-top: -32px;
 }

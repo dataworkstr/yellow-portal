@@ -26,6 +26,21 @@
 
     }else{
 
+        session_start();
+        ob_start();
+
+
+
+        if($_SESSION["a"] == "ozanumut"){
+
+            echo "<div class='oylama-wrong'><i class='fa fa-exclamation-triangle'></i> Zaten oy kullandınız</div>";
+
+        echo "<div style='text-align: center; margin-top: 40px;'><p><a href='index.php?page=anket-sonucu&anket=".$neceksek['baslik_seo']."' id='gonder'>Sonuçlar</a></p></div>";
+
+        }else{
+
+        $_SESSION["a"] = "ozanumut";
+
         $oylanankisi = $_POST['oyuncu'];
 
         $getirinbakalim = mysql_query("select * from anket");
@@ -55,6 +70,11 @@
              echo "<div class='oylama-success'><i class='fa fa-check-circle'></i> Oyunuz başarılı bir şekilde gönderildi.</div>";
 
         echo "<div style='text-align: center; margin-top: 40px;'><p><a href='index.php?page=anket-sonucu&anket=".$oku['baslik_seo']."' id='gonder'>Sonuçlar</a></p></div>";
+
+
+            }
+
+            ob_end_flush();
 
         }
 
