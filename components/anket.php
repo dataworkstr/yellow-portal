@@ -28,7 +28,9 @@
 
     }else{
 
-
+        if(isset($_SESSION['a'])){
+         $_SESSION['a'] = "ozanumut";
+        }
 
         if($_SESSION['a'] == "ozanumut"){
 
@@ -38,7 +40,6 @@
 
         }else{
 
-        $_SESSION['a'] = "ozanumut";
 
         $oylanankisi = $_POST['oyuncu'];
 
