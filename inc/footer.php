@@ -2,10 +2,10 @@
 <footer>
     <div class="row footer1">
         <div class="col-xs-6 col-sm-3 footer-logo">
-            <img src="images/footer-logo.png" alt="Yellow Bulls"/>
+            <img src="images/footer-logo.png" alt="Yellow Bulls" width="213" height="160"/>
         </div>
         <div class="col-xs-6 col-sm-2 footer-linkler">
-            <h4>Linkler</h4>
+            <h4><stron>Linkler</stron></h4>
             <ul>
                 <li><a href="#">Haberler</a></li>
                 <li><a href="#">Takımlar</a></li>
@@ -14,7 +14,7 @@
             </ul>
         </div>
         <div class="col-xs-6 col-sm-3 footer-sonuclar">
-            <h4>Son Maçlar</h4>
+            <h4><b>Son Maçlar</b></h4>
             <ul>
                 <li><a href="#">Fenerbahçe 6 - 0 Fenerbahçe</a></li>
                 <li><a href="#">Fenerbahçe 6 - 0 Fenerbahçe</a></li>
@@ -34,7 +34,7 @@
         <div class="copyrightyazisi">
             Copyright © 2015 <br/>
             YellowPlex Production <br/><br/>
-            <img src="images/yellowplex-footerlogo.png" alt="YellowPlex" style="opacity:0.2;"/>
+            <img src="images/yellowplex-footerlogo.png" alt="YellowPlex" style="opacity:0.2;" width="154" height="30"/>
         </div>
     </div>
 </footer>
