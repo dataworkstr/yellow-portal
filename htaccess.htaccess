@@ -1,0 +1,11 @@
+Options +FollowSymLinks 
+RewriteEngine on
+RewriteBase /
+
+
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?page=$1 [L,NC]
+RewriteRule ^haber/([a-zA-Z0-9_-]+)$ index.php?page=haber-detay&haber=$1
+RewriteRule ^takim/([a-zA-Z0-9_-]+)$ index.php?page=takim-detay&takim=$1
+RewriteRule ^oyuncu/([a-zA-Z0-9_-]+)$ index.php?page=oyuncu-detay&oyuncu=$1
+RewriteRule ^saha/([a-zA-Z0-9_-]+)$ index.php?page=saha-detay&sahalar=$1
+RewriteRule ^anket/([a-zA-Z0-9_-]+)$ index.php?page=anket-sonucu&anket=$1
