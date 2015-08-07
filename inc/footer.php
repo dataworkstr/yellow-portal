@@ -26,7 +26,7 @@
             <div id="footersocialBarWrapper">
                 <ul>
                     <li><a target="_blank" href="http://www.facebook.com/" title="Yellow Bulls" style="background:#36549a"><i class="fa fa-facebook"></i><em>Facebook</em></a></li>
-                    <li><a target="_blank" href="http://www.twitter.com/" title="Yellow Bulls" style="background:#00b5f2"><i class="fa fa-twitter"></i><em>Twitter</em></a></li>
+                    <li><a target="_blank" href="http://twitter.com/yellowbulls_tr" title="Yellow Bulls" style="background:#00b5f2"><i class="fa fa-twitter"></i><em>Twitter</em></a></li>
                     <li><a target="_blank" href="http://www.instagram.com/" title="Yellow Bulls" style="background:#713e2c"><i class="fa fa-instagram"></i><em>Instagram</em></a></li>
                 </ul>
             </div>
