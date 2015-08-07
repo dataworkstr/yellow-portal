@@ -2,7 +2,7 @@
 <footer>
     <div class="row footer1">
         <div class="col-xs-6 col-sm-3 footer-logo">
-            <img src="images/footer-logo.png" />
+            <img src="images/footer-logo.png" alt="Yellow Bulls"/>
         </div>
         <div class="col-xs-6 col-sm-2 footer-linkler">
             <h4>Linkler</h4>
@@ -34,7 +34,7 @@
         <div class="copyrightyazisi">
             Copyright © 2015 <br/>
             YellowPlex Production <br/><br/>
-            <img src="images/yellowplex-footerlogo.png" style="opacity:0.2;"/>
+            <img src="images/yellowplex-footerlogo.png" alt="YellowPlex" style="opacity:0.2;"/>
         </div>
     </div>
 </footer>
