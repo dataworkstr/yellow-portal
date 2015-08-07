@@ -35,10 +35,10 @@ include "admin/ayar.php";
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li><a href="index.php"><div class="menu-home-icon"><i class="fa fa-home"></i></div> <span class="sr-only">(current)</span></a></li>
-          <li><a href="index.php?page=news">Haberler</a></li>
-          <li><a href="index.php?page=teams">Takımlar</a></li>
-          <li><a href="index.php?page=players">Oyuncular</a></li>
-          <li><a href="index.php?page=stadium">Sahalar</a></li>
+          <li><a href="haberler">Haberler</a></li>
+          <li><a href="takimlar">Takımlar</a></li>
+          <li><a href="oyuncular">Oyuncular</a></li>
+          <li><a href="sahalar">Sahalar</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
