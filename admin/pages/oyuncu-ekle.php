@@ -46,8 +46,13 @@ if($kontrol)
 
 
     $a = $_POST['ilkpozisyon'];
-    $b = $_POST['ikincipozisyon'];
-    $pozisyon = $a." ".$b;
+
+    if($_POST['ikincipozisyon'] == ""){
+        $b = "";
+    }else{
+        $b = " ".$_POST['ikincipozisyon'];
+    }
+    $pozisyon = $a.$b;
 
 
 
