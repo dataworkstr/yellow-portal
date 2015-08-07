@@ -22,6 +22,8 @@ include "admin/ayar.php";
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
+  <base href="http://yellowbulls.org/"/>
+
 </head>
 <div id="tum-site" class="row">
   <!-- <div class="advertise-top"> </div> -->
