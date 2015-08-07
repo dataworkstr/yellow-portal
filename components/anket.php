@@ -1,34 +1,33 @@
-<<<<<<< HEAD
  <div class="anket">
-   <div class="news-header"><i class="fa fa-question"></i> Anket</div>
+     <div class="news-header"><i class="fa fa-question"></i> Anket</div>
 
-   <div class="anket-side">
-
-
-
-     <?php
+     <div class="anket-side">
 
 
-    if(!$_POST['gonder']){
-         $cekelim = mysql_query("select * from anket where anasayfa = 1");
 
-        $neceksek = mysql_fetch_array($cekelim);
+       <?php
 
-        echo "<div class='anket-title'>".$neceksek['anket_baslik']."<br/></div>";
 
-        echo "<form method='post'>";
+       if(!$_POST['gonder']){
+           $cekelim = mysql_query("select * from anket where anasayfa = 1");
 
-        echo  "<li><input type='radio' id='oyuncu' name='oyuncu' value='".$neceksek['deger1']."'/>".$neceksek['deger1']."<br/></li>";
+           $neceksek = mysql_fetch_array($cekelim);
 
-        echo  "<li><input type='radio' id='oyuncu' name='oyuncu' value='".$neceksek['deger2']."'/>".$neceksek['deger2']."<br/></li>";
+           echo "<div class='anket-title'>".$neceksek['anket_baslik']."<br/></div>";
 
-        echo  "<li><input type='radio' id='oyuncu' name='oyuncu' value='".$neceksek['deger3']."'/>".$neceksek['deger3']."<br/></li>";
+           echo "<form method='post'>";
 
-      echo "<p><input id='gonder' name='gonder' type='submit' value='Oyla'/><a href='index.php?page=anket-sonucu&anket=".$neceksek['baslik_seo']."' id='gonder'>Sonuçlar</a></p>";
+           echo  "<li><input type='radio' id='oyuncu' name='oyuncu' value='".$neceksek['deger1']."'/>".$neceksek['deger1']."<br/></li>";
 
-    }else{
+           echo  "<li><input type='radio' id='oyuncu' name='oyuncu' value='".$neceksek['deger2']."'/>".$neceksek['deger2']."<br/></li>";
 
-        if(isset($_SESSION['a'])){
+           echo  "<li><input type='radio' id='oyuncu' name='oyuncu' value='".$neceksek['deger3']."'/>".$neceksek['deger3']."<br/></li>";
+
+           echo "<p><input id='gonder' name='gonder' type='submit' value='Oyla'/><a href='index.php?page=anket-sonucu&anket=".$neceksek['baslik_seo']."' id='gonder'>Sonuçlar</a></p>";
+
+       }else{
+
+        if(!isset($_SESSION['a'])){
          $_SESSION['a'] = "ozanumut";
         }
 
@@ -36,40 +35,39 @@
 
             echo "<div class='oylama-wrong'><i class='fa fa-exclamation-triangle'></i> Zaten oy kullandınız</div>";
 
-        echo "<div style='text-align: center; margin-top: 40px;'><p><a href='index.php?page=anket-sonucu&anket=".$neceksek['baslik_seo']."' id='gonder'>Sonuçlar</a></p></div>";
+            echo "<div style='text-align: center; margin-top: 40px;'><p><a href='index.php?page=anket-sonucu&anket=".$neceksek['baslik_seo']."' id='gonder'>Sonuçlar</a></p></div>";
 
         }else{
 
+            $oylanankisi = $_POST['oyuncu'];
 
-        $oylanankisi = $_POST['oyuncu'];
+            $getirinbakalim = mysql_query("select * from anket");
 
-        $getirinbakalim = mysql_query("select * from anket");
+            while($oku = mysql_fetch_array($getirinbakalim)){
 
-        while($oku = mysql_fetch_array($getirinbakalim)){
+                if($oku['deger1'] == $oylanankisi){
 
-            if($oku['deger1'] == $oylanankisi){
+                    $toplagelsin = $oku['deger1_say']+1;
 
-                $toplagelsin = $oku['deger1_say']+1;
+                    mysql_query("update anket set deger1_say ='$toplagelsin' ",$baglanti) or die("Veri güncellenemedi".mysql_error());
 
-                mysql_query("update anket set deger1_say ='$toplagelsin' ",$baglanti) or die("Veri güncellenemedi".mysql_error());
+                }else if($oku['deger2'] == $oylanankisi){
 
-            }else if($oku['deger2'] == $oylanankisi){
+                    $toplagelsin2 = $oku['deger2_say']+1;
 
-                $toplagelsin2 = $oku['deger2_say']+1;
+                    mysql_query("update anket set deger2_say ='$toplagelsin2' ",$baglanti) or die("Veri güncellenemedi".mysql_error());
 
-                mysql_query("update anket set deger2_say ='$toplagelsin2' ",$baglanti) or die("Veri güncellenemedi".mysql_error());
+                }else if($oku['deger3'] == $oylanankisi){
 
-            }else if($oku['deger3'] == $oylanankisi){
+                    $toplagelsin3 = $oku['deger3_say']+1;
 
-                $toplagelsin3 = $oku['deger3_say']+1;
+                    mysql_query("update anket set deger3_say ='$toplagelsin3' ",$baglanti) or die("Veri güncellenemedi".mysql_error());
 
-                mysql_query("update anket set deger3_say ='$toplagelsin3' ",$baglanti) or die("Veri güncellenemedi".mysql_error());
+                }
 
-            }
+                echo "<div class='oylama-success'><i class='fa fa-check-circle'></i> Oyunuz başarılı bir şekilde gönderildi.</div>";
 
-             echo "<div class='oylama-success'><i class='fa fa-check-circle'></i> Oyunuz başarılı bir şekilde gönderildi.</div>";
-
-        echo "<div style='text-align: center; margin-top: 40px;'><p><a href='index.php?page=anket-sonucu&anket=".$oku['baslik_seo']."' id='gonder'>Sonuçlar</a></p></div>";
+                echo "<div style='text-align: center; margin-top: 40px;'><p><a href='index.php?page=anket-sonucu&anket=".$oku['baslik_seo']."' id='gonder'>Sonuçlar</a></p></div>";
 
 
             }
@@ -77,9 +75,9 @@
 
         }
 
-        }
+    }
 
-        ?>
-    </form>
+    ?>
+</form>
 </div>
 </div>
