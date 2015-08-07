@@ -66,7 +66,7 @@
 
                 echo "<div class='oylama-success'><i class='fa fa-check-circle'></i> Oyunuz başarılı bir şekilde gönderildi.</div>";
 
-                $ensonsonuc = mysql_fetch_array(mysql_query("select * from anket where anasayfa = 1"));
+                $ensonsonuc = mysql_fetch_array(mysql_query("select * from anket where anasayfa = '1'"));
 
                 echo "<div style='text-align: center; margin-top: 40px;'><p><a href='index.php?page=anket-sonucu&anket=".$ensonsonuc['baslik_seo']."' id='gonder'>Sonuçlar</a></p></div>";
 
