@@ -15,8 +15,8 @@
 
           <div class="col-xs-6">
             <div class="oyuncu-liste">
-             <a href="index.php?page=takim-detay&takim=<?php echo $oku['takim_adiseo'] ?>"><img src="<?php echo $oku['logo'] ?>" width="100" height="100"/></a>  <br/>
-             <p><a href="index.php?page=takim-detay&takim=<?php echo $oku['takim_adiseo'] ?>"><?php echo $oku['takim_adi'] ?></a></p>
+             <a href="takimlar/<?php echo $oku['takim_adiseo'] ?>"><img src="<?php echo $oku['logo'] ?>" width="100" height="100"/></a>  <br/>
+             <p><a href="takimlar/<?php echo $oku['takim_adiseo'] ?>"><?php echo $oku['takim_adi'] ?></a></p>
 
              <div class="oyuncu-adi">
 
@@ -68,7 +68,7 @@
 
 
                         </td>
-                        <td><a href="index.php?page=oyuncu-detay&oyuncu=<?php echo $gelsinbakalim['ad_soyadseo']; ?>" class="oyuncu-linkleri-rengi"><?php echo $gelsinbakalim['ad_soyad']; ?></a></td>
+                        <td><a href="oyuncular/<?php echo $gelsinbakalim['ad_soyadseo']; ?>" class="oyuncu-linkleri-rengi"><?php echo $gelsinbakalim['ad_soyad']; ?></a></td>
 
                         <td style="width:70px;"><?php $yeniposition = explode(",",$gelsinbakalim['pozisyon']); echo $yeniposition[1]; ?></td>
                       </tr>
@@ -143,7 +143,7 @@
 
 
                         </td>
-                        <td><a href="index.php?page=oyuncu-detay&oyuncu=<?php echo $asdx['ad_soyadseo']; ?>" class="oyuncu-linkleri-rengi"><?php echo $asdx['ad_soyad']; ?></a></td>
+                        <td><a href="oyuncular/<?php echo $asdx['ad_soyadseo']; ?>" class="oyuncu-linkleri-rengi"><?php echo $asdx['ad_soyad']; ?></a></td>
 
                         <td><?php
                                     $yeniposition2 = explode(",",$asdx['pozisyon']); echo $yeniposition2[1];

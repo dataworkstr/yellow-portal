@@ -23,11 +23,11 @@
 
          <li>
           <div class="haber-sayfasi-tek-haber">
-            <a href="index.php?page=haber-detay&haber=<?php echo $okumenuhaber['haber_adiseo'] ?>" class="haberin-resmi"><img src="<?php echo $okumenuhaber['haber_resim'] ?>" width="194" height="88"/></a>
+            <a href="haber/<?php echo $okumenuhaber['haber_adiseo'] ?>" class="haberin-resmi"><img src="<?php echo $okumenuhaber['haber_resim'] ?>" width="194" height="88"/></a>
             <div class="anasayfa-haber-baslik">
-              <a href="index.php?page=haber-detay&haber=<?php echo $okumenuhaber['haber_adiseo'] ?>"><?php echo stripslashes($okumenuhaber['haber_adi2']); ?></a><br/>
+              <a href="haber/<?php echo $okumenuhaber['haber_adiseo'] ?>"><?php echo stripslashes($okumenuhaber['haber_adi2']); ?></a><br/>
             </div>
-            <div class="haber-text"><?php echo kisalt(stripslashes($okumenuhaber['haber_icerik']),100); ?> </div><div class="devami-butonu"><a href="index.php?page=haber-detay&haber=<?php echo $okumenuhaber['haber_adiseo'] ?>">Devamı..</a></div>
+            <div class="haber-text"><?php echo kisalt(stripslashes($okumenuhaber['haber_icerik']),100); ?> </div><div class="devami-butonu"><a href="haber/<?php echo $okumenuhaber['haber_adiseo'] ?>">Devamı..</a></div>
 
           </div>
 

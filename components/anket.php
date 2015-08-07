@@ -22,7 +22,7 @@
 
            echo  "<li><input type='radio' id='oyuncu' name='oyuncu' value='".$neceksek['deger3']."'/>".$neceksek['deger3']."<br/></li>";
 
-           echo "<p><input id='gonder' name='gonder' type='submit' value='Oyla'/><a href='index.php?page=anket-sonucu&anket=".$neceksek['baslik_seo']."' id='gonder'>Sonuçlar</a></p>";
+           echo "<p><input id='gonder' name='gonder' type='submit' value='Oyla'/><a href='anket/".$neceksek['baslik_seo']."' id='gonder'>Sonuçlar</a></p>";
 
        }else{
 
@@ -34,7 +34,7 @@
 
             echo "<div class='oylama-wrong'><i class='fa fa-exclamation-triangle'></i> Zaten oy kullandınız</div>";
 
-            echo "<div style='text-align: center; margin-top: 40px;'><p><a href='index.php?page=anket-sonucu&anket=".$neceksek['baslik_seo']."' id='gonder'>Sonuçlar</a></p></div>";
+            echo "<div style='text-align: center; margin-top: 40px;'><p><a href='anket/".$neceksek['baslik_seo']."' id='gonder'>Sonuçlar</a></p></div>";
 
         }else{
 
@@ -68,7 +68,7 @@
 
                 $ensonsonuc = mysql_fetch_array(mysql_query("select * from anket where anasayfa = '1'"));
 
-                echo "<div style='text-align: center; margin-top: 40px;'><p><a href='index.php?page=anket-sonucu&anket=".$ensonsonuc['baslik_seo']."' id='gonder'>Sonuçlar</a></p></div>";
+                echo "<div style='text-align: center; margin-top: 40px;'><p><a href='anket/".$ensonsonuc['baslik_seo']."' id='gonder'>Sonuçlar</a></p></div>";
 
 
             }
