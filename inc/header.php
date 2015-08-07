@@ -14,14 +14,14 @@ include "admin/ayar.php";
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
   <script src="https://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="js/jssor.js"></script>
-  <script type="text/javascript" src="js/jssor.slider.js"></script>
-  <script src="js/jquery.knob.js" type="text/javascript"></script>
+  <script type="text/javascript" src="http://yellowbulls.org/js/jssor.js"></script>
+  <script type="text/javascript" src="http://yellowbulls.org/js/jssor.slider.js"></script>
+  <script src="http://yellowbulls.org/js/jquery.knob.js" type="text/javascript"></script>
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="http://yellowbulls.org/css/style.css">
   <base href="http://yellowbulls.org/"/>
 
 </head>
