@@ -107,7 +107,7 @@ top: 0px; left: 0px;width: 100%;height:100%;">
     while($oku = mysql_fetch_array($habercek)){
         ?>
         <div>
-            <a href="haber/<?php echo $oku['haber_adiseo'] ?>"><img u="image" src="<?php echo $oku['haber_resim']; ?>" />
+            <a href="haber/<?php echo $oku['haber_adiseo'] ?>"><img u="image" src="<?php echo $oku['haber_resim']; ?>"  alt ="<?php echo $oku['haber_adi'];?>"/>
                 <div class="haber-yazisi-anasayfadaki-ust">
                     <?php echo stripslashes($oku['haber_adi']); ?>
                 </div>
@@ -115,7 +115,7 @@ top: 0px; left: 0px;width: 100%;height:100%;">
                     <?php echo stripslashes($oku['haber_adi2']); ?>
                 </div>
             </a>
-            <img u="thumb" src="<?php echo $oku['haber_resim']; ?>"/>
+            <img u="thumb" src="<?php echo $oku['haber_resim']; ?>" alt ="<?php echo $oku['haber_adi'];?>"/>
         </div>
         <?php } ?>
     </div>

@@ -8,7 +8,7 @@
                 ?>
                 <li>
                     <div class="news-home-single">
-                        <a href="haber/<?php echo $okualti['haber_adiseo'] ?>"><img src="<?php echo $okualti['haber_resim'] ?>" width="194" height="88"/></a>
+                        <a href="haber/<?php echo $okualti['haber_adiseo'] ?>"><img src="<?php echo $okualti['haber_resim'] ?>" width="194" height="88" alt ="<?php echo $okualti['haber_adi'];?>"/></a>
                         <div class="anasayfa-haber-baslik">
                             <a href="haber/<?php echo $okualti['haber_adiseo'] ?>"><?php echo stripslashes($okualti['haber_adi2']); ?></a><br/>
                         </div>
@@ -19,7 +19,7 @@
             </ul>
         </div>
         <div class="haber-devami-git">
-            <a href="index.php?page=news">
+            <a href="haberler">
                 <i class="fa fa-chevron-circle-right"></i>
                 Tüm haberleri görüntülemek için tıklayın
             </a>

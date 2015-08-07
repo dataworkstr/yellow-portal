@@ -25,7 +25,7 @@
 
                 ?>
                 <div class="oyuncu-liste2">
-                   <div class="oyuncuresim"><a href="oyuncular/<?php echo $oyuncugoster['ad_soyadseo'] ?>"><img src="<?php echo $oyuncugoster['oyuncu_photo'] ?>" width="105" height="120"></a> <br/>
+                   <div class="oyuncuresim"><a href="oyuncular/<?php echo $oyuncugoster['ad_soyadseo'] ?>"><img src="<?php echo $oyuncugoster['oyuncu_photo'] ?>" width="105" height="120" alt ="<?php echo $oyuncugoster['ad_soyad'];?>"></a> <br/>
                       <div class="oyuncu-adi-container" style="display:none;"><a href="oyuncular/<?php echo $oyuncugoster['ad_soyadseo'] ?>" class="oyuncu-adison" ><?php echo $oyuncugoster['ad_soyad'] ?></a>                </div>
                   </div>
               </div>

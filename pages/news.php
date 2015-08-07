@@ -23,7 +23,7 @@
 
          <li>
           <div class="haber-sayfasi-tek-haber">
-            <a href="haber/<?php echo $okumenuhaber['haber_adiseo'] ?>" class="haberin-resmi"><img src="<?php echo $okumenuhaber['haber_resim'] ?>" width="194" height="88"/></a>
+            <a href="haber/<?php echo $okumenuhaber['haber_adiseo'] ?>" class="haberin-resmi"><img src="<?php echo $okumenuhaber['haber_resim'] ?>" width="194" height="88" alt ="<?php echo $okumenuhaber['haber_adi'];?>"/></a>
             <div class="anasayfa-haber-baslik">
               <a href="haber/<?php echo $okumenuhaber['haber_adiseo'] ?>"><?php echo stripslashes($okumenuhaber['haber_adi2']); ?></a><br/>
             </div>

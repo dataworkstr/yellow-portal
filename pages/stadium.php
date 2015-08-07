@@ -23,7 +23,7 @@
                 ?>
 
                 <div class="statlar">
-                   <a href="sahalar/<?php echo $gostersahalari['saha_adiseo']; ?>"><div class="statresmi" ><img src="<?php echo $gostersahalari['saha_resim']; ?>" class="img-responsive" style="height:150px;width:100%;"/></div></a>
+                   <a href="sahalar/<?php echo $gostersahalari['saha_adiseo']; ?>"><div class="statresmi" ><img src="<?php echo $gostersahalari['saha_resim']; ?>" alt ="<?php echo $gostersahalari['saha_adi'];?>" class="img-responsive" style="height:150px;width:100%;"/></div></a>
                    <a href="sahalar/<?php echo $gostersahalari['saha_adiseo']; ?>"> <div class="statismi" style="display:none;"> <?php echo $gostersahalari['saha_adi']; ?> </div></a>
                </div>
 

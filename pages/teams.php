@@ -15,7 +15,7 @@
 
           <div class="col-xs-6">
             <div class="oyuncu-liste">
-             <a href="takim-detay/<?php echo $oku['takim_adiseo'] ?>"><img src="<?php echo $oku['logo'] ?>" width="100" height="100"/></a>  <br/>
+             <a href="takim-detay/<?php echo $oku['takim_adiseo'] ?>"><img src="<?php echo $oku['logo'] ?>" width="100" height="100" alt ="<?php echo $oku['ad_soyad'];?>"/></a>  <br/>
              <p><a href="takim-detay/<?php echo $oku['takim_adiseo'] ?>"><?php echo $oku['takim_adi'] ?></a></p>
 
              <div class="oyuncu-adi">
