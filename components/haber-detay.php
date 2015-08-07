@@ -4,11 +4,7 @@
         $enginx = $_GET['haber'];
         $haberimioku = mysql_fetch_array(mysql_query("select * from haberler where haber_adiseo = '$enginx'"));
         ?>
-        <meta property="og:title" content="<?php echo $haberimioku['haber_adi2']; ?>"/>
-        <meta property="og:type" content="<?php echo $haberimioku['haber_icerik']; ?>"/>
-        <meta property="og:image" content="<?php echo $haberimioku['haber_resim']; ?>"/>
-        <meta property="og:url" content="index.php?page=haber-detay&haber=<?php echo $haberimioku['haber_adiseo']; ?>"/>
-        <meta property="og:description" content=""/>
+
         <div class="haberler-sayfasi">
             <div class="news-header"> <h3><i class="fa fa-newspaper-o"></i> <?php echo stripslashes($haberimioku['haber_adi']); ?></h3></div>
             <div class="haber-detayi-kapsa">
