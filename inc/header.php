@@ -25,7 +25,7 @@ include "admin/ayar.php";
   <base href="http://yellowbulls.org/"/>
 
 </head>
-<div id="tum-site" class="row">
+<div id="tum-site" class="row" style="margin-top: 15px;">
   <!-- <div class="advertise-top"> </div> -->
   <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -88,3 +88,4 @@ include "admin/ayar.php";
     });
   </script>
   <body>
+

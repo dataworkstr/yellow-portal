@@ -3,10 +3,10 @@
 session_start();
 ob_start();
 
- $dbhost      = "localhost";
- $dbadi       = "yellowbulls";
- $dbuser      = "root";
- $dbpass      = "";
+$dbhost      = "localhost";
+$dbadi       = "yellowbulls";
+$dbuser      = "root";
+$dbpass      = "root";
 
 //$dbhost      = "localhost";
 //$dbadi       = "canagirk_yellowbulls";
